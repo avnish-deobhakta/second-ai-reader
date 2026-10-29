@@ -1,0 +1,893 @@
+{
+  "lock_v5_1_sha256": "2531e1336f9487ee074b6154cf2b44367ae7b3b5bcba644369cb1065bb346012",
+  "opened_utc": "2026-09-23T15:58:34.254795+00:00",
+  "cohort": {
+    "images": 12422,
+    "pdr": 913,
+    "groups": 332,
+    "half_A_images": 6205,
+    "half_B_images": 6217,
+    "referable_prevalence_A": 0.4237,
+    "operating_point_f": 0.555
+  },
+  "fellow_eye_check": {
+    "numbered_adjacent_pairs": 6584,
+    "numbered_adjacent_kappa": 0.892,
+    "timestamp_pairs_within_120s": 3128,
+    "timestamp_pairs_kappa": 0.981,
+    "random_pairs_kappa": -0.017
+  },
+  "P1_supported": true,
+  "benefit": {
+    "prevalence_relative_f__pdr": {
+      "fraction_referred_each": 0.555,
+      "mv_net": {
+        "per_pair_mean": 12.41,
+        "cluster_95": [
+          7.193,
+          18.251
+        ]
+      },
+      "anchor_miss": {
+        "per_pair_mean": 45.303,
+        "cluster_95": [
+          22.541,
+          74.062
+        ]
+      },
+      "ens_miss": {
+        "per_pair_mean": 32.893,
+        "cluster_95": [
+          14.325,
+          58.526
+        ]
+      },
+      "rescued": {
+        "per_pair_mean": 25.372,
+        "cluster_95": [
+          14.074,
+          37.596
+        ]
+      },
+      "incr_ref": {
+        "per_pair_mean": 1133.927,
+        "cluster_95": [
+          939.613,
+          1384.205
+        ]
+      },
+      "incr_fp": {
+        "per_pair_mean": 789.828,
+        "cluster_95": [
+          587.581,
+          1042.278
+        ]
+      },
+      "mv_net_vs_better": {
+        "per_pair_mean": 3.796,
+        "cluster_95": [
+          1.547,
+          6.39
+        ]
+      },
+      "relative_reduction_vs_anchor": 0.2739,
+      "union_rescue_fraction_of_anchor_misses": 0.56,
+      "incr_fp_per_pdr_rescued": 31.1,
+      "incr_referrals_per_pdr_rescued": 44.7
+    },
+    "prevalence_relative_f__grade3plus": {
+      "fraction_referred_each": 0.555,
+      "mv_net": {
+        "per_pair_mean": 13.321,
+        "cluster_95": [
+          8.02,
+          19.15
+        ]
+      },
+      "anchor_miss": {
+        "per_pair_mean": 47.455,
+        "cluster_95": [
+          24.879,
+          76.124
+        ]
+      },
+      "ens_miss": {
+        "per_pair_mean": 34.133,
+        "cluster_95": [
+          15.645,
+          59.607
+        ]
+      },
+      "rescued": {
+        "per_pair_mean": 27.032,
+        "cluster_95": [
+          15.775,
+          39.065
+        ]
+      },
+      "incr_ref": {
+        "per_pair_mean": 1133.927,
+        "cluster_95": [
+          939.613,
+          1384.205
+        ]
+      },
+      "incr_fp": {
+        "per_pair_mean": 789.828,
+        "cluster_95": [
+          587.581,
+          1042.278
+        ]
+      },
+      "mv_net_vs_better": {
+        "per_pair_mean": 4.727,
+        "cluster_95": [
+          2.371,
+          7.458
+        ]
+      },
+      "relative_reduction_vs_anchor": 0.2807,
+      "union_rescue_fraction_of_anchor_misses": 0.5696,
+      "incr_fp_per_pdr_rescued": 29.2,
+      "incr_referrals_per_pdr_rescued": 41.9
+    },
+    "fixed_25__pdr": {
+      "fraction_referred_each": 0.25,
+      "mv_net": {
+        "per_pair_mean": 13.362,
+        "cluster_95": [
+          6.111,
+          21.922
+        ]
+      },
+      "anchor_miss": {
+        "per_pair_mean": 269.515,
+        "cluster_95": [
+          158.267,
+          383.197
+        ]
+      },
+      "ens_miss": {
+        "per_pair_mean": 256.154,
+        "cluster_95": [
+          151.014,
+          364.662
+        ]
+      },
+      "rescued": {
+        "per_pair_mean": 90.519,
+        "cluster_95": [
+          54.192,
+          129.587
+        ]
+      },
+      "incr_ref": {
+        "per_pair_mean": 651.735,
+        "cluster_95": [
+          579.951,
+          722.182
+        ]
+      },
+      "incr_fp": {
+        "per_pair_mean": 97.283,
+        "cluster_95": [
+          73.567,
+          123.748
+        ]
+      },
+      "mv_net_vs_better": {
+        "per_pair_mean": -7.713,
+        "cluster_95": [
+          -16.328,
+          -0.254
+        ]
+      },
+      "relative_reduction_vs_anchor": 0.0496,
+      "union_rescue_fraction_of_anchor_misses": 0.3359,
+      "incr_fp_per_pdr_rescued": 1.1,
+      "incr_referrals_per_pdr_rescued": 7.2
+    },
+    "fixed_25__grade3plus": {
+      "fraction_referred_each": 0.25,
+      "mv_net": {
+        "per_pair_mean": 17.382,
+        "cluster_95": [
+          9.879,
+          26.586
+        ]
+      },
+      "anchor_miss": {
+        "per_pair_mean": 295.0,
+        "cluster_95": [
+          186.359,
+          407.483
+        ]
+      },
+      "ens_miss": {
+        "per_pair_mean": 277.618,
+        "cluster_95": [
+          173.022,
+          384.164
+        ]
+      },
+      "rescued": {
+        "per_pair_mean": 102.709,
+        "cluster_95": [
+          66.519,
+          141.184
+        ]
+      },
+      "incr_ref": {
+        "per_pair_mean": 651.735,
+        "cluster_95": [
+          579.951,
+          722.182
+        ]
+      },
+      "incr_fp": {
+        "per_pair_mean": 97.283,
+        "cluster_95": [
+          73.567,
+          123.748
+        ]
+      },
+      "mv_net_vs_better": {
+        "per_pair_mean": -3.461,
+        "cluster_95": [
+          -12.055,
+          4.386
+        ]
+      },
+      "relative_reduction_vs_anchor": 0.0589,
+      "union_rescue_fraction_of_anchor_misses": 0.3482,
+      "incr_fp_per_pdr_rescued": 0.9,
+      "incr_referrals_per_pdr_rescued": 6.3
+    }
+  },
+  "selection": {
+    "primary_A_to_B": {
+      "C": {
+        "estimate": 0.3602,
+        "arch_bootstrap_95": [
+          -0.0897,
+          0.7032
+        ],
+        "permutation_null_95": [
+          -0.1978,
+          0.195
+        ],
+        "supported": false
+      },
+      "C_partial_on_partner_marginal": {
+        "estimate": 0.44,
+        "arch_bootstrap_95": [
+          -0.0711,
+          0.7174
+        ]
+      },
+      "rho_cost_negated": {
+        "estimate": 0.4477,
+        "arch_bootstrap_95": [
+          -0.0418,
+          0.7863
+        ]
+      },
+      "partner_quality": {
+        "estimate": 0.4868,
+        "arch_bootstrap_95": [
+          -0.0357,
+          0.704
+        ]
+      },
+      "rules": {
+        "rule_mean_rescued": {
+          "least_ceiling_overlap": 14.293,
+          "least_weighted_dependence": 14.848,
+          "best_partner_marginal": 15.152,
+          "two_stage": 15.838,
+          "random": 13.158,
+          "oracle": 16.384
+        },
+        "least_ceiling_overlap_minus_best_marginal__rescued": {
+          "mean": -0.859,
+          "arch_95": [
+            -2.212,
+            0.263
+          ],
+          "anchors_favouring_first": 4
+        },
+        "least_ceiling_overlap_minus_best_marginal__mv_net": {
+          "mean": 0.313,
+          "arch_95": [
+            -1.476,
+            2.192
+          ],
+          "anchors_favouring_first": 4
+        },
+        "least_ceiling_overlap_minus_best_marginal__incr_fp": {
+          "mean": 69.182,
+          "arch_95": [
+            47.36,
+            91.243
+          ],
+          "anchors_favouring_first": 10
+        },
+        "two_stage_minus_best_marginal__rescued": {
+          "mean": 0.687,
+          "arch_95": [
+            0.293,
+            1.162
+          ],
+          "anchors_favouring_first": 7
+        },
+        "two_stage_minus_best_marginal__mv_net": {
+          "mean": 3.071,
+          "arch_95": [
+            1.424,
+            4.627
+          ],
+          "anchors_favouring_first": 7
+        },
+        "two_stage_minus_best_marginal__incr_fp": {
+          "mean": 46.495,
+          "arch_95": [
+            20.109,
+            77.687
+          ],
+          "anchors_favouring_first": 7
+        },
+        "picks": {
+          "densenet121_binary": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "densenet121_5class": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "retfound_binary",
+            "two_stage": "retfound_binary"
+          },
+          "efficientnet_b3_binary": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "efficientnet_b3_5class": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "resnet50_binary": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "resnet50_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "vit_base_binary": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "retfound_adversarial",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "vit_base_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "retfound_binary": {
+            "least_ceiling_overlap": "efficientnet_b3_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_adversarial": {
+            "least_ceiling_overlap": "efficientnet_b3_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "densenet121_5class"
+          }
+        }
+      }
+    },
+    "without_retfound_adversarial": {
+      "C": {
+        "estimate": 0.2225,
+        "arch_bootstrap_95": [
+          -0.2927,
+          0.6159
+        ],
+        "permutation_null_95": [
+          -0.218,
+          0.2155
+        ],
+        "supported": false
+      },
+      "C_partial_on_partner_marginal": {
+        "estimate": 0.3096,
+        "arch_bootstrap_95": [
+          -0.2776,
+          0.6451
+        ]
+      },
+      "rho_cost_negated": {
+        "estimate": 0.3717,
+        "arch_bootstrap_95": [
+          -0.207,
+          0.7873
+        ]
+      },
+      "partner_quality": {
+        "estimate": 0.5516,
+        "arch_bootstrap_95": [
+          0.0312,
+          0.7517
+        ]
+      },
+      "rules": {
+        "rule_mean_rescued": {
+          "least_ceiling_overlap": 14.933,
+          "least_weighted_dependence": 15.6,
+          "best_partner_marginal": 15.8,
+          "two_stage": 16.533,
+          "random": 13.615,
+          "oracle": 17.156
+        },
+        "least_ceiling_overlap_minus_best_marginal__rescued": {
+          "mean": -0.867,
+          "arch_95": [
+            -2.334,
+            0.445
+          ],
+          "anchors_favouring_first": 4
+        },
+        "least_ceiling_overlap_minus_best_marginal__mv_net": {
+          "mean": 0.344,
+          "arch_95": [
+            -1.611,
+            2.434
+          ],
+          "anchors_favouring_first": 4
+        },
+        "least_ceiling_overlap_minus_best_marginal__incr_fp": {
+          "mean": 65.933,
+          "arch_95": [
+            41.732,
+            89.981
+          ],
+          "anchors_favouring_first": 9
+        },
+        "two_stage_minus_best_marginal__rescued": {
+          "mean": 0.733,
+          "arch_95": [
+            0.256,
+            1.267
+          ],
+          "anchors_favouring_first": 6
+        },
+        "two_stage_minus_best_marginal__mv_net": {
+          "mean": 3.089,
+          "arch_95": [
+            1.533,
+            4.511
+          ],
+          "anchors_favouring_first": 7
+        },
+        "two_stage_minus_best_marginal__incr_fp": {
+          "mean": 43.467,
+          "arch_95": [
+            14.818,
+            76.291
+          ],
+          "anchors_favouring_first": 6
+        },
+        "picks": {
+          "densenet121_binary": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "densenet121_5class": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "retfound_binary",
+            "two_stage": "retfound_binary"
+          },
+          "efficientnet_b3_binary": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "efficientnet_b3_5class": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "resnet50_binary": {
+            "least_ceiling_overlap": "retfound_binary",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "resnet50_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "vit_base_binary": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "retfound_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "vit_base_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "retfound_binary"
+          },
+          "retfound_binary": {
+            "least_ceiling_overlap": "efficientnet_b3_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_binary",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "densenet121_5class"
+          }
+        }
+      }
+    },
+    "swap_B_to_A": {
+      "C": {
+        "estimate": 0.3952,
+        "arch_bootstrap_95": [
+          -0.1316,
+          0.7958
+        ],
+        "permutation_null_95": [
+          -0.1977,
+          0.1965
+        ],
+        "supported": false
+      },
+      "C_partial_on_partner_marginal": {
+        "estimate": 0.4728,
+        "arch_bootstrap_95": [
+          -0.0875,
+          0.8459
+        ]
+      },
+      "rho_cost_negated": {
+        "estimate": 0.6168,
+        "arch_bootstrap_95": [
+          0.1801,
+          0.8774
+        ]
+      },
+      "partner_quality": {
+        "estimate": 0.328,
+        "arch_bootstrap_95": [
+          -0.2318,
+          0.6394
+        ]
+      },
+      "rules": {
+        "rule_mean_rescued": {
+          "least_ceiling_overlap": 13.04,
+          "least_weighted_dependence": 13.545,
+          "best_partner_marginal": 12.889,
+          "two_stage": 13.354,
+          "random": 12.386,
+          "oracle": 15.202
+        },
+        "least_ceiling_overlap_minus_best_marginal__rescued": {
+          "mean": 0.152,
+          "arch_95": [
+            -1.394,
+            1.818
+          ],
+          "anchors_favouring_first": 6
+        },
+        "least_ceiling_overlap_minus_best_marginal__mv_net": {
+          "mean": -2.535,
+          "arch_95": [
+            -4.445,
+            -0.757
+          ],
+          "anchors_favouring_first": 2
+        },
+        "least_ceiling_overlap_minus_best_marginal__incr_fp": {
+          "mean": 65.061,
+          "arch_95": [
+            7.386,
+            133.892
+          ],
+          "anchors_favouring_first": 7
+        },
+        "two_stage_minus_best_marginal__rescued": {
+          "mean": 0.465,
+          "arch_95": [
+            -0.758,
+            1.869
+          ],
+          "anchors_favouring_first": 2
+        },
+        "two_stage_minus_best_marginal__mv_net": {
+          "mean": -1.242,
+          "arch_95": [
+            -2.313,
+            -0.292
+          ],
+          "anchors_favouring_first": 1
+        },
+        "two_stage_minus_best_marginal__incr_fp": {
+          "mean": 40.182,
+          "arch_95": [
+            -20.731,
+            117.167
+          ],
+          "anchors_favouring_first": 2
+        },
+        "picks": {
+          "densenet121_binary": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_adversarial",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_5class"
+          },
+          "densenet121_5class": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_adversarial",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_5class"
+          },
+          "efficientnet_b3_binary": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_adversarial",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_5class"
+          },
+          "efficientnet_b3_5class": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_adversarial",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_5class"
+          },
+          "resnet50_binary": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "densenet121_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "resnet50_5class": {
+            "least_ceiling_overlap": "densenet121_binary",
+            "least_weighted_dependence": "densenet121_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "vit_base_binary": {
+            "least_ceiling_overlap": "densenet121_binary",
+            "least_weighted_dependence": "densenet121_binary",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "vit_base_5class": {
+            "least_ceiling_overlap": "densenet121_binary",
+            "least_weighted_dependence": "densenet121_binary",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_binary": {
+            "least_ceiling_overlap": "densenet121_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_5class": {
+            "least_ceiling_overlap": "densenet121_5class",
+            "least_weighted_dependence": "efficientnet_b3_binary",
+            "best_partner_marginal": "densenet121_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_adversarial": {
+            "least_ceiling_overlap": "densenet121_5class",
+            "least_weighted_dependence": "densenet121_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          }
+        }
+      }
+    },
+    "transport_eyepacs_predictors_to_DDR_B": {
+      "C": {
+        "estimate": 0.2929,
+        "arch_bootstrap_95": [
+          -0.1782,
+          0.7266
+        ],
+        "permutation_null_95": [
+          -0.1967,
+          0.1935
+        ],
+        "supported": false
+      },
+      "C_partial_on_partner_marginal": {
+        "estimate": 0.4146,
+        "arch_bootstrap_95": [
+          -0.2058,
+          0.8052
+        ]
+      },
+      "rho_cost_negated": {
+        "estimate": 0.3458,
+        "arch_bootstrap_95": [
+          -0.1717,
+          0.7791
+        ]
+      },
+      "partner_quality": {
+        "estimate": 0.463,
+        "arch_bootstrap_95": [
+          -0.0349,
+          0.728
+        ]
+      },
+      "rules": {
+        "rule_mean_rescued": {
+          "least_ceiling_overlap": 13.96,
+          "least_weighted_dependence": 13.202,
+          "best_partner_marginal": 15.515,
+          "two_stage": 16.03,
+          "random": 13.158,
+          "oracle": 16.384
+        },
+        "least_ceiling_overlap_minus_best_marginal__rescued": {
+          "mean": -1.556,
+          "arch_95": [
+            -3.789,
+            0.719
+          ],
+          "anchors_favouring_first": 3
+        },
+        "least_ceiling_overlap_minus_best_marginal__mv_net": {
+          "mean": -4.455,
+          "arch_95": [
+            -6.96,
+            -1.808
+          ],
+          "anchors_favouring_first": 0
+        },
+        "least_ceiling_overlap_minus_best_marginal__incr_fp": {
+          "mean": 77.515,
+          "arch_95": [
+            17.818,
+            143.573
+          ],
+          "anchors_favouring_first": 9
+        },
+        "two_stage_minus_best_marginal__rescued": {
+          "mean": 0.515,
+          "arch_95": [
+            -0.525,
+            1.606
+          ],
+          "anchors_favouring_first": 3
+        },
+        "two_stage_minus_best_marginal__mv_net": {
+          "mean": -1.202,
+          "arch_95": [
+            -2.273,
+            -0.283
+          ],
+          "anchors_favouring_first": 2
+        },
+        "two_stage_minus_best_marginal__incr_fp": {
+          "mean": 84.465,
+          "arch_95": [
+            27.32,
+            148.436
+          ],
+          "anchors_favouring_first": 9
+        },
+        "picks": {
+          "densenet121_binary": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "densenet121_5class": {
+            "least_ceiling_overlap": "retfound_5class",
+            "least_weighted_dependence": "retfound_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_5class"
+          },
+          "efficientnet_b3_binary": {
+            "least_ceiling_overlap": "retfound_adversarial",
+            "least_weighted_dependence": "retfound_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "efficientnet_b3_5class": {
+            "least_ceiling_overlap": "resnet50_5class",
+            "least_weighted_dependence": "resnet50_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "resnet50_binary": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_adversarial"
+          },
+          "resnet50_5class": {
+            "least_ceiling_overlap": "efficientnet_b3_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "retfound_5class"
+          },
+          "vit_base_binary": {
+            "least_ceiling_overlap": "resnet50_5class",
+            "least_weighted_dependence": "resnet50_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "vit_base_5class": {
+            "least_ceiling_overlap": "densenet121_binary",
+            "least_weighted_dependence": "resnet50_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_binary": {
+            "least_ceiling_overlap": "densenet121_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_5class": {
+            "least_ceiling_overlap": "densenet121_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "retfound_binary",
+            "two_stage": "densenet121_5class"
+          },
+          "retfound_adversarial": {
+            "least_ceiling_overlap": "densenet121_5class",
+            "least_weighted_dependence": "efficientnet_b3_5class",
+            "best_partner_marginal": "retfound_5class",
+            "two_stage": "densenet121_5class"
+          }
+        }
+      }
+    }
+  },
+  "pre_registered_prediction": "Fixed 25% sits below DDR referable prevalence (about 45%), the regime where APTOS showed most pairs losing at matched volume. Predicted: no benefit at fixed 25% matched volume; benefit at the prevalence-relative operating point.",
+  "notes": [
+    "per_pair_mean is the mean over 110 ordered pairs x 9 seed combinations of per-pair counts over the evaluated images",
+    "cluster intervals resample the 332 filename groups with referral sets fixed at full-sample thresholds",
+    "mv_net_vs_better compares the ensemble with the better single reader of each combination (v3-style comparator)"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "plan": "skin exploratory: is the training-data effect symmetric across training sources?",
+  "written": "2026-10-03, after the BRSET exploratory results showed the retinal effect came only from EyePACS-trained pairs",
+  "status": "exploratory; changes no confirmatory result",
+  "analysis": "different-architecture pairs only, split into HAM10000-only, BCN20000-only and mixed pairs; shared-miss ratio for HIBA melanoma, HIBA any cancer and PAD any cancer; each same-source group minus mixed, with patient-cluster bootstrap; plus a same-source effect adjusted for the pair's mean miss count and miss-count gap; model AUC by training source",
+  "interpretation_fixed_in_advance": "effect from both sources: the BRSET asymmetry is likely specific to the weaker DDR models; effect from one source only: one-sidedness is general and the claim is stated that way in both domains"
+}

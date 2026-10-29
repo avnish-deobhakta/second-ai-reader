@@ -1,0 +1,20 @@
+{
+  "plan": "ballistics, full-recipe zoo (supersedes the short-recipe pilot and its amendment)",
+  "written": "2026-09-26, before any full-recipe zoo model is trained",
+  "why": "The short-recipe pilot was inconclusive: after amendment 1 the calibration gate reached 0.586 against a 0.600 threshold. Rather than move the threshold, the proxy is dropped: every zoo model is trained with its real recipe, so no calibration gate is needed.",
+  "zoo": "the same 22 backbones as ballistics_pilot_plan.json, all included, including DINOv2 and CLIP ViT-B",
+  "training": {
+    "cnn": "canonical CNN recipe: AdamW lr 1e-4, wd 1e-4, cosine, batch 32, 15 epochs, best-validation-AUC checkpoint",
+    "vit_family_and_mixer_and_beit": "stabilized ViT recipe: AdamW lr 3e-5, wd 0.05, 5-epoch warm-up then cosine, layer-wise LR decay 0.65 over the transformer blocks, clip 1.0, batch 32, 15 epochs",
+    "swin": "stabilized ViT recipe without layer-wise decay (Swin has no single 12-block stack), recorded as a deviation",
+    "retfound": "canonical RETFound recipe: batch 8, lr 5e-5, wd 0.05, layer-wise decay 0.65, classifier at 10x lr, clip 1.0, cosine, 15 epochs",
+    "seed": "one seed per model (20261501)"
+  },
+  "inclusion": "All 22 models are included in the primary analysis. No model is excluded on validation AUC. Any model with validation AUC below 0.80 is flagged, and a pre-specified sensitivity analysis repeats the primary results without flagged models.",
+  "reproducibility_check_descriptive": "For the 8 models that also exist as fully trained paper models (different seeds), the rank agreement of pairwise severe co-miss between this zoo and the paper models is reported as a measure of seed-level reproducibility of pair structure. It is descriptive, not a gate.",
+  "fingerprints": "identical to ballistics_pilot_plan.json (frequency, channel and degradation response vectors; occlusion maps; trained and pretrained CKA; pretrained feature shifts), on the same 2,000 unlabelled confirmation-set images",
+  "outcomes": "primary: pairwise co-miss ratio for grade 3 or worse at 25% referral on the EyePACS confirmation set; secondary: matched-volume net severe rescue, PDR and referable co-miss",
+  "analysis": "identical to ballistics_pilot_plan_amendment1.json: partial rank correlations controlling for pair mean and gap in severe misses with model-level bootstrap; within strength tertiles; leave-one-family-out with increment over accuracy; clinical partner-choice test with 10% (primary) and 25% (secondary) tiers",
+  "what_counts_as_a_signal": "a label-free fingerprint whose strength-adjusted association with severe co-miss has a model-bootstrap interval excluding zero, and a fingerprint model that improves on accuracy-only prediction in held-out families; clinically, a fingerprint-chosen partner rescuing more severe disease at matched volume than the strongest partner",
+  "status": "exploratory (confirmation set previously opened under lock v3); confirmatory test reserved for BRSET"
+}

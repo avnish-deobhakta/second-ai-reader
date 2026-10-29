@@ -1,0 +1,14 @@
+{
+  "plan": "dermatology robustness: benefit of a second reader across all referral shares",
+  "written": "2026-09-27, before this analysis is run",
+  "status": "exploratory robustness check (HIBA and PAD already opened under derm_lock_v1)",
+  "question": "Does the matched-volume benefit of a second reader hold across referral shares, or only at the prevalence-based share (1.31 x prevalence)?",
+  "grid": "referral share f from 0.20 to 0.90 in steps of 0.05 (15 values), each model and each pair referring the same share",
+  "pairs": {
+    "all_pairs": "every ordered pair of different architecture, all training-run combinations (the H1 definition)",
+    "strongest_partner": "for each deployed model, the different-architecture partner with the highest internal validation AUC (from training_record.json), so the choice uses no test labels"
+  },
+  "outcomes": ["HIBA melanoma", "HIBA any skin cancer", "PAD any skin cancer"],
+  "measure": "relative reduction in missed cases from the deployed model to the pair at the same share, pooled over pairs; patient-cluster bootstrap (1,000); report whether each interval excludes zero",
+  "reporting": "one curve per outcome, with the prevalence-based share marked; the result is reported whatever it shows"
+}

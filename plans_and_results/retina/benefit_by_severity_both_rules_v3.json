@@ -1,0 +1,89 @@
+{
+  "generated_utc": "2026-09-22T23:30:28.930092+00:00",
+  "status": "EXPLORATORY; supersedes notebook 11; pre-specified primary unchanged",
+  "burden": 0.25,
+  "weights": {
+    "4": 500,
+    "3": 200,
+    "2": 15
+  },
+  "by_grade": [
+    {
+      "grade": "grade 4 (PDR)",
+      "eyes": 328,
+      "baseline_miss_rate": 0.0416,
+      "avoided_matched": 3.2,
+      "avoided_union_same_volume": 2.27,
+      "weighted_matched": 1602.0,
+      "weighted_union": 1133.3
+    },
+    {
+      "grade": "grade 3 (severe NPDR)",
+      "eyes": 384,
+      "baseline_miss_rate": 0.0616,
+      "avoided_matched": 1.59,
+      "avoided_union_same_volume": 1.37,
+      "weighted_matched": 317.2,
+      "weighted_union": 274.3
+    },
+    {
+      "grade": "grade 2 (moderate NPDR)",
+      "eyes": 2373,
+      "baseline_miss_rate": 0.3403,
+      "avoided_matched": 45.99,
+      "avoided_union_same_volume": 47.48,
+      "weighted_matched": 689.8,
+      "weighted_union": 712.2
+    }
+  ],
+  "intervals": {
+    "matched_grade4": [
+      1.31,
+      4.15
+    ],
+    "matched_grade3": [
+      0.32,
+      2.98
+    ],
+    "matched_grade2": [
+      34.43,
+      55.27
+    ],
+    "union_grade4": [
+      0.5,
+      3.74
+    ],
+    "union_grade3": [
+      -0.27,
+      3.03
+    ],
+    "union_grade2": [
+      38.12,
+      58.16
+    ]
+  },
+  "union_extra_referrals_mean": 1196.3,
+  "clinical": {
+    "screened_patients": 7897,
+    "union_extra_referrals_per_1000": 151.5,
+    "matched": {
+      "grade2_avoided_per_1000_screened": 5.823,
+      "grade3_avoided_per_1000_screened": 0.201,
+      "grade4_avoided_per_1000_screened": 0.406,
+      "pdr_per_100000_screened": 40.6,
+      "number_needed_to_screen_per_pdr_avoided": 2465
+    },
+    "union": {
+      "grade2_avoided_per_1000_screened": 6.012,
+      "grade3_avoided_per_1000_screened": 0.174,
+      "grade4_avoided_per_1000_screened": 0.287,
+      "pdr_per_100000_screened": 28.7,
+      "number_needed_to_screen_per_pdr_avoided": 3484
+    },
+    "note": "A missed PDR at one screening round is not equivalent to blindness (rescreening, symptomatic presentation, later treatment), so any QALY figure is an upper bound."
+  },
+  "definitions": {
+    "matched": "top-R by max percentile rank; truncated union; misses can rise",
+    "union": "refer if either refers; misses can only fall; baseline is the better constituent given the same enlarged volume"
+  }
+}

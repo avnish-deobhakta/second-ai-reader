@@ -1,0 +1,17 @@
+{
+  "plan": "enriched calibration: choosing a partner from a few hundred known severe cases",
+  "written": "2026-09-26, after the random-sample partner-choice simulation and before this simulation is run",
+  "status": "exploratory; same previously opened sets and models as partner_choice_calibration_plan.json",
+  "motivation": "In the random-sample simulation, choosing by referable AUC failed at DDR (worse than random) and counting severe misses needed about 2,000 random images; the limiting factor is the number of severe cases, so a site should grade an enriched sample (known severe cases from its records plus controls).",
+  "calibration_sample": "k eyes with grade 3 or worse plus k eyes with grade 0 to 2, drawn at random (EyePACS by patient is not enforced for this case-control draw; eyes are drawn individually), for k in 25, 50, 100, 200; 200 draws each",
+  "setup": "identical to the random-sample simulation: each model in turn is deployed; eligible partners are of a different family; referral thresholds and matched-volume ensembles use the full set's unlabelled scores (what a site would set from its referral rate); outcome is net severe eyes rescued at matched volume on eyes outside the calibration sample",
+  "rules": {
+    "enriched_rescue": "partner with the most net severe rescue on the sampled severe eyes for this deployed model (ties broken by union rescue, then at random)",
+    "enriched_severe_misses": "partner with the fewest misses among the sampled severe eyes",
+    "enriched_auc": "partner with the highest AUC for severe vs non-severe in the case-control sample",
+    "random_sample_same_effort": "reference: a random sample of 2k eyes, partner with the fewest severe misses (same grading effort as the enriched sample)",
+    "benchmarks": "random, true strongest (fewest severe misses on the full set), oracle"
+  },
+  "outputs": "share of the true-strongest advantage over random and of the oracle advantage, by rule, k and site; how often each rule picks the true strongest",
+  "what_counts_as_useful": "a k at which an enriched rule captures most (80% or more) of the true-strongest benefit at both sites"
+}

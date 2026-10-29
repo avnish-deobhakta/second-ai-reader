@@ -1,0 +1,100 @@
+{
+  "generated_utc": "2026-09-27T16:46:41.139397+00:00",
+  "plan": "hiba_image_type_plan.json",
+  "status": "exploratory sensitivity",
+  "image_type_counts": {
+    "dermoscopic": 1270,
+    "clinical: overview": 340,
+    "clinical: close-up": 6
+  },
+  "results": {
+    "dermoscopic": {
+      "images": 1270,
+      "patients": 584,
+      "melanoma": 194,
+      "cancer": 533,
+      "referral_share": 0.5498,
+      "auc_median": 0.9064,
+      "auc_range": [
+        0.8722,
+        0.9357
+      ],
+      "H1_melanoma": {
+        "relative_reduction": 0.1153,
+        "ci95": [
+          0.0582,
+          0.191
+        ]
+      },
+      "H3_melanoma": {
+        "same_data_ratio": 4.104,
+        "different_data_ratio": 3.531,
+        "same_minus_different": 0.573,
+        "ci95": [
+          0.2257,
+          1.1622
+        ]
+      },
+      "H1_any cancer": {
+        "relative_reduction": 0.2129,
+        "ci95": [
+          0.1576,
+          0.2766
+        ]
+      },
+      "H3_any cancer": {
+        "same_data_ratio": 5.203,
+        "different_data_ratio": 4.164,
+        "same_minus_different": 1.039,
+        "ci95": [
+          0.5935,
+          1.6682
+        ]
+      }
+    },
+    "clinical": {
+      "images": 346,
+      "patients": 244,
+      "melanoma": 59,
+      "cancer": 218,
+      "referral_share": 0.8254,
+      "auc_median": 0.7234,
+      "auc_range": [
+        0.6055,
+        0.8166
+      ],
+      "H1_melanoma": {
+        "relative_reduction": 0.0516,
+        "ci95": [
+          -0.0441,
+          0.155
+        ]
+      },
+      "H3_melanoma": {
+        "same_data_ratio": 2.225,
+        "different_data_ratio": 1.985,
+        "same_minus_different": 0.24,
+        "ci95": [
+          -0.0041,
+          0.6647
+        ]
+      },
+      "H1_any cancer": {
+        "relative_reduction": 0.1435,
+        "ci95": [
+          0.0745,
+          0.2197
+        ]
+      },
+      "H3_any cancer": {
+        "same_data_ratio": 3.367,
+        "different_data_ratio": 2.436,
+        "same_minus_different": 0.931,
+        "ci95": [
+          0.4999,
+          1.6525
+        ]
+      }
+    }
+  }
+}

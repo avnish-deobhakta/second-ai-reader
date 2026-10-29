@@ -1,0 +1,182 @@
+{
+  "generated_utc": "2026-09-25T14:27:30.687756+00:00",
+  "status": "exploratory follow-up to pilot_plan_paper2_aptos.json; outcome changed after the pre-specified PDR analysis hit a floor",
+  "f": 0.5319,
+  "events": {
+    "referable": 1487,
+    "grade3plus": 488,
+    "pdr": 295
+  },
+  "co_miss_ratio_by_pair_type": {
+    "referable": {
+      "seed_siblings": {
+        "mean": 36.3,
+        "ci95": [
+          29.09,
+          48.35
+        ]
+      },
+      "diff_data_same_arch": {
+        "mean": 18.22,
+        "ci95": [
+          11.4,
+          25.18
+        ]
+      },
+      "same_data_diff_arch": {
+        "mean": 13.45,
+        "ci95": [
+          10.77,
+          16.99
+        ]
+      },
+      "diff_data_diff_arch": {
+        "mean": 8.21,
+        "ci95": [
+          5.76,
+          11.02
+        ]
+      },
+      "same_data_diff_arch_minus_diff_data_diff_arch": {
+        "mean": 5.24,
+        "ci95": [
+          2.46,
+          8.67
+        ]
+      },
+      "diff_data_same_arch_minus_same_data_diff_arch": {
+        "mean": 4.77,
+        "ci95": [
+          -2.73,
+          12.54
+        ]
+      },
+      "diff_data_same_arch_minus_diff_data_diff_arch": {
+        "mean": 10.01,
+        "ci95": [
+          3.41,
+          16.64
+        ]
+      }
+    },
+    "grade3plus": {
+      "seed_siblings": {
+        "mean": 53.51,
+        "ci95": [
+          24.92,
+          93.75
+        ]
+      },
+      "diff_data_same_arch": {
+        "mean": 37.03,
+        "ci95": [
+          10.78,
+          62.65
+        ]
+      },
+      "same_data_diff_arch": {
+        "mean": 11.84,
+        "ci95": [
+          8.21,
+          20.65
+        ]
+      },
+      "diff_data_diff_arch": {
+        "mean": 7.26,
+        "ci95": [
+          3.46,
+          12.15
+        ]
+      },
+      "same_data_diff_arch_minus_diff_data_diff_arch": {
+        "mean": 4.58,
+        "ci95": [
+          0.92,
+          11.88
+        ]
+      },
+      "diff_data_same_arch_minus_same_data_diff_arch": {
+        "mean": 25.19,
+        "ci95": [
+          -3.63,
+          49.55
+        ]
+      },
+      "diff_data_same_arch_minus_diff_data_diff_arch": {
+        "mean": 29.76,
+        "ci95": [
+          4.43,
+          53.36
+        ]
+      }
+    },
+    "pdr": {
+      "seed_siblings": {
+        "mean": 24.74,
+        "ci95": [
+          15.6,
+          51.65
+        ]
+      },
+      "diff_data_same_arch": {
+        "mean": 15.79,
+        "ci95": [
+          6.75,
+          31.1
+        ]
+      },
+      "same_data_diff_arch": {
+        "mean": 8.79,
+        "ci95": [
+          6.07,
+          16.4
+        ]
+      },
+      "diff_data_diff_arch": {
+        "mean": 5.09,
+        "ci95": [
+          2.31,
+          11.21
+        ]
+      },
+      "same_data_diff_arch_minus_diff_data_diff_arch": {
+        "mean": 3.7,
+        "ci95": [
+          0.64,
+          8.58
+        ]
+      },
+      "diff_data_same_arch_minus_same_data_diff_arch": {
+        "mean": 7.0,
+        "ci95": [
+          -4.61,
+          21.27
+        ]
+      },
+      "diff_data_same_arch_minus_diff_data_diff_arch": {
+        "mean": 10.7,
+        "ci95": [
+          -0.19,
+          25.93
+        ]
+      }
+    }
+  },
+  "referable_benefit_by_pair_type": {
+    "diff_data_diff_arch": {
+      "rescued": 21.09,
+      "mv_net": 14.83,
+      "incr_fp": 151.35
+    },
+    "diff_data_same_arch": {
+      "rescued": 16.62,
+      "mv_net": 9.21,
+      "incr_fp": 129.6
+    },
+    "same_data_diff_arch": {
+      "rescued": 19.64,
+      "mv_net": 12.34,
+      "incr_fp": 141.41
+    }
+  }
+}

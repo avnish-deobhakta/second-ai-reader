@@ -1,0 +1,424 @@
+{
+  "generated_utc": "2026-09-23T19:41:35.633873+00:00",
+  "status": "exploratory; rule chosen after manuscript_tables_v2; all outcome data previously opened under locks v4 and v5.1",
+  "predictor": "Pearson correlation of binary misclassification vectors at the site operating point, mean over 9 seed combinations",
+  "results": {
+    "EyePACS_est_to_conf": {
+      "rule_means": {
+        "least_error_correlation": {
+          "rescued": 14.576,
+          "mv_net": 9.626,
+          "incr_fp": 1158.606
+        },
+        "two_stage_error_correlation": {
+          "rescued": 14.697,
+          "mv_net": 9.445,
+          "incr_fp": 1117.97
+        },
+        "best_marginal": {
+          "rescued": 13.848,
+          "mv_net": 10.949,
+          "incr_fp": 927.394
+        },
+        "random": {
+          "rescued": 12.754,
+          "mv_net": 6.64,
+          "incr_fp": 1074.855
+        },
+        "oracle": {
+          "rescued": 16.031
+        }
+      },
+      "fraction_of_oracle_gain_rescued": {
+        "least_error_correlation": 0.556,
+        "two_stage_error_correlation": 0.593,
+        "best_marginal": 0.334
+      },
+      "paired_vs_best_marginal": {
+        "least_error_correlation_minus_best_marginal__rescued": {
+          "mean": 0.727,
+          "arch_95": [
+            -0.232,
+            1.707
+          ],
+          "anchors_better": 5
+        },
+        "least_error_correlation_minus_best_marginal__mv_net": {
+          "mean": -1.323,
+          "arch_95": [
+            -2.848,
+            -0.101
+          ],
+          "anchors_better": 2
+        },
+        "least_error_correlation_minus_best_marginal__incr_fp": {
+          "mean": 231.212,
+          "arch_95": [
+            40.34,
+            437.202
+          ],
+          "anchors_better": 0
+        },
+        "two_stage_error_correlation_minus_best_marginal__rescued": {
+          "mean": 0.849,
+          "arch_95": [
+            -0.06,
+            1.748
+          ],
+          "anchors_better": 5
+        },
+        "two_stage_error_correlation_minus_best_marginal__mv_net": {
+          "mean": -1.505,
+          "arch_95": [
+            -2.9,
+            -0.343
+          ],
+          "anchors_better": 1
+        },
+        "two_stage_error_correlation_minus_best_marginal__incr_fp": {
+          "mean": 190.576,
+          "arch_95": [
+            14.041,
+            372.233
+          ],
+          "anchors_better": 0
+        }
+      },
+      "picks": {
+        "densenet121_binary": {
+          "least_error_correlation": "retfound_5class",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "densenet121_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "retfound_5class"
+        },
+        "efficientnet_b3_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "retfound_5class"
+        },
+        "efficientnet_b3_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "retfound_5class"
+        },
+        "resnet50_binary": {
+          "least_error_correlation": "retfound_5class",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "resnet50_5class": {
+          "least_error_correlation": "retfound_5class",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "vit_base_binary": {
+          "least_error_correlation": "efficientnet_b3_5class",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "vit_base_5class": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "retfound_binary": {
+          "least_error_correlation": "efficientnet_b3_5class",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "retfound_5class": {
+          "least_error_correlation": "efficientnet_b3_5class",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_binary"
+        },
+        "retfound_adversarial": {
+          "least_error_correlation": "efficientnet_b3_5class",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        }
+      }
+    },
+    "DDR_A_to_B": {
+      "rule_means": {
+        "least_error_correlation": {
+          "rescued": 14.919,
+          "mv_net": 9.111,
+          "incr_fp": 386.273
+        },
+        "two_stage_error_correlation": {
+          "rescued": 15.949,
+          "mv_net": 10.02,
+          "incr_fp": 398.758
+        },
+        "best_marginal": {
+          "rescued": 15.152,
+          "mv_net": 7.667,
+          "incr_fp": 348.667
+        },
+        "random": {
+          "rescued": 13.158,
+          "mv_net": 7.014,
+          "incr_fp": 359.923
+        },
+        "oracle": {
+          "rescued": 16.384
+        }
+      },
+      "fraction_of_oracle_gain_rescued": {
+        "least_error_correlation": 0.546,
+        "two_stage_error_correlation": 0.865,
+        "best_marginal": 0.618
+      },
+      "paired_vs_best_marginal": {
+        "least_error_correlation_minus_best_marginal__rescued": {
+          "mean": -0.232,
+          "arch_95": [
+            -1.374,
+            0.97
+          ],
+          "anchors_better": 5
+        },
+        "least_error_correlation_minus_best_marginal__mv_net": {
+          "mean": 1.444,
+          "arch_95": [
+            -0.061,
+            3.051
+          ],
+          "anchors_better": 8
+        },
+        "least_error_correlation_minus_best_marginal__incr_fp": {
+          "mean": 37.606,
+          "arch_95": [
+            4.333,
+            78.372
+          ],
+          "anchors_better": 6
+        },
+        "two_stage_error_correlation_minus_best_marginal__rescued": {
+          "mean": 0.798,
+          "arch_95": [
+            0.273,
+            1.455
+          ],
+          "anchors_better": 6
+        },
+        "two_stage_error_correlation_minus_best_marginal__mv_net": {
+          "mean": 2.354,
+          "arch_95": [
+            0.838,
+            3.96
+          ],
+          "anchors_better": 6
+        },
+        "two_stage_error_correlation_minus_best_marginal__incr_fp": {
+          "mean": 50.091,
+          "arch_95": [
+            16.919,
+            86.257
+          ],
+          "anchors_better": 0
+        }
+      },
+      "picks": {
+        "densenet121_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "densenet121_5class"
+        },
+        "densenet121_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "retfound_binary"
+        },
+        "efficientnet_b3_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "densenet121_5class"
+        },
+        "efficientnet_b3_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "densenet121_5class"
+        },
+        "resnet50_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "densenet121_5class"
+        },
+        "resnet50_5class": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "retfound_adversarial",
+          "best_marginal": "densenet121_5class"
+        },
+        "vit_base_binary": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "densenet121_5class"
+        },
+        "vit_base_5class": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "densenet121_5class"
+        },
+        "retfound_binary": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "densenet121_5class"
+        },
+        "retfound_5class": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "densenet121_5class"
+        },
+        "retfound_adversarial": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "densenet121_5class"
+        }
+      }
+    },
+    "DDR_B_to_A": {
+      "rule_means": {
+        "least_error_correlation": {
+          "rescued": 14.152,
+          "mv_net": 6.04,
+          "incr_fp": 501.869
+        },
+        "two_stage_error_correlation": {
+          "rescued": 13.657,
+          "mv_net": 6.596,
+          "incr_fp": 461.525
+        },
+        "best_marginal": {
+          "rescued": 12.889,
+          "mv_net": 7.232,
+          "incr_fp": 410.758
+        },
+        "random": {
+          "rescued": 12.386,
+          "mv_net": 4.515,
+          "incr_fp": 425.903
+        },
+        "oracle": {
+          "rescued": 15.202
+        }
+      },
+      "fraction_of_oracle_gain_rescued": {
+        "least_error_correlation": 0.627,
+        "two_stage_error_correlation": 0.451,
+        "best_marginal": 0.179
+      },
+      "paired_vs_best_marginal": {
+        "least_error_correlation_minus_best_marginal__rescued": {
+          "mean": 1.263,
+          "arch_95": [
+            -0.152,
+            2.849
+          ],
+          "anchors_better": 9
+        },
+        "least_error_correlation_minus_best_marginal__mv_net": {
+          "mean": -1.192,
+          "arch_95": [
+            -2.818,
+            0.01
+          ],
+          "anchors_better": 3
+        },
+        "least_error_correlation_minus_best_marginal__incr_fp": {
+          "mean": 91.111,
+          "arch_95": [
+            33.41,
+            169.805
+          ],
+          "anchors_better": 1
+        },
+        "two_stage_error_correlation_minus_best_marginal__rescued": {
+          "mean": 0.768,
+          "arch_95": [
+            -0.343,
+            2.243
+          ],
+          "anchors_better": 2
+        },
+        "two_stage_error_correlation_minus_best_marginal__mv_net": {
+          "mean": -0.636,
+          "arch_95": [
+            -1.536,
+            0.071
+          ],
+          "anchors_better": 1
+        },
+        "two_stage_error_correlation_minus_best_marginal__incr_fp": {
+          "mean": 50.768,
+          "arch_95": [
+            -4.404,
+            129.686
+          ],
+          "anchors_better": 2
+        }
+      },
+      "picks": {
+        "densenet121_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "densenet121_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "efficientnet_b3_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "efficientnet_b3_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "resnet50_binary": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "resnet50_5class": {
+          "least_error_correlation": "retfound_adversarial",
+          "two_stage_error_correlation": "retfound_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "vit_base_binary": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "vit_base_5class": {
+          "least_error_correlation": "densenet121_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "retfound_binary": {
+          "least_error_correlation": "efficientnet_b3_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        },
+        "retfound_5class": {
+          "least_error_correlation": "efficientnet_b3_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "densenet121_5class"
+        },
+        "retfound_adversarial": {
+          "least_error_correlation": "efficientnet_b3_binary",
+          "two_stage_error_correlation": "densenet121_5class",
+          "best_marginal": "retfound_5class"
+        }
+      }
+    }
+  }
+}

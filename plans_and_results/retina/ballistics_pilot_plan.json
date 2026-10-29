@@ -1,0 +1,35 @@
+{
+  "plan": "ballistics pilot: can measurable properties of how a model sees predict which partner rescues its missed severe disease?",
+  "written": "2026-09-26, before any zoo model is trained or any fingerprint measured",
+  "status": "exploratory on EyePACS (confirmation set previously opened under lock v3); a confirmatory test is reserved for BRSET",
+  "clinical_target": "severe disease (grade 3 or worse) missed by a deployed model and rescued by an added partner at matched referral volume; PDR secondary. Generic similarity is not the outcome.",
+  "prior_art_positioning": "General ML shows training-methodology divergence (Gontijo-Lopes et al., ICLR 2022) and deliberately different feature priors (shape vs texture) yield less correlated errors and better ensembles on natural images. DR ensemble papers assert architecture diversity helps but do not measure or predict error dependence; head-to-head commercial comparisons (Lee et al., Diabetes Care 2021) compare accuracy, not joint failure. No work found using measured behavioural fingerprints to choose partners for rescuing sight-threatening disease.",
+  "zoo": {
+    "size": "about 24 timm backbones, one seed each",
+    "families": ["ResNet/ResNeXt", "RegNet", "DenseNet", "EfficientNet", "MobileNet", "ConvNeXt", "Swin", "ViT supervised", "DeiT", "BEiT", "DINOv2", "CLIP ViT", "MLP-Mixer", "RETFound"],
+    "training": "EyePACS v2 train split; one short, identical recipe per family (CNN: AdamW 1e-4, cosine; transformers: stabilized ViT recipe with warm-up and layer-wise decay); 5 epochs; best-validation checkpoint",
+    "includes_fully_trained_anchors": ["densenet121", "efficientnet_b3", "resnet50", "vit_base_patch16_224", "retfound"]
+  },
+  "calibration_gate": "For the anchors, pairwise severe co-miss under the cheap recipe must rank-correlate at least 0.6 with pairwise severe co-miss of the fully trained models on the confirmation set. If not, the cheap zoo is not a valid proxy and the pilot stops.",
+  "fingerprints": {
+    "measured_on": "2,000 unlabelled confirmation-set images; each fingerprint computed for the pretrained backbone (before retinal training, via frozen features) and for the trained model (via its referral score)",
+    "frequency_reliance": "change in output under low-pass (Gaussian blur, several radii) and high-pass (image minus blur) versions",
+    "attention_location": "occlusion maps (8 x 8 grid) on 200 images; pairwise map correlation",
+    "channel_reliance": "change in output when each colour channel is replaced by its mean",
+    "degradation_profile": "change in output under blur, JPEG compression, gamma shifts, noise, and vignetting (uneven illumination)",
+    "representation_similarity": "linear CKA of penultimate features"
+  },
+  "outcomes": {
+    "primary": "pairwise co-miss ratio for grade 3 or worse at 25% referral",
+    "secondary": ["matched-volume net severe eyes rescued (ordered pairs)", "PDR co-miss ratio", "latent correlation of referable misses"]
+  },
+  "analyses": {
+    "prediction": "pair-level regression of the primary outcome on fingerprint distances, with each model's accuracy and the pair's accuracy gap as covariates; inference by model-level resampling (pairs sharing a model are not independent)",
+    "out_of_sample": "leave-one-family-out: fit on other families, predict pairs involving the held-out family; report rank correlation of predicted vs observed",
+    "added_value": "increment over accuracy alone and over the spec sheet (family, pretraining data, objective)",
+    "clinical_rule_test": "for each deployed model, choose the partner with the greatest fingerprint distance among partners within 10% of the best quality; compare matched-volume net severe rescue with the strongest-partner rule, in held-out families"
+  },
+  "what_counts_as_a_signal": "a fingerprint distance that predicts severe co-miss in held-out families (rank correlation interval excluding zero) beyond accuracy alone; and a fingerprint-chosen partner rescuing more severe disease at matched volume than the strongest partner",
+  "stop_rules": ["calibration gate fails", "no fingerprint adds predictive value beyond accuracy in held-out families"],
+  "caveats": ["one seed per zoo model", "short training", "all trained on EyePACS, so the floor from shared data remains", "exploratory; confirmation reserved for BRSET"]
+}

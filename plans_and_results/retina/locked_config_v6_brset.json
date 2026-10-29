@@ -1,0 +1,43 @@
+{
+  "lock": "v6, BRSET external retinal test",
+  "written": "2026-10-03, after download and checksum verification of BRSET 1.0.2 and before any image is preprocessed, any model is run, or any label is read",
+  "depends_on": {
+    "brset_access_record": "data/brset/brset_access_record.json (downloaded 2026-10-03T01:46 UTC; labels_examined false)",
+    "label_file_sha256": "4cd000ec1f651deb5cfb4f018ed1dec7a874da59a20c47f1e59a421d4a112adf",
+    "archive_sha256": "151bf6a71b51ba1a773203d506e0d8b67785b1058667a666f1826fb57f530aaa"
+  },
+  "data": {
+    "cohort": "all BRSET images with an ICDR diabetic retinopathy grade of 0 to 4 (the ICDR grading column provided by BRSET). If the label file has no unambiguous ICDR grade column, or no patient identifier, the analysis stops and an amendment is recorded before any result is computed.",
+    "unit": "image",
+    "clustering": "patient identifier; all intervals from 1,000 patient-cluster bootstrap resamples",
+    "sensitivity_analysis": "repeat B1 and B2 excluding images that BRSET marks as inadequate quality, if such a field exists"
+  },
+  "preprocessing": "identical to EyePACS and DDR: RGB, 512x512 Lanczos, PNG; evaluation transform resize 256, centre crop 224, ImageNet normalisation",
+  "models": {
+    "core_24": "DenseNet121, EfficientNet-B3, ResNet50 and RETFound, 5-class, each trained on EyePACS (checkpoints eyepacs_*_5class[_seedK]_v2.pt) and on DDR (ddr_*_5class[_seedK]_v2.pt) with the identical recipe, 3 runs each",
+    "replication_set": "all 33 EyePACS-trained models (11 designs x 3 runs)",
+    "score": "probability of referable DR (summed probability of grades 2 to 4 for 5-class models; sigmoid output for binary models)",
+    "frozen": "no model is trained, tuned, recalibrated or selected on BRSET"
+  },
+  "referral": "each model refers its top f of images; f = 1.31 x proportion of images with ICDR grade 2 or worse in the cohort; secondary f = that proportion",
+  "combination": "matched volume: within-population ranks, combined score = higher of the two ranks, top f referred",
+  "outcomes": {
+    "referable": "ICDR grade 2 or worse not referred",
+    "severe": "ICDR grade 3 or 4 not referred (chosen in advance because BRSET is drawn from general ophthalmology clinics and is described by its authors as mostly normal eyes, so PDR alone may be too rare)",
+    "pdr": "ICDR grade 4 not referred (secondary)"
+  },
+  "hypotheses": {
+    "B1_primary_training_data": "In the core 24, among pairs of different architecture, the shared-miss ratio for missed referable DR is higher for pairs trained on the same source (both EyePACS or both DDR) than for pairs trained on different sources. Statistic: mean ratio over same-source pairs minus mean over different-source pairs, averaged over training-run combinations. Supported if the 95% patient-bootstrap interval is above zero.",
+    "B1b_secondary": "the same contrast for missed severe DR",
+    "B2_benefit": "(a) over all 110 ordered pairings of the 11 EyePACS designs, relative reduction in missed severe DR at matched volume against the deployed system; (b) the same over different-architecture pairs in the core 24. Supported if the 95% interval is above zero.",
+    "B3_decomposition": "latent correlation of missed referable DR for all pairs in the core 24, regressed on shared training source, shared architecture and repeat run; reported, with the shared-source term expected to be positive",
+    "B4_sibling_test": "referral agreement (Cohen's kappa) on all images without labels; relative rule = 95th percentile of agreement among pairs of different architecture; supported if at least 80% of repeat-run pairs exceed it. Same-architecture pairs trained on different sources are expected to fall below the sibling flag (reported).",
+    "B5_miss_rate": "share of misses rescued at matched volume against each model's own miss rate, by grade 2, 3 and 4; descriptive"
+  },
+  "order_of_work": [
+    "1. this plan written and hashed",
+    "2. BRSET_prep_inference: preprocessing and predictions for all 45 models, each prediction file hashed; label file checked against the access record but not opened",
+    "3. analysis notebook written to this plan, run once; only aggregate results leave the Colab environment"
+  ],
+  "what_is_not_changed_after_this_lock": "cohort rule, models, referral rule, outcomes, hypotheses and success criteria"
+}

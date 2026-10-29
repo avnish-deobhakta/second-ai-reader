@@ -1,0 +1,42 @@
+{
+  "lock": "v5",
+  "name": "DDR external replication",
+  "written_before": "any DDR preprocessing or inference; no model has seen DDR",
+  "depends_on": {
+    "ddr_intake_record": "99_audit/ddr_intake_v2.json",
+    "ddr_manifest": "01_splits/ddr_manifest_v2.csv",
+    "ddr_manifest_sha256": "9c6b9cd1bf1872d9c6c84b173b1fabc5f03c8942754f2ee66fc3fadffe95848a",
+    "ddr_assembled_zip_sha256": "a50cf62cf68031e7ebde6312e17a3c65ce5f7aa2294f7f4c3484bf1ac54e9178",
+    "models": "the 33 frozen v2 checkpoints (11 architectures x 3 seeds); no retraining, no fine-tuning, no recalibration on DDR",
+    "preprocessing": "the identical v2 preprocessing pipeline used for the Kaggle-test portion"
+  },
+  "cohort": {
+    "include": "all DDR grading images (train, valid and test files pooled; DDR's own split is irrelevant because nothing is trained on DDR) with grade 0 to 4",
+    "exclude_ungradable": "grade 5 (1,151 images) excluded before inference results are read",
+    "byte_duplicates": "within each group of byte-identical images: keep one copy if all labels agree; drop the whole group if labels disagree. Counts reported.",
+    "expected_after_intake": "about 12,522 gradable images before deduplication, 913 PDR"
+  },
+  "unit_and_uncertainty": {
+    "unit": "image (DDR releases no patient identifier; intake found no filename token that groups images into anything near the 9,598 patients reported)",
+    "headline_intervals": "image-level bootstrap, 2,000 resamples, reported alongside a pre-specified conservative inflation: standard errors multiplied by sqrt(13,673 / 9,598) = 1.19, the worst case in which all images from one patient are perfectly correlated",
+    "selection_intervals": "architecture bootstrap exactly as lock v4 (the unit there is the architecture, unaffected by the missing patient key)"
+  },
+  "operating_points": {
+    "prevalence_relative_primary": "each model refers its own top fraction f of DDR images, f = 1.31 x DDR referable prevalence among included images. 1.31 is fixed from EyePACS, where 25% referral / 19.08% referable prevalence = 1.31. With DDR prevalence 0.449, f is about 0.59.",
+    "fixed_25_percent_secondary": "each model refers its own top 25% of DDR images, the EyePACS operating point applied unchanged",
+    "pre_registered_prediction": "The fixed 25% rule sits below DDR's referable prevalence, the regime in which APTOS showed most pairs losing at matched volume. We predict the fixed 25% matched-volume result will show no ensemble benefit or harm, and the prevalence-relative result will show benefit. Recorded so that a split result is interpretable rather than post hoc."
+  },
+  "endpoints": {
+    "primary_headline": "matched-volume ensemble versus single reader at the prevalence-relative operating point: PDR eyes missed by the anchor that the ensemble catches, net of PDR eyes the ensemble newly misses, averaged over the 55 architecture pairs and 9 seed combinations, max-score aggregation on within-dataset percentile ranks, referral volume held at f",
+    "primary_supported_if": "mean net PDR misses avoided per pair positive with the inflated 95% interval excluding zero",
+    "co_primary_union": "union rule (each model at its own f): PDR rescued relative to the anchor, with incremental referrals and incremental false positives (non-referable images referred by the partner and not the anchor) reported for every pair",
+    "secondary": ["the same two endpoints at the fixed 25% operating point", "grade 3 or worse in place of PDR", "results with and without retfound_adversarial"],
+    "selection_transport_test": "C, rho_cost and partner marginal cost measured on the Kaggle-test ESTIMATION pool (pair_quantities_estimation_v4.csv, unchanged) used to rank each anchor's 10 partners; outcome = anchor-relative PDR rescued on DDR under the union rule at f. Statistic, uncertainty and success criterion identical to lock v4 as amended (v4.1). This tests whether complementarity measured in one population predicts it in another."
+  },
+  "not_permitted": [
+    "choosing any operating point, aggregation rule or subgroup after DDR predictions are read",
+    "recalibrating or thresholding models on DDR labels",
+    "reporting the best pair on DDR as a headline"
+  ],
+  "confirmation_status": "DDR predictions do not exist at the time of writing. The analysis notebook asserts this file and the manifest hash before reading any prediction."
+}

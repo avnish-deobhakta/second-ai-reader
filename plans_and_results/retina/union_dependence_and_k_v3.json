@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-09-23T00:16:26.417075+00:00",
+  "status": "EXPLORATORY",
+  "burden": 0.25,
+  "weights": {
+    "4": 500,
+    "3": 200,
+    "2": 15
+  },
+  "part_a_union_dependence": {
+    "identity_same_dataset": {
+      "std_beta_marginal": 1.017,
+      "std_beta_dependence": -0.784,
+      "r2": 0.9767,
+      "note": "advantage = better marginal miss cost minus shared miss cost, so this should be near 1"
+    },
+    "spread_across_pairs": {
+      "sd_marginal_miss_cost": 2576.0,
+      "sd_shared_miss_cost": 1905.1
+    },
+    "raw_out_of_sample_spearman_dependence_vs_advantage": 0.166,
+    "partial_same_dataset_controlling_marginals": -0.944,
+    "partial_out_of_sample_controlling_marginals": 0.009,
+    "partial_out_of_sample_model_level_ci": [
+      -0.636,
+      0.415
+    ],
+    "oos_regression": {
+      "std_beta_marginal": 0.561,
+      "std_beta_dependence": -0.365,
+      "r2": 0.327
+    }
+  },
+  "part_b_ensemble_size": {
+    "2": {
+      "seed": 1.0,
+      "adv_matched": 2566.758,
+      "adv_union_same_volume": 2081.242,
+      "adv_union_miss_only": 8738.485,
+      "extra_referrals": 1196.455,
+      "pdr_matched": 3.194,
+      "pdr_union": 6.988
+    },
+    "3": {
+      "seed": 1.0,
+      "adv_matched": 3104.202,
+      "adv_union_same_volume": 2639.616,
+      "adv_union_miss_only": 11494.707,
+      "extra_referrals": 1947.356,
+      "pdr_matched": 3.554,
+      "pdr_union": 8.079
+    },
+    "4": {
+      "seed": 1.0,
+      "adv_matched": 3068.616,
+      "adv_union_same_volume": 2741.207,
+      "adv_union_miss_only": 12849.172,
+      "extra_referrals": 2489.563,
+      "pdr_matched": 2.922,
+      "pdr_union": 8.321
+    },
+    "5": {
+      "seed": 1.0,
+      "adv_matched": 2934.171,
+      "adv_union_same_volume": 2928.31,
+      "adv_union_miss_only": 13656.343,
+      "extra_referrals": 2906.391,
+      "pdr_matched": 2.335,
+      "pdr_union": 8.402
+    }
+  }
+}

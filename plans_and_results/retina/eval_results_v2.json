@@ -1,0 +1,344 @@
+{
+  "evaluated_at_utc": "2026-09-22T16:25:45.714144+00:00",
+  "lock_sha256": "0338c4fff7f3400c848d58e32fbcbbb0c6ad7f6035a8cdebffff2bee8b2b9699",
+  "test_file_sha256": {
+    "eyepacs_predictions_test_densenet121_binary_v2.csv": "ea044b148e20b6bb573b04b034c03d7327f415357f94410abac0219d1f5a266c",
+    "eyepacs_predictions_test_densenet121_binary_seed1_v2.csv": "ba80cddfa6bc0cb2f9dcf7cc03b66feb4b78f47c7126b389ddcf2e4686bbe159",
+    "eyepacs_predictions_test_densenet121_binary_seed2_v2.csv": "cd73f5f11ab3c9a360100edaba96f7c188ded2ad3aa27f9d9c6a032997127b01",
+    "eyepacs_predictions_test_densenet121_5class_v2.csv": "5f3d5a1033f850df0fef8018ed344970bb5f98bbd8ea41ff44262099e69fdb26",
+    "eyepacs_predictions_test_densenet121_5class_seed1_v2.csv": "a69963a345308296773db8a9b2ceb12055ee64795f429aea61a85f3829d7e855",
+    "eyepacs_predictions_test_densenet121_5class_seed2_v2.csv": "1cb2646761b412f272d33027d28f25fb97bdb098c67ca7ff5a87895125478148",
+    "eyepacs_predictions_test_efficientnet_b3_binary_v2.csv": "a32b8c698c6fe666f1d169c5f6f0beb49b14375d6f28bd4eee78748fd58df7e4",
+    "eyepacs_predictions_test_efficientnet_b3_binary_seed1_v2.csv": "9428655ef38a67242c28510b04c03776ddd7d7266f4309cf2843a460c601d232",
+    "eyepacs_predictions_test_efficientnet_b3_binary_seed2_v2.csv": "b94ff9e7cc3e16f222fe0dfccab9babb602e8ca15ccdf2a1abe0cec72ac8bb5c",
+    "eyepacs_predictions_test_efficientnet_b3_5class_v2.csv": "fc6a73e4ac50168b59589cc2f6fd5067d16fd8779082f8c766da5df7ab947b64",
+    "eyepacs_predictions_test_efficientnet_b3_5class_seed1_v2.csv": "ebda5fc82aeb25797ea3fc573e7eb48780145202ab349aa02e0ba017310b7ab0",
+    "eyepacs_predictions_test_efficientnet_b3_5class_seed2_v2.csv": "95d1b3da2c3b04a2c1315a9177d02e714535490c26177aefa8fa8f78531be152",
+    "eyepacs_predictions_test_resnet50_binary_v2.csv": "ac1148ca604b8a05d2bca275979fb47b20369ec8e31212d9b9f1276dc2f8c7c3",
+    "eyepacs_predictions_test_resnet50_binary_seed1_v2.csv": "db04f798f7d9bea057b3480f737a9ddebe778413ce1ae636de0b979fbb5d7a9a",
+    "eyepacs_predictions_test_resnet50_binary_seed2_v2.csv": "c68b8f9330276579e6e3d499ff15a492c8ab78492bf20915f8c5c56558cfb136",
+    "eyepacs_predictions_test_resnet50_5class_v2.csv": "108af9275f305615cd0968e82a88e801cb12679a15dcaa99025977a91cd7fcac",
+    "eyepacs_predictions_test_resnet50_5class_seed1_v2.csv": "86a1001d3af5f209c397de67a9e512510125d375019cbb3ffe6ec1498587feb8",
+    "eyepacs_predictions_test_resnet50_5class_seed2_v2.csv": "eb1b022f66ea5c5956812958e4b4951bf073183fa072b8ab913f0805fce73a88",
+    "eyepacs_predictions_test_vit_base_binary_v2.csv": "f549a8612c209b8e8fb024cd84e8810739003d4718d376ce1cfb32f3bce97f55",
+    "eyepacs_predictions_test_vit_base_binary_seed1_v2.csv": "fa28240a0388d5c185879c3e5a9a3d40d5f9eb434b37858a3e6add1a2d0e441f",
+    "eyepacs_predictions_test_vit_base_binary_seed2_v2.csv": "8007a032399683d87fa89b340e53d2c4f8acd5ec2405b0474738cf65c951f589",
+    "eyepacs_predictions_test_vit_base_5class_v2.csv": "26e33f4754e39b86532c85c3c0d2536e8b8742acfeefe721f6a06f7ff03aa4f3",
+    "eyepacs_predictions_test_vit_base_5class_seed1_v2.csv": "c67674a853df7ab318c1c8b82c73432433b21e92c53ef24dbccb137b21307f60",
+    "eyepacs_predictions_test_vit_base_5class_seed2_v2.csv": "eaf39d82b67047025908aba5dd192a8808a10529549422bef42b54887c23b70d",
+    "eyepacs_predictions_test_retfound_binary_v2.csv": "cd976186d66d646d3e33a58f1ff7ccbf799b9d7862a66e4f92eed0c1faf85268",
+    "eyepacs_predictions_test_retfound_binary_seed1_v2.csv": "ba8e8493a52afdcb04a4cd6818d2e1472edcb8e3a8dfa2c7b103abdceaa65d7d",
+    "eyepacs_predictions_test_retfound_binary_seed2_v2.csv": "b358bdaf48ef9e8dd6b0c6b926b52c61d53ba0e3752254ceeff2830ec953563c",
+    "eyepacs_predictions_test_retfound_5class_v2.csv": "d5b81377dcf6150ed187c0348fba66d9ebb4a0633e905439e61c32771d2b52ca",
+    "eyepacs_predictions_test_retfound_5class_seed1_v2.csv": "e870c2127a69dbd0304b08c7499335987deb9df39e877b57b5538ec240f776c6",
+    "eyepacs_predictions_test_retfound_5class_seed2_v2.csv": "e1850c9faadf8c23fc395c7f9f85feca497f4e7ec331129a18a93341729efaf0",
+    "eyepacs_predictions_test_retfound_adversarial_v2.csv": "ba59021528d420a19a1e57e4d67438aeb3d31b8d4e9fb52a4fe5adcd91666389",
+    "eyepacs_predictions_test_retfound_adversarial_seed1_v2.csv": "c389d3ef9251d189572d276996835644371274aece790ca87ceedc257021442d",
+    "eyepacs_predictions_test_retfound_adversarial_seed2_v2.csv": "6b8239edae5ce7b5413973caa995ef16118944bf37e0aa0d5042aa8b4befc753"
+  },
+  "aptos_file_sha256": {
+    "aptos_predictions_external_densenet121_binary_v2.csv": "e0064b6f7187303d79152084216af525537daa7876cf5198ae176db602db9696",
+    "aptos_predictions_external_densenet121_binary_seed1_v2.csv": "20b85f153629ce458e6b849353733c0fb9e6f1bebf0219447d1d0f6ab6714ec3",
+    "aptos_predictions_external_densenet121_binary_seed2_v2.csv": "46153c9709324feec9effdb6d26c9e3ca85809fe988b2d3c7f24e1bfd7c678ac",
+    "aptos_predictions_external_densenet121_5class_v2.csv": "7c911a87146126530bce6226f9ac5ba4d39243fbd425b76eb97115bd723e9d13",
+    "aptos_predictions_external_densenet121_5class_seed1_v2.csv": "14b8aca878d2509835d3f3109f6cb36eedff38ca71574368591cd622972ac6c1",
+    "aptos_predictions_external_densenet121_5class_seed2_v2.csv": "4d55b4d1a289762ebb5171c1a6a5ee6ac9d655f15019ba8c239b661d840aada5",
+    "aptos_predictions_external_efficientnet_b3_binary_v2.csv": "c272b271293a59f476ac2b0ce1730b908909ac3a0c6384e0ca5c59fab3ce5d4a",
+    "aptos_predictions_external_efficientnet_b3_binary_seed1_v2.csv": "1963ecaed395ec91b98e2500614bcd27c7fd07ef5389bd18bbe97a78791adb28",
+    "aptos_predictions_external_efficientnet_b3_binary_seed2_v2.csv": "00675f9eadfec4ea6e4bc9962b2db6193a69937b85a550ace5b522121d149f52",
+    "aptos_predictions_external_efficientnet_b3_5class_v2.csv": "fdc956a5ed146f4cf1bdae00bb6c28d70da024815c8a487809bd589d0ae90837",
+    "aptos_predictions_external_efficientnet_b3_5class_seed1_v2.csv": "7e9dc05e114c22e722bba4d6d215b0e0fc49866169643926438c366ba044b912",
+    "aptos_predictions_external_efficientnet_b3_5class_seed2_v2.csv": "a309896717ff49a844de6584fed363cc6670f2cd56744724f211399bd7b9e0e4",
+    "aptos_predictions_external_resnet50_binary_v2.csv": "331066719732e10e99eb2b37ce2aba71141048af0eb831e2582862de77dfe2eb",
+    "aptos_predictions_external_resnet50_binary_seed1_v2.csv": "06857d11d659afb98a869a42389b13c109fe5432983b04337355eb8eadf6b817",
+    "aptos_predictions_external_resnet50_binary_seed2_v2.csv": "ce378d73121aef8f0a4f5824bc88ceb8f21cad59043e1ac9a04ae673a9b63963",
+    "aptos_predictions_external_resnet50_5class_v2.csv": "8f40323590070588984ac1134bb7e9dc0b7469b645d3bfa670a3f5bf8f862567",
+    "aptos_predictions_external_resnet50_5class_seed1_v2.csv": "acf3afe51b20f4a444451ae40eb16192cee49601a75647269fdb2207dc1d4758",
+    "aptos_predictions_external_resnet50_5class_seed2_v2.csv": "20b8043176f9a50aa5be089c7509856cabef84c7e09be4afe038f1d4114566db",
+    "aptos_predictions_external_vit_base_binary_v2.csv": "6c69e0a3c7735124124792a38f0e109693b1bf572385af6334d0feffb6633824",
+    "aptos_predictions_external_vit_base_binary_seed1_v2.csv": "106ff1abe35ca6b86883ab7f7c3c9ee0e8011685e03f1b56e02e8c2cf96dfc89",
+    "aptos_predictions_external_vit_base_binary_seed2_v2.csv": "f2c7585fef2a658d42a42d48c8fc89b33f1a531d8ce7d6d813444ec3935a98ca",
+    "aptos_predictions_external_vit_base_5class_v2.csv": "86be38d210094247a9f3b006c671461d52dc4629df6bf66ee2de9370969e8775",
+    "aptos_predictions_external_vit_base_5class_seed1_v2.csv": "8d823c8488e58d4c426c923eb873e67e011fb199e662fd542a7e9e5d6a38277c",
+    "aptos_predictions_external_vit_base_5class_seed2_v2.csv": "76dba0f2fee6c24494241931c161d27bc357eb488cc2a27b99b1e98654f1ac6b",
+    "aptos_predictions_external_retfound_binary_v2.csv": "e7e886be86d509b7fed8c59b593162ad82deab22d6bcf95d6b4c3d6b9991f066",
+    "aptos_predictions_external_retfound_binary_seed1_v2.csv": "a12c7c5dcf28de35d13e6090e470dc3447a3137ca571c9c5179b7bd92d7def04",
+    "aptos_predictions_external_retfound_binary_seed2_v2.csv": "64690fb97659df6187590f7d6c042b470fb2c91ba085c755c4aaa309bcedff24",
+    "aptos_predictions_external_retfound_5class_v2.csv": "e2dff356e577d6eddf2a564e76d723a6ecc428f1f3bfa7d020009fb5acb291de",
+    "aptos_predictions_external_retfound_5class_seed1_v2.csv": "da97ee0c97ebff44c916f5bcb8535caba7c5a88cb9719f7af62db899a70445da",
+    "aptos_predictions_external_retfound_5class_seed2_v2.csv": "eea43ed465602a82e20249caf7363ed87b362739928418afa202371d4998bbb0",
+    "aptos_predictions_external_retfound_adversarial_v2.csv": "07b81f2cce1885602fac871fb231b951075fbb6c23b01a967b2abcec38ac29b1",
+    "aptos_predictions_external_retfound_adversarial_seed1_v2.csv": "2c1e51044a7ad6639356d0eae4f67a4b5c507f2dd553179566e7a9fa34bca99d",
+    "aptos_predictions_external_retfound_adversarial_seed2_v2.csv": "c06a76fc3e872d9100b431cf0488cacd6d943aab9f84fb0b7ab7d6ec6072680c"
+  },
+  "primary_eyepacs_test_25pct": {
+    "pairs_winning_of_55": [
+      52.0,
+      23.0,
+      52.0
+    ],
+    "mean_advantage": [
+      472.0,
+      -72.2,
+      702.0
+    ],
+    "claim_supported": false,
+    "seed_combos_winning_of_495": 417,
+    "pairs_beating_best_roster_single_of_55": [
+      34.0,
+      3.0,
+      41.0
+    ],
+    "best_roster_single": "retfound_binary"
+  },
+  "tier2_witness": {
+    "pair": [
+      "vit_base_5class",
+      "retfound_adversarial"
+    ],
+    "test_adv_vs_constituent": [
+      938.6,
+      180.5,
+      1634.2
+    ],
+    "test_adv_vs_roster": [
+      716.2,
+      -595.8,
+      1086.2
+    ],
+    "validation_adv_vs_constituent": 1235.44,
+    "winners_curse_shrinkage": 0.24
+  },
+  "tier3_engineering": {
+    "pair": [
+      "densenet121_binary",
+      "retfound_adversarial"
+    ],
+    "test_adv": [
+      752.3,
+      -530.8,
+      1425.7
+    ],
+    "control_pair": [
+      "densenet121_binary",
+      "retfound_binary"
+    ],
+    "control_test_adv": [
+      823.3,
+      -337.5,
+      1288.4
+    ],
+    "engineering_minus_control": [
+      -71.0,
+      -629.1,
+      502.0
+    ]
+  },
+  "operating_characteristics_25pct": {
+    "best_single (retfound_binary)": {
+      "sensitivity": 0.7241,
+      "specificity": 0.8642,
+      "ppv": 0.5623,
+      "npv": 0.9286,
+      "referral_rate": 0.25,
+      "severe_misses": 9.3333,
+      "grade4_misses": 0.0
+    },
+    "witness ('vit_base_5class', 'retfound_adversarial')": {
+      "sensitivity": 0.7351,
+      "specificity": 0.8669,
+      "ppv": 0.5709,
+      "npv": 0.9314,
+      "referral_rate": 0.25,
+      "severe_misses": 6.0,
+      "grade4_misses": 0.0
+    },
+    "engineering ('densenet121_binary', 'retfound_adversarial')": {
+      "sensitivity": 0.7484,
+      "specificity": 0.8701,
+      "ppv": 0.5811,
+      "npv": 0.9349,
+      "referral_rate": 0.25,
+      "severe_misses": 5.6667,
+      "grade4_misses": 0.6667
+    },
+    "control ('densenet121_binary', 'retfound_binary')": {
+      "sensitivity": 0.7472,
+      "specificity": 0.8698,
+      "ppv": 0.5802,
+      "npv": 0.9346,
+      "referral_rate": 0.25,
+      "severe_misses": 5.3333,
+      "grade4_misses": 0.3333
+    }
+  },
+  "rho_analysis": {
+    "spearman_rho_vs_test_advantage": -0.322,
+    "model_level_95ci_adv": [
+      -0.764,
+      0.16
+    ],
+    "spearman_rho_vs_concordant_severe_misses": 0.246,
+    "model_level_95ci_conc": [
+      -0.211,
+      0.656
+    ]
+  },
+  "raw_or_sensitivity_25pct": {
+    "pairs_winning": 49,
+    "mean_adv": 389.7
+  },
+  "weight_invariance_25pct": [
+    {
+      "w4/w3/w2": "500/200/15",
+      "wfp": 1,
+      "pairs_winning": 52,
+      "mean_adv": 472.0
+    },
+    {
+      "w4/w3/w2": "500/200/15",
+      "wfp": 5,
+      "pairs_winning": 53,
+      "mean_adv": 500.2
+    },
+    {
+      "w4/w3/w2": "500/200/15",
+      "wfp": 20,
+      "pairs_winning": 53,
+      "mean_adv": 601.3
+    },
+    {
+      "w4/w3/w2": "500/200/15",
+      "wfp": 50,
+      "pairs_winning": 53,
+      "mean_adv": 791.6
+    },
+    {
+      "w4/w3/w2": "500/200/15",
+      "wfp": 100,
+      "pairs_winning": 54,
+      "mean_adv": 1088.0
+    },
+    {
+      "w4/w3/w2": "250/100/10",
+      "wfp": 1,
+      "pairs_winning": 53,
+      "mean_adv": 253.0
+    },
+    {
+      "w4/w3/w2": "250/100/10",
+      "wfp": 5,
+      "pairs_winning": 53,
+      "mean_adv": 280.1
+    },
+    {
+      "w4/w3/w2": "250/100/10",
+      "wfp": 20,
+      "pairs_winning": 53,
+      "mean_adv": 376.3
+    },
+    {
+      "w4/w3/w2": "250/100/10",
+      "wfp": 50,
+      "pairs_winning": 54,
+      "mean_adv": 554.5
+    },
+    {
+      "w4/w3/w2": "250/100/10",
+      "wfp": 100,
+      "pairs_winning": 54,
+      "mean_adv": 837.9
+    },
+    {
+      "w4/w3/w2": "1000/400/20",
+      "wfp": 1,
+      "pairs_winning": 49,
+      "mean_adv": 880.2
+    },
+    {
+      "w4/w3/w2": "1000/400/20",
+      "wfp": 5,
+      "pairs_winning": 49,
+      "mean_adv": 909.4
+    },
+    {
+      "w4/w3/w2": "1000/400/20",
+      "wfp": 20,
+      "pairs_winning": 53,
+      "mean_adv": 1015.9
+    },
+    {
+      "w4/w3/w2": "1000/400/20",
+      "wfp": 50,
+      "pairs_winning": 53,
+      "mean_adv": 1218.3
+    },
+    {
+      "w4/w3/w2": "1000/400/20",
+      "wfp": 100,
+      "pairs_winning": 53,
+      "mean_adv": 1536.8
+    },
+    {
+      "w4/w3/w2": "100/50/10",
+      "wfp": 1,
+      "pairs_winning": 53,
+      "mean_adv": 147.4
+    },
+    {
+      "w4/w3/w2": "100/50/10",
+      "wfp": 5,
+      "pairs_winning": 53,
+      "mean_adv": 171.7
+    },
+    {
+      "w4/w3/w2": "100/50/10",
+      "wfp": 20,
+      "pairs_winning": 54,
+      "mean_adv": 258.3
+    },
+    {
+      "w4/w3/w2": "100/50/10",
+      "wfp": 50,
+      "pairs_winning": 53,
+      "mean_adv": 426.2
+    },
+    {
+      "w4/w3/w2": "100/50/10",
+      "wfp": 100,
+      "pairs_winning": 52,
+      "mean_adv": 703.4
+    },
+    {
+      "w4/w3/w2": "50/25/5",
+      "wfp": 1,
+      "pairs_winning": 53,
+      "mean_adv": 76.8
+    },
+    {
+      "w4/w3/w2": "50/25/5",
+      "wfp": 5,
+      "pairs_winning": 53,
+      "mean_adv": 100.5
+    },
+    {
+      "w4/w3/w2": "50/25/5",
+      "wfp": 20,
+      "pairs_winning": 54,
+      "mean_adv": 185.3
+    },
+    {
+      "w4/w3/w2": "50/25/5",
+      "wfp": 50,
+      "pairs_winning": 52,
+      "mean_adv": 351.7
+    },
+    {
+      "w4/w3/w2": "50/25/5",
+      "wfp": 100,
+      "pairs_winning": 51,
+      "mean_adv": 627.8
+    }
+  ],
+  "aptos_curve_note": "APTOS is enriched (40.6% referable); tier 1 reported as a curve only"
+}

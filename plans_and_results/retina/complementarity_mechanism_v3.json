@@ -1,0 +1,76 @@
+{
+  "generated_utc": "2026-09-22T22:49:18.829605+00:00",
+  "status": "EXPLORATORY: generated after the confirmatory read; not pre-specified",
+  "burden": 0.25,
+  "severe_definition": "grade >= 3",
+  "decomposition_fresh": {
+    "mean_union_advantage": 0.0224,
+    "predicted_by_independence_alone": 0.0486,
+    "added_by_observed_dependence": -0.0262,
+    "share_from_dependence": -1.172,
+    "mean_joint_miss_rate": 0.0299,
+    "mean_independence_benchmark": 0.0037,
+    "pairs_more_dependent_than_independent_of_55": 55,
+    "mean_matched_advantage": 0.0067,
+    "matched_as_share_of_union": 0.297
+  },
+  "predictors_out_of_sample": [
+    {
+      "predictor (validation)": "overall_rho_all_errors (locked, failed)",
+      "spearman_vs_fresh_matched_advantage": 0.255,
+      "model_level_95ci": [
+        -0.401,
+        0.694
+      ]
+    },
+    {
+      "predictor (validation)": "severe_dependence_excess",
+      "spearman_vs_fresh_matched_advantage": 0.168,
+      "model_level_95ci": [
+        -0.294,
+        0.579
+      ]
+    },
+    {
+      "predictor (validation)": "min_marginal_severe_miss_rate",
+      "spearman_vs_fresh_matched_advantage": 0.391,
+      "model_level_95ci": [
+        -0.209,
+        0.812
+      ]
+    },
+    {
+      "predictor (validation)": "mean_marginal_severe_miss_rate",
+      "spearman_vs_fresh_matched_advantage": 0.353,
+      "model_level_95ci": [
+        -0.142,
+        0.666
+      ]
+    },
+    {
+      "predictor (validation)": "rank_complementarity (rescued_frac)",
+      "spearman_vs_fresh_matched_advantage": -0.007,
+      "model_level_95ci": [
+        -0.425,
+        0.382
+      ]
+    },
+    {
+      "predictor (validation)": "partner_mean_rank_of_missed",
+      "spearman_vs_fresh_matched_advantage": -0.006,
+      "model_level_95ci": [
+        -0.458,
+        0.387
+      ]
+    }
+  ],
+  "rank_complementarity": {
+    "mean_partner_rank_of_missed_severe": 0.6472,
+    "reference_rank_if_uninformative": 0.875,
+    "mean_rescued_fraction": 0.4206,
+    "rescued_fraction_iqr": [
+      0.3636,
+      0.486
+    ]
+  }
+}

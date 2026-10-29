@@ -1,0 +1,455 @@
+{
+  "generated_utc": "2026-09-26T20:32:18.874654+00:00",
+  "plan": "enriched_calibration_plan.json",
+  "status": "exploratory",
+  "summary": {
+    "EyePACS": {
+      "25": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 12.67,
+          "p5": 8.92,
+          "p95": 16.32,
+          "share_of_true_strongest_advantage": 0.242,
+          "share_of_oracle_advantage": 0.177,
+          "picks_true_strongest": 0.064
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 13.22,
+          "p5": 8.03,
+          "p95": 16.69,
+          "share_of_true_strongest_advantage": 0.33,
+          "share_of_oracle_advantage": 0.241,
+          "picks_true_strongest": 0.081
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 14.32,
+          "p5": 7.74,
+          "p95": 18.27,
+          "share_of_true_strongest_advantage": 0.507,
+          "share_of_oracle_advantage": 0.371,
+          "picks_true_strongest": 0.128
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 11.86,
+          "p5": 9.59,
+          "p95": 14.27,
+          "share_of_true_strongest_advantage": 0.111,
+          "share_of_oracle_advantage": 0.081,
+          "picks_true_strongest": 0.054
+        },
+        "random": {
+          "mean_net_severe_rescued": 11.17,
+          "p5": 10.86,
+          "p95": 11.47,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 17.37,
+          "p5": 16.64,
+          "p95": 17.96,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.73
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 19.65,
+          "p5": 18.95,
+          "p95": 20.23,
+          "share_of_true_strongest_advantage": 1.369,
+          "share_of_oracle_advantage": 1.0
+        }
+      },
+      "50": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 13.01,
+          "p5": 9.22,
+          "p95": 16.32,
+          "share_of_true_strongest_advantage": 0.375,
+          "share_of_oracle_advantage": 0.271,
+          "picks_true_strongest": 0.072
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 13.52,
+          "p5": 9.09,
+          "p95": 16.73,
+          "share_of_true_strongest_advantage": 0.462,
+          "share_of_oracle_advantage": 0.334,
+          "picks_true_strongest": 0.143
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 14.17,
+          "p5": 7.42,
+          "p95": 17.82,
+          "share_of_true_strongest_advantage": 0.57,
+          "share_of_oracle_advantage": 0.412,
+          "picks_true_strongest": 0.196
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 12.11,
+          "p5": 9.63,
+          "p95": 14.45,
+          "share_of_true_strongest_advantage": 0.226,
+          "share_of_oracle_advantage": 0.163,
+          "picks_true_strongest": 0.06
+        },
+        "random": {
+          "mean_net_severe_rescued": 10.77,
+          "p5": 10.31,
+          "p95": 11.26,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 16.73,
+          "p5": 15.72,
+          "p95": 17.59,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.723
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 19.02,
+          "p5": 18.22,
+          "p95": 19.86,
+          "share_of_true_strongest_advantage": 1.383,
+          "share_of_oracle_advantage": 1.0
+        }
+      },
+      "100": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 12.73,
+          "p5": 9.81,
+          "p95": 14.82,
+          "share_of_true_strongest_advantage": 0.513,
+          "share_of_oracle_advantage": 0.358,
+          "picks_true_strongest": 0.102
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 13.33,
+          "p5": 9.58,
+          "p95": 15.91,
+          "share_of_true_strongest_advantage": 0.624,
+          "share_of_oracle_advantage": 0.436,
+          "picks_true_strongest": 0.236
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 14.03,
+          "p5": 10.63,
+          "p95": 16.73,
+          "share_of_true_strongest_advantage": 0.753,
+          "share_of_oracle_advantage": 0.526,
+          "picks_true_strongest": 0.244
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 12.34,
+          "p5": 9.14,
+          "p95": 15.91,
+          "share_of_true_strongest_advantage": 0.442,
+          "share_of_oracle_advantage": 0.309,
+          "picks_true_strongest": 0.064
+        },
+        "random": {
+          "mean_net_severe_rescued": 9.95,
+          "p5": 9.33,
+          "p95": 10.65,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 15.37,
+          "p5": 14.09,
+          "p95": 16.64,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.699
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 17.7,
+          "p5": 16.64,
+          "p95": 18.86,
+          "share_of_true_strongest_advantage": 1.43,
+          "share_of_oracle_advantage": 1.0
+        }
+      },
+      "200": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 11.25,
+          "p5": 9.72,
+          "p95": 12.78,
+          "share_of_true_strongest_advantage": 0.648,
+          "share_of_oracle_advantage": 0.433,
+          "picks_true_strongest": 0.115
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 11.59,
+          "p5": 8.94,
+          "p95": 13.95,
+          "share_of_true_strongest_advantage": 0.722,
+          "share_of_oracle_advantage": 0.482,
+          "picks_true_strongest": 0.315
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 12.12,
+          "p5": 8.91,
+          "p95": 14.78,
+          "share_of_true_strongest_advantage": 0.84,
+          "share_of_oracle_advantage": 0.561,
+          "picks_true_strongest": 0.269
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 12.68,
+          "p5": 8.13,
+          "p95": 16.32,
+          "share_of_true_strongest_advantage": 0.963,
+          "share_of_oracle_advantage": 0.643,
+          "picks_true_strongest": 0.081
+        },
+        "random": {
+          "mean_net_severe_rescued": 8.3,
+          "p5": 7.49,
+          "p95": 9.18,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 12.85,
+          "p5": 11.0,
+          "p95": 14.41,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.668
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 15.11,
+          "p5": 13.77,
+          "p95": 16.55,
+          "share_of_true_strongest_advantage": 1.497,
+          "share_of_oracle_advantage": 1.0
+        }
+      }
+    },
+    "DDR": {
+      "25": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 15.92,
+          "p5": 10.73,
+          "p95": 20.82,
+          "share_of_true_strongest_advantage": 0.147,
+          "share_of_oracle_advantage": 0.134,
+          "picks_true_strongest": 0.134
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 16.61,
+          "p5": 10.72,
+          "p95": 21.28,
+          "share_of_true_strongest_advantage": 0.229,
+          "share_of_oracle_advantage": 0.208,
+          "picks_true_strongest": 0.166
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 18.91,
+          "p5": 10.25,
+          "p95": 22.82,
+          "share_of_true_strongest_advantage": 0.5,
+          "share_of_oracle_advantage": 0.456,
+          "picks_true_strongest": 0.189
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 15.3,
+          "p5": 11.27,
+          "p95": 19.0,
+          "share_of_true_strongest_advantage": 0.074,
+          "share_of_oracle_advantage": 0.068,
+          "picks_true_strongest": 0.128
+        },
+        "random": {
+          "mean_net_severe_rescued": 14.67,
+          "p5": 14.21,
+          "p95": 15.06,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 23.14,
+          "p5": 22.45,
+          "p95": 23.73,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.911
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 23.97,
+          "p5": 23.36,
+          "p95": 24.55,
+          "share_of_true_strongest_advantage": 1.098,
+          "share_of_oracle_advantage": 1.0
+        }
+      },
+      "50": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 16.44,
+          "p5": 10.27,
+          "p95": 20.91,
+          "share_of_true_strongest_advantage": 0.255,
+          "share_of_oracle_advantage": 0.231,
+          "picks_true_strongest": 0.181
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 17.39,
+          "p5": 10.73,
+          "p95": 21.55,
+          "share_of_true_strongest_advantage": 0.37,
+          "share_of_oracle_advantage": 0.336,
+          "picks_true_strongest": 0.231
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 19.5,
+          "p5": 12.81,
+          "p95": 22.36,
+          "share_of_true_strongest_advantage": 0.626,
+          "share_of_oracle_advantage": 0.568,
+          "picks_true_strongest": 0.212
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 15.44,
+          "p5": 10.27,
+          "p95": 19.91,
+          "share_of_true_strongest_advantage": 0.133,
+          "share_of_oracle_advantage": 0.121,
+          "picks_true_strongest": 0.139
+        },
+        "random": {
+          "mean_net_severe_rescued": 14.34,
+          "p5": 13.69,
+          "p95": 14.9,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 22.58,
+          "p5": 21.64,
+          "p95": 23.55,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.908
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 23.42,
+          "p5": 22.45,
+          "p95": 24.18,
+          "share_of_true_strongest_advantage": 1.102,
+          "share_of_oracle_advantage": 1.0
+        }
+      },
+      "100": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 16.44,
+          "p5": 11.09,
+          "p95": 20.0,
+          "share_of_true_strongest_advantage": 0.349,
+          "share_of_oracle_advantage": 0.314,
+          "picks_true_strongest": 0.222
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 17.48,
+          "p5": 11.8,
+          "p95": 21.18,
+          "share_of_true_strongest_advantage": 0.481,
+          "share_of_oracle_advantage": 0.433,
+          "picks_true_strongest": 0.305
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 19.74,
+          "p5": 16.82,
+          "p95": 21.91,
+          "share_of_true_strongest_advantage": 0.767,
+          "share_of_oracle_advantage": 0.69,
+          "picks_true_strongest": 0.259
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 16.5,
+          "p5": 10.81,
+          "p95": 21.2,
+          "share_of_true_strongest_advantage": 0.356,
+          "share_of_oracle_advantage": 0.32,
+          "picks_true_strongest": 0.164
+        },
+        "random": {
+          "mean_net_severe_rescued": 13.68,
+          "p5": 12.93,
+          "p95": 14.46,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 21.58,
+          "p5": 20.08,
+          "p95": 22.82,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.9
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 22.46,
+          "p5": 21.09,
+          "p95": 23.55,
+          "share_of_true_strongest_advantage": 1.111,
+          "share_of_oracle_advantage": 1.0
+        }
+      },
+      "200": {
+        "enriched_rescue": {
+          "mean_net_severe_rescued": 16.13,
+          "p5": 12.27,
+          "p95": 19.0,
+          "share_of_true_strongest_advantage": 0.533,
+          "share_of_oracle_advantage": 0.474,
+          "picks_true_strongest": 0.302
+        },
+        "enriched_severe_misses": {
+          "mean_net_severe_rescued": 16.95,
+          "p5": 12.27,
+          "p95": 19.91,
+          "share_of_true_strongest_advantage": 0.648,
+          "share_of_oracle_advantage": 0.576,
+          "picks_true_strongest": 0.435
+        },
+        "enriched_auc": {
+          "mean_net_severe_rescued": 18.18,
+          "p5": 16.0,
+          "p95": 19.91,
+          "share_of_true_strongest_advantage": 0.821,
+          "share_of_oracle_advantage": 0.73,
+          "picks_true_strongest": 0.267
+        },
+        "random_sample_same_effort": {
+          "mean_net_severe_rescued": 17.45,
+          "p5": 10.89,
+          "p95": 22.1,
+          "share_of_true_strongest_advantage": 0.718,
+          "share_of_oracle_advantage": 0.638,
+          "picks_true_strongest": 0.227
+        },
+        "random": {
+          "mean_net_severe_rescued": 12.33,
+          "p5": 11.14,
+          "p95": 13.43,
+          "share_of_true_strongest_advantage": 0.0,
+          "share_of_oracle_advantage": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 19.46,
+          "p5": 17.81,
+          "p95": 21.27,
+          "share_of_true_strongest_advantage": 1.0,
+          "share_of_oracle_advantage": 0.889
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 20.35,
+          "p5": 18.73,
+          "p95": 22.0,
+          "share_of_true_strongest_advantage": 1.125,
+          "share_of_oracle_advantage": 1.0
+        }
+      }
+    }
+  },
+  "n_severe": {
+    "EyePACS": 712,
+    "DDR": 1149
+  }
+}

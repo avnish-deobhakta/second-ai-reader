@@ -1,0 +1,28 @@
+{
+  "plan": "starting-weights experiment, part 2: CNN arm and replication on the EyePACS confirmation set",
+  "written": "2026-09-25, before the ResNet50 models are trained and before any new model is run on the confirmation set",
+  "status": "exploratory (confirmation set previously opened under lock v3); fixes the comparison in advance",
+  "question": "Does changing only the starting weights reduce shared blind spots, for a CNN as well as a ViT, with enough events to tell?",
+  "models": {
+    "vit_base": "ImageNet supervised (existing), MAE, DINOv2; 3 seeds each (trained)",
+    "resnet50": "ImageNet supervised a1_in1k (existing resnet50_5class), semi-weakly supervised fb_swsl_ig1b_ft_in1k (new), self-supervised DINO ResNet-50 (new); 3 seeds each; canonical CNN recipe",
+    "other_architectures": "existing EyePACS-trained 5-class DenseNet121, EfficientNet-B3, RETFound"
+  },
+  "evaluation_set": "EyePACS confirmation set (15,794 eyes, 7,897 patients), 25% eye-level referral as in lock v3, patient-cluster bootstrap (1,000)",
+  "outcomes": {
+    "primary": "co-miss ratio for referable disease by pair type",
+    "secondary": ["co-miss ratio for grade 3 or worse and for PDR", "matched-volume net referable eyes rescued", "binary error correlation"]
+  },
+  "pair_types": {
+    "seed_siblings": "same variant, different seed",
+    "same_architecture_different_init": "reported for ViT-Base and ResNet50 separately and pooled",
+    "different_architecture": "pairs among ViT-Base supervised, ResNet50 supervised, DenseNet121, EfficientNet-B3, RETFound",
+    "new_init_vs_other_architecture": "each new-initialisation model with each model of a different architecture"
+  },
+  "what_counts_as_a_signal": {
+    "starting_weights_matter": "same_architecture_different_init clearly below seed_siblings (interval of the difference excludes zero), separately for each architecture",
+    "architecture_matters_more": "different_architecture clearly below same_architecture_different_init, before and after the strength adjustment"
+  },
+  "strength_adjustment": "pair-level regression of log co-miss ratio on pair type with the pair's mean and gap in referable misses",
+  "decision_this_informs": "whether paper 2 needs a pretraining arm, or should vary only architecture family and training data"
+}

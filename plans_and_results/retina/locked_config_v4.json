@@ -1,0 +1,109 @@
+{
+  "lock": "v4",
+  "locked_at_utc": "2026-09-23T12:21:35.047720+00:00",
+  "locked_on": "Kaggle-test estimation pool only (17859 patients, 35718 eyes). Confirmation pool (8929 patients) not read by this notebook.",
+  "protocol_doc_section": 13,
+  "file_sha256": {
+    "eyepacs_predictions_kaggletest_densenet121_binary_v2.csv": "da647766ecd7aae1c2e220b2d960c40bbc651894fc4b0493921fc2fb2708ad3d",
+    "eyepacs_predictions_kaggletest_densenet121_binary_seed1_v2.csv": "4f9de9b9c204aeef6cdeb734962d8608127a18471f00466c2a1a1590f8fef50f",
+    "eyepacs_predictions_kaggletest_densenet121_binary_seed2_v2.csv": "3adc003f0a23f15bdcce4f9dca1ba1ac1e8e55ea064bf45548f092e58350075f",
+    "eyepacs_predictions_kaggletest_densenet121_5class_v2.csv": "a16bf406a1525893920bed688bb33c6cb8069a50b5bd6d1a3f1e49ada98c5018",
+    "eyepacs_predictions_kaggletest_densenet121_5class_seed1_v2.csv": "eb99002eb4be057860d9c9c56df5c39f8953b3fd3a0ac8533e3f526890dcd97f",
+    "eyepacs_predictions_kaggletest_densenet121_5class_seed2_v2.csv": "c7ee5c009acbf496f36a8da67ebb076859851a9b9b449c604a6a7717820d1322",
+    "eyepacs_predictions_kaggletest_efficientnet_b3_binary_v2.csv": "135efe3ea73717653b48c0c9cbdc5d0383c54c1a7f8e848277e005a8a03e49d6",
+    "eyepacs_predictions_kaggletest_efficientnet_b3_binary_seed1_v2.csv": "276e36ec4ed63641e403d7a5dca6b3bbbe903b3ada1569f2169fbf68c717bdfa",
+    "eyepacs_predictions_kaggletest_efficientnet_b3_binary_seed2_v2.csv": "bae3e03cb33cadf9d911774ab6398315dffa5fb865f885c28848ae201d626df5",
+    "eyepacs_predictions_kaggletest_efficientnet_b3_5class_v2.csv": "d969772116ece4bd6e8eb102eca3363d3e3ebc33f5a014eb3b5da4524bba9e71",
+    "eyepacs_predictions_kaggletest_efficientnet_b3_5class_seed1_v2.csv": "84dc1d67d8153057365629c5cbb820b6f301841888787d203dcf326b46f0fd04",
+    "eyepacs_predictions_kaggletest_efficientnet_b3_5class_seed2_v2.csv": "96bab8db16ae7a3ef8e1589bc194087991b35f0866889492cfa90b9c10744a8d",
+    "eyepacs_predictions_kaggletest_resnet50_binary_v2.csv": "f930a113f16500a3e9401bedb7404e22bf039c696a93736638aa2aa593432a57",
+    "eyepacs_predictions_kaggletest_resnet50_binary_seed1_v2.csv": "8473c055491f911b0a53b06ca401b2b7d1ad65bf873995ca3f5d655aca14a704",
+    "eyepacs_predictions_kaggletest_resnet50_binary_seed2_v2.csv": "5774d69abfa4e262997aba1dd6476ec34bfe2c5745de8fda052da9e595bde2a7",
+    "eyepacs_predictions_kaggletest_resnet50_5class_v2.csv": "176826ffe5220f451f5d43be8b0c818c125d8c5f5e13aa170cf32f4bd2109d51",
+    "eyepacs_predictions_kaggletest_resnet50_5class_seed1_v2.csv": "952e16f2c87e69264fcfe44fe0d779b422c47db40828db57fe05ba0c9df742ad",
+    "eyepacs_predictions_kaggletest_resnet50_5class_seed2_v2.csv": "84c19afa8e979740c561591b8c2165ed740812b9ca6ea8a2bec907f7706136ca",
+    "eyepacs_predictions_kaggletest_vit_base_binary_v2.csv": "318d8c19099fc2d0c381e0d594ae0889113ae0cadc8fe3047f5bdf3ec386ddaf",
+    "eyepacs_predictions_kaggletest_vit_base_binary_seed1_v2.csv": "46d78b1ac07aadc385f49d58871f85b6566c7c020719cdd6911f06effd9a9363",
+    "eyepacs_predictions_kaggletest_vit_base_binary_seed2_v2.csv": "bb812b7d3f248cebd7bc53bf1ce10fc725f7955344e56d3a6ffc5bca90b3ce2a",
+    "eyepacs_predictions_kaggletest_vit_base_5class_v2.csv": "46436df0b84146129f2a5c789d1825829a7253331dfdd6849b0e3485296faee0",
+    "eyepacs_predictions_kaggletest_vit_base_5class_seed1_v2.csv": "3c756a17b0b6e3f77ab7a0ac8ef1d6fec9ce703b85efbbaf7d111a921d2daa85",
+    "eyepacs_predictions_kaggletest_vit_base_5class_seed2_v2.csv": "0ed372da504b2a14d26618278929d61a613714cca31964c17e3bd3dc67fc2714",
+    "eyepacs_predictions_kaggletest_retfound_binary_v2.csv": "fb66732d595f5ad20da119321c9e62b07d7ab6581cced4f2edc21025e179e7a6",
+    "eyepacs_predictions_kaggletest_retfound_binary_seed1_v2.csv": "6b506db1cee2899940e26875fc37c26c600b98355936f6b22ba9a1b01c3a2b1e",
+    "eyepacs_predictions_kaggletest_retfound_binary_seed2_v2.csv": "a174450259b0842a4148f2da342e7bf9f1a50c348d060533986e7d54ef50369a",
+    "eyepacs_predictions_kaggletest_retfound_5class_v2.csv": "31a2461541d0d118cd059cccf10a9e9d741d81b5da74122fdf751a89a02e579c",
+    "eyepacs_predictions_kaggletest_retfound_5class_seed1_v2.csv": "a63635c71dc119b60f91c251fe7d6ccd9a937f899b5a515fc2a8dade27c637bb",
+    "eyepacs_predictions_kaggletest_retfound_5class_seed2_v2.csv": "68527253d6cc550a4823095f4cf2e47a8b97263244a4e8ccb2ccd6560031702f",
+    "eyepacs_predictions_kaggletest_retfound_adversarial_v2.csv": "25137eb285e3fb5f3c1df6823ec704cc74538c167541548575f136b8c0c67c05",
+    "eyepacs_predictions_kaggletest_retfound_adversarial_seed1_v2.csv": "99ec6174922da7e37152cc3d1d2362dadc172a2a7d7bca211ab933053a8252f4",
+    "eyepacs_predictions_kaggletest_retfound_adversarial_seed2_v2.csv": "82dba80ea77840a78cca939a3b0079e021e0a696f86c0b4d7a80fdc72b38fa38",
+    "eyepacs_split_kaggletest_estconf_v2.csv": "cc677d17d031ee655304c324a0e04afaaadec9f06ff66ad3bce1893e402dbd51"
+  },
+  "definitions": {
+    "complementarity_C": "C = 1 - m_both / min(m_A, m_B), severity-weighted, ceiling-normalised",
+    "weighted_dependence": "rho_cost = Pearson correlation of per-case cost contributions",
+    "miss_weights": {
+      "4": 500,
+      "3": 200,
+      "2": 15
+    },
+    "false_positive_weight": 1,
+    "grade_1_miss_penalty": "dropped (section 6)",
+    "burden": 0.25,
+    "referral_unit": "eye",
+    "primary_aggregation": "union rule at each model's own 25% threshold",
+    "secondary_aggregation": "max-score aggregation at matched referral volume",
+    "seed_handling": "all pair quantities averaged over the nine cross-seed combinations",
+    "algebraic_link": "Within a sample, union advantage = min(m_A, m_B) x C. The predictor is one factor of the outcome; the test is out of sample, which is what makes it a test."
+  },
+  "competing_rules": {
+    "least_weighted_dependence": "minimise rho_cost (estimation)",
+    "least_ceiling_overlap": "maximise C (estimation)",
+    "best_partner_marginal": "minimise partner's own weighted miss cost (estimation)",
+    "random": "uniform over the ten candidates, 1,000 draws",
+    "oracle": "maximise the confirmation outcome; upper bound only"
+  },
+  "primary_endpoint": {
+    "statistic": "mean across 11 anchors of the within-anchor Spearman correlation between estimation-measured C and the confirmation outcome across that anchor 10 candidates",
+    "outcome": "pdr_misses_avoided",
+    "outcome_decided_at_utc": "2026-09-23T12:21:34.384734+00:00",
+    "outcome_decision_basis": "diagnostic 3 granularity thresholds pre-committed in section 13",
+    "uncertainty": "bootstrap over architectures, 1000 resamples, anchors and candidate pools rebuilt from the resampled multiset, self-pairs excluded, repeated architectures contributing as distinct anchor instances",
+    "supported_if": "point estimate positive and the 95 percent percentile interval excludes zero",
+    "also_reported": "anchor permutation interval (not the decision rule: pairs recur across anchors so the eleven within-anchor correlations are not exchangeable); partial correlation controlling for estimation-measured partner marginal quality"
+  },
+  "decision_relevant_secondary": "per-anchor paired difference in the confirmation outcome between least_ceiling_overlap and best_partner_marginal, architecture-bootstrapped",
+  "reliability_gate": {
+    "threshold": 0.8,
+    "observed_full_estimation_pool": 0.7414,
+    "passed": false,
+    "if_passed": "a null speaks to the mechanism",
+    "if_failed": "a null is a power statement and the implied sample size is reported"
+  },
+  "power_expectation": {
+    "note": "Recorded before the confirmation pool is opened so a null is pre-interpreted, not explained afterwards.",
+    "expected_estimation_pool_reliability": 0.7414,
+    "expected_confirmation_pool_reliability": 0.5891,
+    "attenuation_factor_sqrt_product": 0.661,
+    "v3_observed_weighted_dependence_correlation": 0.18,
+    "v3_disattenuated_underlying_estimate": 0.33,
+    "expected_observed_correlation_here": 0.218,
+    "detection_threshold_eleven_anchors": 0.28,
+    "interpretation": "Expected effect and detection threshold coincide. A null does not rule out a relationship of the size v3 implies; only a substantially stronger one registers.",
+    "implied_requirements": {
+      "patients_for_reliability_0.90": 25000,
+      "architectures_for_threshold_0.20": 21,
+      "patient_axis_satisfied": true,
+      "architecture_axis_satisfied": false
+    }
+  },
+  "named_limitation": "The union primary is not volume-controlled. Holding each model to its own 25% means union volume varies only through overlap in the referred sets, so a low-overlap partner delivers both more complementarity and more referrals. The matched-volume max-score secondary separates them. A positive primary with a null secondary means selection works through volume, which is weaker than complementarity but still true, and is reported so.",
+  "exploratory_no_verdict": [
+    "10 to 40 percent burden curve",
+    "severity-weighted index as a consistency check against the count endpoint",
+    "max-score matched-volume results alongside the union rule",
+    "top-1 policy simulation in the v3 format for comparability",
+    "results with and without retfound_adversarial"
+  ],
+  "confirmation_status": "CLOSED. Opened once, by the confirmation notebook, after this file exists."
+}

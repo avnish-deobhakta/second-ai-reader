@@ -1,0 +1,53 @@
+{
+  "generated_utc": "2026-09-23T00:36:42.775004+00:00",
+  "status": "EXPLORATORY",
+  "effective_sample": {
+    "validation_mean_shared_pdr_misses": 1.84,
+    "validation_mean_shared_severe_misses": 5.75,
+    "fresh_mean_shared_pdr_misses": 6.66,
+    "fresh_mean_shared_severe_misses": 21.39
+  },
+  "reliability": {
+    "validation_vs_fresh_dependence": 0.407,
+    "fresh_split_half_dependence": 0.579,
+    "validation_sized_subsample_vs_full_fresh": 0.75,
+    "implied_max_out_of_sample_correlation_if_true_is_0.94": 0.6
+  },
+  "policy_simulation": [
+    {
+      "rule": "least_weighted_dependence",
+      "fresh_adv_union_same_volume": 1764.2,
+      "fresh_adv_union_miss_only": 8491.4,
+      "fresh_pdr_avoided": 6.8,
+      "pct_of_oracle_gain_over_random": 2.4
+    },
+    {
+      "rule": "least_dependence_excess",
+      "fresh_adv_union_same_volume": 1835.9,
+      "fresh_adv_union_miss_only": 8603.5,
+      "fresh_pdr_avoided": 6.8,
+      "pct_of_oracle_gain_over_random": 4.9
+    },
+    {
+      "rule": "best_partner_marginal",
+      "fresh_adv_union_same_volume": 2035.0,
+      "fresh_adv_union_miss_only": 8074.7,
+      "fresh_pdr_avoided": 6.0,
+      "pct_of_oracle_gain_over_random": 11.8
+    },
+    {
+      "rule": "random",
+      "fresh_adv_union_same_volume": 1695.0,
+      "fresh_adv_union_miss_only": 8475.8,
+      "fresh_pdr_avoided": 6.4,
+      "pct_of_oracle_gain_over_random": 0.0
+    },
+    {
+      "rule": "oracle_fresh",
+      "fresh_adv_union_same_volume": 4570.8,
+      "fresh_adv_union_miss_only": 11537.6,
+      "fresh_pdr_avoided": 9.8,
+      "pct_of_oracle_gain_over_random": 100.0
+    }
+  ]
+}

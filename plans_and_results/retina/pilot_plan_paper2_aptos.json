@@ -1,0 +1,24 @@
+{
+  "plan": "paper 2 pilot, APTOS",
+  "status": "exploratory; written before any DDR-trained model exists. APTOS was previously used to score the EyePACS-trained models, so nothing here is confirmatory. The plan fixes the comparison so the pilot cannot be tuned after the fact; if it works, the BRSET lock is written from it.",
+  "question": "Do models trained on different data share fewer PDR blind spots, and rescue more of each other's misses, than models trained on the same data with different architectures?",
+  "models": {
+    "eyepacs_trained": "the existing 5-class EyePACS models for DenseNet121, EfficientNet-B3, ResNet50 and RETFound, 3 seeds each (12 models)",
+    "ddr_trained": "the same four architectures trained on DDR with the identical canonical recipe, 3 seeds each (12 models, TRAIN_ddr_v2_pilot)"
+  },
+  "evaluation_set": "APTOS 2019 (3,662 images), identical v2 preprocessing; no patient identifiers, so image-level intervals",
+  "operating_point": "each model refers its top fraction f = 1.31 x APTOS referable prevalence, the rule used for DDR in lock v5.1",
+  "pair_types": {
+    "same_data_different_architecture": "both EyePACS-trained, or both DDR-trained, different architectures",
+    "different_data_same_architecture": "one EyePACS-trained, one DDR-trained, same architecture",
+    "different_data_different_architecture": "one of each training source, different architectures",
+    "same_data_same_architecture": "seed siblings, reported as a floor"
+  },
+  "outcomes": {
+    "primary": "co-miss ratio for PDR (eyes missed by both / eyes expected to be missed by both if independent), mean by pair type",
+    "secondary": ["anchor-relative PDR rescued under the union rule at f", "matched-volume net PDR at f", "incremental false positives", "plain binary error correlation"]
+  },
+  "quality_adjustment": "DDR-trained and EyePACS-trained models may differ in strength on APTOS. The benefit outcomes are therefore also reported from a within-anchor regression of PDR rescued on partner marginal PDR misses plus a different-training-data indicator, with anchors resampled by architecture for intervals, so that a cross-source advantage cannot be explained by partner strength alone.",
+  "what_counts_as_a_signal": "co-miss ratio for different-data pairs clearly below that of same-data different-architecture pairs (non-overlapping architecture-bootstrap intervals), and a positive different-training-data coefficient in the quality-adjusted rescue regression",
+  "if_no_signal": "report as a null pilot and reconsider whether paper 2 should vary training data, pretraining, or both before spending BRSET"
+}

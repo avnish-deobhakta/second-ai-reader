@@ -1,0 +1,367 @@
+{
+  "generated_utc": "2026-09-25T23:59:22.572417+00:00",
+  "plan": "starting_weights_part2_plan.json",
+  "status": "exploratory; confirmation set previously opened under lock v3",
+  "referral_fraction": 0.25,
+  "quality": {
+    "vit_base_5class": {
+      "auc": 0.8619,
+      "referable_missed": 894.7
+    },
+    "vit_base_mae_5class": {
+      "auc": 0.8667,
+      "referable_missed": 904.0
+    },
+    "vit_base_dinov2_5class": {
+      "auc": 0.9128,
+      "referable_missed": 616.7
+    },
+    "resnet50_5class": {
+      "auc": 0.8612,
+      "referable_missed": 925.3
+    },
+    "resnet50_swsl_5class": {
+      "auc": 0.907,
+      "referable_missed": 661.3
+    },
+    "resnet50_dino_5class": {
+      "auc": 0.8934,
+      "referable_missed": 755.3
+    },
+    "densenet121_5class": {
+      "auc": 0.8856,
+      "referable_missed": 786.7
+    },
+    "efficientnet_b3_5class": {
+      "auc": 0.8604,
+      "referable_missed": 920.0
+    },
+    "retfound_5class": {
+      "auc": 0.8765,
+      "referable_missed": 824.0
+    }
+  },
+  "co_miss_ratio": {
+    "referable": {
+      "seed_siblings": {
+        "mean": 3.05,
+        "ci95": [
+          2.91,
+          3.21
+        ]
+      },
+      "same_arch_diff_init_vit": {
+        "mean": 2.54,
+        "ci95": [
+          2.43,
+          2.67
+        ]
+      },
+      "same_arch_diff_init_resnet": {
+        "mean": 2.64,
+        "ci95": [
+          2.52,
+          2.78
+        ]
+      },
+      "different_architecture": {
+        "mean": 2.38,
+        "ci95": [
+          2.28,
+          2.49
+        ]
+      },
+      "new_init_vs_other_architecture": {
+        "mean": 2.61,
+        "ci95": [
+          2.49,
+          2.73
+        ]
+      },
+      "same_arch_diff_init_pooled": {
+        "mean": 2.59,
+        "ci95": [
+          2.48,
+          2.72
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_vit": {
+        "mean": 0.51,
+        "ci95": [
+          0.45,
+          0.58
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_resnet": {
+        "mean": 0.41,
+        "ci95": [
+          0.35,
+          0.48
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_pooled": {
+        "mean": 0.46,
+        "ci95": [
+          0.41,
+          0.52
+        ]
+      },
+      "same_arch_diff_init_vit__minus__different_architecture": {
+        "mean": 0.16,
+        "ci95": [
+          0.11,
+          0.22
+        ]
+      },
+      "same_arch_diff_init_resnet__minus__different_architecture": {
+        "mean": 0.27,
+        "ci95": [
+          0.21,
+          0.32
+        ]
+      },
+      "same_arch_diff_init_pooled__minus__different_architecture": {
+        "mean": 0.21,
+        "ci95": [
+          0.17,
+          0.26
+        ]
+      }
+    },
+    "grade3plus": {
+      "seed_siblings": {
+        "mean": 11.65,
+        "ci95": [
+          9.73,
+          14.73
+        ]
+      },
+      "same_arch_diff_init_vit": {
+        "mean": 7.33,
+        "ci95": [
+          5.97,
+          9.16
+        ]
+      },
+      "same_arch_diff_init_resnet": {
+        "mean": 8.85,
+        "ci95": [
+          7.26,
+          10.98
+        ]
+      },
+      "different_architecture": {
+        "mean": 7.69,
+        "ci95": [
+          6.42,
+          9.53
+        ]
+      },
+      "new_init_vs_other_architecture": {
+        "mean": 8.87,
+        "ci95": [
+          7.38,
+          10.91
+        ]
+      },
+      "same_arch_diff_init_pooled": {
+        "mean": 8.09,
+        "ci95": [
+          6.74,
+          9.92
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_vit": {
+        "mean": 4.31,
+        "ci95": [
+          3.05,
+          6.47
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_resnet": {
+        "mean": 2.79,
+        "ci95": [
+          1.71,
+          4.58
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_pooled": {
+        "mean": 3.55,
+        "ci95": [
+          2.48,
+          5.38
+        ]
+      },
+      "same_arch_diff_init_vit__minus__different_architecture": {
+        "mean": -0.36,
+        "ci95": [
+          -1.48,
+          0.75
+        ]
+      },
+      "same_arch_diff_init_resnet__minus__different_architecture": {
+        "mean": 1.16,
+        "ci95": [
+          -0.07,
+          2.57
+        ]
+      },
+      "same_arch_diff_init_pooled__minus__different_architecture": {
+        "mean": 0.4,
+        "ci95": [
+          -0.55,
+          1.33
+        ]
+      }
+    },
+    "pdr": {
+      "seed_siblings": {
+        "mean": 11.62,
+        "ci95": [
+          9.21,
+          16.0
+        ]
+      },
+      "same_arch_diff_init_vit": {
+        "mean": 6.8,
+        "ci95": [
+          4.73,
+          9.45
+        ]
+      },
+      "same_arch_diff_init_resnet": {
+        "mean": 7.66,
+        "ci95": [
+          4.96,
+          10.62
+        ]
+      },
+      "different_architecture": {
+        "mean": 6.68,
+        "ci95": [
+          4.84,
+          9.2
+        ]
+      },
+      "new_init_vs_other_architecture": {
+        "mean": 8.12,
+        "ci95": [
+          6.15,
+          10.85
+        ]
+      },
+      "same_arch_diff_init_pooled": {
+        "mean": 7.23,
+        "ci95": [
+          5.13,
+          9.68
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_vit": {
+        "mean": 4.82,
+        "ci95": [
+          2.77,
+          8.77
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_resnet": {
+        "mean": 3.96,
+        "ci95": [
+          2.1,
+          8.04
+        ]
+      },
+      "seed_siblings__minus__same_arch_diff_init_pooled": {
+        "mean": 4.39,
+        "ci95": [
+          2.83,
+          8.13
+        ]
+      },
+      "same_arch_diff_init_vit__minus__different_architecture": {
+        "mean": 0.12,
+        "ci95": [
+          -1.84,
+          2.37
+        ]
+      },
+      "same_arch_diff_init_resnet__minus__different_architecture": {
+        "mean": 0.98,
+        "ci95": [
+          -1.25,
+          3.25
+        ]
+      },
+      "same_arch_diff_init_pooled__minus__different_architecture": {
+        "mean": 0.55,
+        "ci95": [
+          -1.23,
+          2.33
+        ]
+      }
+    }
+  },
+  "pair_co_miss_referable": {
+    "ViT sup | ViT sup": 2.78,
+    "ViT sup | ViT MAE": 2.43,
+    "ViT sup | ViT DINOv2": 2.59,
+    "ViT sup | ResNet sup": 2.31,
+    "ViT sup | ResNet SWSL": 2.58,
+    "ViT sup | ResNet DINO": 2.48,
+    "ViT sup | DenseNet": 2.42,
+    "ViT sup | EffNet": 2.3,
+    "ViT sup | RETFound": 2.45,
+    "ViT MAE | ViT MAE": 2.8,
+    "ViT MAE | ViT DINOv2": 2.6,
+    "ViT MAE | ResNet sup": 2.35,
+    "ViT MAE | ResNet SWSL": 2.55,
+    "ViT MAE | ResNet DINO": 2.52,
+    "ViT MAE | DenseNet": 2.46,
+    "ViT MAE | EffNet": 2.3,
+    "ViT MAE | RETFound": 2.47,
+    "ViT DINOv2 | ViT DINOv2": 3.98,
+    "ViT DINOv2 | ResNet sup": 2.44,
+    "ViT DINOv2 | ResNet SWSL": 3.14,
+    "ViT DINOv2 | ResNet DINO": 2.93,
+    "ViT DINOv2 | DenseNet": 2.86,
+    "ViT DINOv2 | EffNet": 2.47,
+    "ViT DINOv2 | RETFound": 2.69,
+    "ResNet sup | ResNet sup": 2.65,
+    "ResNet sup | ResNet SWSL": 2.5,
+    "ResNet sup | ResNet DINO": 2.53,
+    "ResNet sup | DenseNet": 2.46,
+    "ResNet sup | EffNet": 2.28,
+    "ResNet sup | RETFound": 2.35,
+    "ResNet SWSL | ResNet SWSL": 3.28,
+    "ResNet SWSL | ResNet DINO": 2.9,
+    "ResNet SWSL | DenseNet": 2.93,
+    "ResNet SWSL | EffNet": 2.5,
+    "ResNet SWSL | RETFound": 2.67,
+    "ResNet DINO | ResNet DINO": 3.15,
+    "ResNet DINO | DenseNet": 2.82,
+    "ResNet DINO | EffNet": 2.45,
+    "ResNet DINO | RETFound": 2.52,
+    "DenseNet | DenseNet": 2.94,
+    "DenseNet | EffNet": 2.42,
+    "DenseNet | RETFound": 2.47,
+    "EffNet | EffNet": 2.52,
+    "EffNet | RETFound": 2.3,
+    "RETFound | RETFound": 3.35
+  },
+  "strength_adjusted": {
+    "same_arch_diff_init_vs_different_architecture_ratio": 1.036,
+    "n_pairs": 36,
+    "note": "multiplicative difference in referable co-miss ratio, pair-level OLS on log ratio with pair mean and gap in referable misses; descriptive"
+  },
+  "matched_volume_net_referable_by_type": {
+    "different_architecture": 75.69,
+    "new_init_vs_other_architecture": 79.23,
+    "same_arch_diff_init_resnet": 77.37,
+    "same_arch_diff_init_vit": 88.0
+  },
+  "signals": {
+    "vit_init_matters": true,
+    "resnet_init_matters": true,
+    "architecture_matters_more": true
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "generated_utc": "2026-09-23T12:21:35.047720+00:00",
+  "pool": {
+    "estimation_patients": 17859,
+    "estimation_eyes": 35718,
+    "confirmation_patients": 8929,
+    "confirmation_eyes": 17858,
+    "grade_counts": {
+      "0": 26394,
+      "1": 2509,
+      "2": 5167,
+      "3": 824,
+      "4": 824
+    },
+    "referable_rate": 0.1908
+  },
+  "referral_rates": {
+    "single_model_eye": 0.25,
+    "single_model_patient": 0.3417,
+    "union_eye_mean": 0.3272
+  },
+  "diagnostic_1_reliability": {
+    "C": {
+      "split_half": 0.5891,
+      "full_estimation_pool": 0.7414,
+      "confirmation_pool_projected": 0.5891
+    },
+    "rho_cost": {
+      "split_half": 0.494,
+      "full_estimation_pool": 0.6613,
+      "confirmation_pool_projected": 0.494
+    },
+    "C_strong": {
+      "split_half": 0.6012,
+      "full_estimation_pool": 0.7509,
+      "confirmation_pool_projected": 0.6012
+    },
+    "C_weak": {
+      "split_half": 0.4192,
+      "full_estimation_pool": 0.5908,
+      "confirmation_pool_projected": 0.4192
+    }
+  },
+  "diagnostic_2_anchor_strength": {
+    "strong_anchors": [
+      "densenet121_binary",
+      "densenet121_5class",
+      "vit_base_binary",
+      "retfound_binary",
+      "retfound_5class",
+      "retfound_adversarial"
+    ],
+    "weak_anchors": [
+      "efficientnet_b3_binary",
+      "efficientnet_b3_5class",
+      "resnet50_binary",
+      "resnet50_5class",
+      "vit_base_5class"
+    ],
+    "C_strong": {
+      "split_half": 0.6012,
+      "full_estimation_pool": 0.7509,
+      "confirmation_pool_projected": 0.6012
+    },
+    "C_weak": {
+      "split_half": 0.4192,
+      "full_estimation_pool": 0.5908,
+      "confirmation_pool_projected": 0.4192
+    }
+  },
+  "diagnostic_3_granularity": {
+    "pdr": {
+      "median_distinct_of_10": 10.0,
+      "mean_max_tie_group": 1.5,
+      "mean_within_anchor_spread": 8.271
+    },
+    "sev3": {
+      "median_distinct_of_10": 10.0,
+      "mean_max_tie_group": 1.42,
+      "mean_within_anchor_spread": 13.256
+    },
+    "pdr_seed0": {
+      "median_distinct_of_10": 7.0,
+      "mean_max_tie_group": 2.67,
+      "mean_within_anchor_spread": 10.518
+    }
+  },
+  "diagnostic_4_seed_stability": {
+    "least_weighted_dependence": {
+      "mean_pairwise_agreement": 0.212,
+      "anchors_unanimous": 1,
+      "chance": 0.1
+    },
+    "least_ceiling_overlap": {
+      "mean_pairwise_agreement": 0.212,
+      "anchors_unanimous": 0,
+      "chance": 0.1
+    },
+    "best_partner_marginal": {
+      "mean_pairwise_agreement": 0.0,
+      "anchors_unanimous": 0,
+      "chance": 0.1
+    }
+  },
+  "pair_summary": {
+    "C_mean": 0.4012,
+    "rho_cost_mean": 0.4316,
+    "pdr_avoided_mean": 22.689,
+    "sev3_avoided_mean": 43.566
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "plan": "predicting shared blind spots from the models themselves",
+  "written": "2026-09-26, before any representation similarity was computed",
+  "status": "exploratory; outcome data (EyePACS confirmation set) previously opened under lock v3",
+  "question": "Can properties of the models, measured without disease labels, predict how often two models miss the same eyes?",
+  "variants": ["ViT-B supervised", "ViT-B MAE", "ViT-B DINOv2", "ResNet50 supervised", "ResNet50 SWSL", "ResNet50 DINO", "DenseNet121", "EfficientNet-B3", "RETFound"],
+  "pairs": "36 pairs of different variants (plus 9 seed-sibling pairs for the variance-components model)",
+  "observed_targets": {
+    "primary": "latent (tetrachoric) correlation of referable-disease misses at 25% referral, seed-averaged",
+    "secondary": ["co-miss ratio for referable disease", "co-miss ratio for grade 3 or worse", "phi correlation of all errors"]
+  },
+  "predictors": {
+    "P1_disagreement_identity": "P(both wrong) = (pA + pB - D)/2, with error rates pA, pB taken from one random half of the confirmation set (labels) and disagreement D from the other half (no labels); compared with the actual joint error on the second half",
+    "P2_pretrained_CKA": "linear CKA between pretrained backbones (before any retinal training) on 2,000 unlabelled confirmation-set images; transformers mean-pooled",
+    "P3_finetuned_CKA": "linear CKA between the trained models' penultimate features (seed 0) on the same images",
+    "P4_structural_similarity": "count of shared attributes: family (CNN or transformer), exact architecture, pretraining data, pretraining objective"
+  },
+  "analyses": {
+    "primary": "Spearman correlation across the 36 pairs between each of P2, P3, P4 and the primary target, with intervals from resampling variants (1,000)",
+    "P1": "mean absolute and relative error of the predicted joint error rate across pairs",
+    "variance_components": "regression of the latent correlation on indicators of shared architecture, shared pretraining data, shared objective and seed-sibling status; the intercept estimates the floor that no difference among these removes"
+  },
+  "what_counts_as_a_signal": "P2 (pretrained CKA) correlating positively with the primary target with an interval excluding zero would mean complementarity can be anticipated before any training on retinal images",
+  "caveats": ["9 variants, 36 pairs: directional", "all models trained on the same EyePACS data, so the data term cannot be estimated here", "CKA measures representation similarity, not decision similarity"]
+}

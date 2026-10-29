@@ -1,0 +1,373 @@
+{
+  "generated_utc": "2026-09-23T16:38:58.751278+00:00",
+  "status": "descriptive (sections 1-2) and exploratory (section 3); all outcome data previously opened under locks v3, v4, v5.1",
+  "operating_points": {
+    "EyePACS_fresh": 0.25,
+    "DDR": 0.555
+  },
+  "strong3_anchors": [
+    "retfound_5class",
+    "retfound_binary",
+    "densenet121_5class"
+  ],
+  "headline_reductions": {
+    "EyePACS_fresh__pdr": {
+      "anchor_missed_per_scenario": 17.24,
+      "ensemble_missed": 10.43,
+      "better_single_missed": 13.44,
+      "relative_reduction_vs_anchor": 0.3952,
+      "relative_reduction_vs_anchor_95": [
+        0.3025,
+        0.5102
+      ],
+      "relative_reduction_vs_better": 0.2242,
+      "relative_reduction_vs_better_95": [
+        0.1226,
+        0.3378
+      ],
+      "strong3_relative_reduction": 0.3111,
+      "strong3_relative_reduction_95": [
+        0.222,
+        0.4414
+      ]
+    },
+    "EyePACS_fresh__grade3plus": {
+      "anchor_missed_per_scenario": 43.21,
+      "ensemble_missed": 32.49,
+      "better_single_missed": 37.23,
+      "relative_reduction_vs_anchor": 0.2481,
+      "relative_reduction_vs_anchor_95": [
+        0.1879,
+        0.3216
+      ],
+      "relative_reduction_vs_better": 0.1273,
+      "relative_reduction_vs_better_95": [
+        0.0746,
+        0.1925
+      ],
+      "strong3_relative_reduction": 0.1308,
+      "strong3_relative_reduction_95": [
+        0.0685,
+        0.2016
+      ]
+    },
+    "DDR__pdr": {
+      "anchor_missed_per_scenario": 45.3,
+      "ensemble_missed": 32.89,
+      "better_single_missed": 36.69,
+      "relative_reduction_vs_anchor": 0.2739,
+      "relative_reduction_vs_anchor_95": [
+        0.1884,
+        0.3988
+      ],
+      "relative_reduction_vs_better": 0.1035,
+      "relative_reduction_vs_better_95": [
+        0.0464,
+        0.2029
+      ],
+      "strong3_relative_reduction": 0.1105,
+      "strong3_relative_reduction_95": [
+        0.0399,
+        0.2343
+      ]
+    },
+    "DDR__grade3plus": {
+      "anchor_missed_per_scenario": 47.45,
+      "ensemble_missed": 34.13,
+      "better_single_missed": 38.86,
+      "relative_reduction_vs_anchor": 0.2807,
+      "relative_reduction_vs_anchor_95": [
+        0.1977,
+        0.4026
+      ],
+      "relative_reduction_vs_better": 0.1216,
+      "relative_reduction_vs_better_95": [
+        0.062,
+        0.2274
+      ],
+      "strong3_relative_reduction": 0.1244,
+      "strong3_relative_reduction_95": [
+        0.0543,
+        0.2491
+      ]
+    }
+  },
+  "weighting_exploratory": {
+    "EyePACS_est_to_conf": {
+      "simple": {
+        "C_weighted": {
+          "estimate": 0.3368,
+          "arch_95": [
+            -0.1317,
+            0.6691
+          ],
+          "minus_C_weighted": null
+        },
+        "C_unweighted": {
+          "estimate": 0.6894,
+          "arch_95": [
+            0.373,
+            0.838
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.3526,
+            "arch_95": [
+              0.0438,
+              0.6989
+            ]
+          }
+        },
+        "C_pdr": {
+          "estimate": 0.2568,
+          "arch_95": [
+            -0.2061,
+            0.5904
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.08,
+            "arch_95": [
+              -0.3101,
+              0.0825
+            ]
+          }
+        },
+        "rho_cost": {
+          "estimate": 0.2819,
+          "arch_95": [
+            -0.2174,
+            0.6598
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.0549,
+            "arch_95": [
+              -0.2565,
+              0.1756
+            ]
+          }
+        },
+        "rho_binary": {
+          "estimate": 0.6163,
+          "arch_95": [
+            0.2554,
+            0.8321
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.2795,
+            "arch_95": [
+              -0.0284,
+              0.6889
+            ]
+          }
+        }
+      },
+      "partial_on_partner_quality": {
+        "C_weighted": {
+          "estimate": 0.443,
+          "arch_95": [
+            -0.1077,
+            0.7265
+          ],
+          "minus_C_weighted": null
+        },
+        "C_unweighted": {
+          "estimate": 0.7646,
+          "arch_95": [
+            0.2288,
+            0.8538
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.3216,
+            "arch_95": [
+              -0.0171,
+              0.6363
+            ]
+          }
+        },
+        "C_pdr": {
+          "estimate": 0.3123,
+          "arch_95": [
+            -0.1659,
+            0.5927
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.1307,
+            "arch_95": [
+              -0.322,
+              0.1161
+            ]
+          }
+        },
+        "rho_cost": {
+          "estimate": 0.2901,
+          "arch_95": [
+            -0.1665,
+            0.5817
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.1529,
+            "arch_95": [
+              -0.3672,
+              0.1469
+            ]
+          }
+        },
+        "rho_binary": {
+          "estimate": 0.6279,
+          "arch_95": [
+            0.0793,
+            0.7925
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.1849,
+            "arch_95": [
+              -0.162,
+              0.5912
+            ]
+          }
+        }
+      }
+    },
+    "DDR_A_to_B": {
+      "simple": {
+        "C_weighted": {
+          "estimate": 0.3602,
+          "arch_95": [
+            -0.0953,
+            0.6981
+          ],
+          "minus_C_weighted": null
+        },
+        "C_unweighted": {
+          "estimate": 0.317,
+          "arch_95": [
+            -0.1743,
+            0.7397
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.0432,
+            "arch_95": [
+              -0.3709,
+              0.2654
+            ]
+          }
+        },
+        "C_pdr": {
+          "estimate": 0.2251,
+          "arch_95": [
+            -0.2269,
+            0.6184
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.135,
+            "arch_95": [
+              -0.3293,
+              0.0197
+            ]
+          }
+        },
+        "rho_cost": {
+          "estimate": 0.4477,
+          "arch_95": [
+            -0.0177,
+            0.8146
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.0876,
+            "arch_95": [
+              -0.219,
+              0.4168
+            ]
+          }
+        },
+        "rho_binary": {
+          "estimate": 0.6288,
+          "arch_95": [
+            0.2729,
+            0.8252
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.2687,
+            "arch_95": [
+              -0.1048,
+              0.6034
+            ]
+          }
+        }
+      },
+      "partial_on_partner_quality": {
+        "C_weighted": {
+          "estimate": 0.44,
+          "arch_95": [
+            -0.0993,
+            0.7298
+          ],
+          "minus_C_weighted": null
+        },
+        "C_unweighted": {
+          "estimate": 0.3349,
+          "arch_95": [
+            -0.1804,
+            0.7267
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.1051,
+            "arch_95": [
+              -0.4488,
+              0.2606
+            ]
+          }
+        },
+        "C_pdr": {
+          "estimate": 0.3477,
+          "arch_95": [
+            -0.134,
+            0.7005
+          ],
+          "minus_C_weighted": {
+            "estimate": -0.0923,
+            "arch_95": [
+              -0.3221,
+              0.0909
+            ]
+          }
+        },
+        "rho_cost": {
+          "estimate": 0.4524,
+          "arch_95": [
+            -0.0324,
+            0.7522
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.0124,
+            "arch_95": [
+              -0.2127,
+              0.2416
+            ]
+          }
+        },
+        "rho_binary": {
+          "estimate": 0.5334,
+          "arch_95": [
+            0.0721,
+            0.7991
+          ],
+          "minus_C_weighted": {
+            "estimate": 0.0934,
+            "arch_95": [
+              -0.2711,
+              0.4849
+            ]
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "relative_reduction_vs_anchor": "sum over 110 ordered pairs x 9 seeds of (anchor misses - ensemble misses) / sum of anchor misses; matched volume, max-percentile-rank ensemble",
+    "relative_reduction_vs_better": "same, with the better single reader of each combination as comparator",
+    "intervals": "cluster bootstrap of the ratio (EyePACS: patients; DDR: filename groups), referral sets fixed at full-sample thresholds",
+    "C_unweighted": "ceiling-normalised overlap with every referable miss weighted 1",
+    "C_pdr": "ceiling-normalised overlap of PDR misses only",
+    "rho_binary": "Pearson correlation of binary misclassification vectors (v1 definition)"
+  }
+}

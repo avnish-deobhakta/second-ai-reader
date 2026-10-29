@@ -1,0 +1,14 @@
+{
+  "plan": "HIBA sensitivity analysis by image type (dermoscopic vs clinical photographs)",
+  "written": "2026-09-27, before image-type labels are joined to results",
+  "status": "exploratory sensitivity analysis (HIBA already opened under derm_lock_v1)",
+  "reason": "HIBA mixes dermoscopic images with clinical close-up and overview photographs; all models were trained on dermoscopy only",
+  "grouping": "image_type from the ISIC archive metadata: 'dermoscopic' vs any value beginning 'clinical' (close-up and overview together)",
+  "analyses_per_group": [
+    "malignancy AUC of each of the 24 models (to show the size of the modality shift)",
+    "H1: relative reduction in missed melanoma and missed skin cancer at matched referral volume, all different-architecture pairs, referral share 1.31 x the group's own prevalence",
+    "H3 primary contrast: shared-miss ratio, different-architecture pairs trained on the same vs different collections, for melanoma and any cancer"
+  ],
+  "intervals": "patient-cluster bootstrap (1,000) within each group",
+  "reporting": "reported whatever it shows; the primary locked results are unchanged"
+}

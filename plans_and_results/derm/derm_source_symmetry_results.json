@@ -1,0 +1,145 @@
+{
+  "generated_utc": "2026-10-03T04:22:26.567892+00:00",
+  "plan": "derm_source_symmetry_plan.json",
+  "status": "exploratory",
+  "median_auc_any_cancer_by_training_source": {
+    "HIBA_HAM10000": 0.8809,
+    "HIBA_BCN20000": 0.8725,
+    "PAD_HAM10000": 0.7446,
+    "PAD_BCN20000": 0.7012
+  },
+  "split_by_source": {
+    "HIBA_melanoma": {
+      "same_HAM10000": {
+        "mean": 3.581,
+        "ci95": [
+          3.0181,
+          4.2793
+        ]
+      },
+      "same_BCN20000": {
+        "mean": 3.169,
+        "ci95": [
+          2.6788,
+          3.8322
+        ]
+      },
+      "mixed": {
+        "mean": 2.93,
+        "ci95": [
+          2.4426,
+          3.4903
+        ]
+      },
+      "HAM_pairs_minus_mixed": {
+        "mean": 0.65,
+        "ci95": [
+          0.37,
+          1.0698
+        ]
+      },
+      "BCN_pairs_minus_mixed": {
+        "mean": 0.239,
+        "ci95": [
+          -0.0588,
+          0.7181
+        ]
+      },
+      "same_source_adjusted_for_miss_counts": {
+        "mean": 0.445,
+        "ci95": [
+          0.2429,
+          0.804
+        ]
+      }
+    },
+    "HIBA_any_cancer": {
+      "same_HAM10000": {
+        "mean": 4.383,
+        "ci95": [
+          3.8457,
+          5.0066
+        ]
+      },
+      "same_BCN20000": {
+        "mean": 3.799,
+        "ci95": [
+          3.3303,
+          4.3222
+        ]
+      },
+      "mixed": {
+        "mean": 3.217,
+        "ci95": [
+          2.7569,
+          3.7001
+        ]
+      },
+      "HAM_pairs_minus_mixed": {
+        "mean": 1.167,
+        "ci95": [
+          0.7826,
+          1.6463
+        ]
+      },
+      "BCN_pairs_minus_mixed": {
+        "mean": 0.583,
+        "ci95": [
+          0.1891,
+          1.0923
+        ]
+      },
+      "same_source_adjusted_for_miss_counts": {
+        "mean": 0.881,
+        "ci95": [
+          0.6068,
+          1.2379
+        ]
+      }
+    },
+    "PAD_any_cancer": {
+      "same_HAM10000": {
+        "mean": 2.124,
+        "ci95": [
+          1.995,
+          2.2691
+        ]
+      },
+      "same_BCN20000": {
+        "mean": 1.837,
+        "ci95": [
+          1.7372,
+          1.9459
+        ]
+      },
+      "mixed": {
+        "mean": 1.527,
+        "ci95": [
+          1.4422,
+          1.6193
+        ]
+      },
+      "HAM_pairs_minus_mixed": {
+        "mean": 0.597,
+        "ci95": [
+          0.482,
+          0.7372
+        ]
+      },
+      "BCN_pairs_minus_mixed": {
+        "mean": 0.31,
+        "ci95": [
+          0.2157,
+          0.4056
+        ]
+      },
+      "same_source_adjusted_for_miss_counts": {
+        "mean": 0.449,
+        "ci95": [
+          0.3703,
+          0.539
+        ]
+      }
+    }
+  }
+}

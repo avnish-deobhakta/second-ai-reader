@@ -1,0 +1,118 @@
+{
+  "generated_utc": "2026-09-25T14:07:20.836984+00:00",
+  "plan": "pilot_plan_paper2_aptos.json",
+  "status": "exploratory pilot; APTOS previously used for EyePACS-trained models",
+  "aptos": {
+    "images": 3662,
+    "pdr": 295,
+    "referable_prevalence": 0.4061,
+    "f": 0.5319
+  },
+  "variant_auc_referable": {
+    "E:densenet121_5class": 0.9579,
+    "E:efficientnet_b3_5class": 0.951,
+    "E:resnet50_5class": 0.9574,
+    "E:retfound_5class": 0.9596,
+    "D:densenet121_5class": 0.9488,
+    "D:efficientnet_b3_5class": 0.9556,
+    "D:resnet50_5class": 0.9488,
+    "D:retfound_5class": 0.9623
+  },
+  "variant_pdr_missed": {
+    "E:densenet121_5class": 1.33,
+    "E:efficientnet_b3_5class": 4.0,
+    "E:resnet50_5class": 5.33,
+    "E:retfound_5class": 3.33,
+    "D:densenet121_5class": 1.0,
+    "D:efficientnet_b3_5class": 5.33,
+    "D:resnet50_5class": 3.67,
+    "D:retfound_5class": 4.67
+  },
+  "co_miss_ratio_by_pair_type": {
+    "seed_siblings": {
+      "mean": 24.74,
+      "ci95": [
+        15.12,
+        52.99
+      ]
+    },
+    "same_data_diff_arch": {
+      "mean": 8.79,
+      "ci95": [
+        5.92,
+        16.78
+      ]
+    },
+    "diff_data_same_arch": {
+      "mean": 15.79,
+      "ci95": [
+        6.76,
+        33.51
+      ]
+    },
+    "diff_data_diff_arch": {
+      "mean": 5.09,
+      "ci95": [
+        2.16,
+        11.63
+      ]
+    },
+    "same_data_diff_arch_minus_diff_data_diff_arch": {
+      "mean": 3.7,
+      "ci95": [
+        -0.03,
+        8.82
+      ]
+    },
+    "same_data_diff_arch_minus_diff_data_same_arch": {
+      "mean": -7.0,
+      "ci95": [
+        -22.58,
+        5.45
+      ]
+    }
+  },
+  "benefit_by_pair_type": {
+    "diff_data_diff_arch": {
+      "rescued": 3.296,
+      "mv_net": 2.148,
+      "incr_fp": 151.347,
+      "rho": 0.608
+    },
+    "diff_data_same_arch": {
+      "rescued": 2.611,
+      "mv_net": 1.472,
+      "incr_fp": 129.597,
+      "rho": 0.668
+    },
+    "same_data_diff_arch": {
+      "rescued": 3.213,
+      "mv_net": 1.509,
+      "incr_fp": 141.412,
+      "rho": 0.634
+    }
+  },
+  "quality_adjusted_regression": {
+    "rescued": {
+      "cross_source_coef": -0.088,
+      "partner_pdr_missed_coef": -0.154,
+      "cross_source_arch_boot_95": [
+        -0.444,
+        0.015
+      ]
+    },
+    "mv_net": {
+      "cross_source_coef": 0.47,
+      "partner_pdr_missed_coef": -0.174,
+      "cross_source_arch_boot_95": [
+        -0.128,
+        0.703
+      ]
+    }
+  },
+  "signal_criteria": {
+    "co_miss_lower_for_different_data": false,
+    "positive_cross_source_rescue_coefficient": false,
+    "both_met": false
+  }
+}

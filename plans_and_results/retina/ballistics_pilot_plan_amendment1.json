@@ -1,0 +1,21 @@
+{
+  "amendment": "ballistics pilot plan, amendment 1",
+  "amends": "ballistics_pilot_plan.json",
+  "written": "2026-09-26, after the calibration gate failed and a post-hoc diagnostic located the cause, before any retraining or re-analysis",
+  "what_happened": {
+    "gate": "Spearman -0.081 across 28 anchor pairs (required 0.6)",
+    "cause_from_diagnostic": "the short transformer recipe (no layer-wise LR decay, 5 epochs) failed to train the DINOv2-initialised ViT-B (confirmation-set AUC 0.60; 419 severe misses vs 21 when fully trained) and the CLIP-initialised ViT-B (AUC 0.68). Excluding DINOv2 post hoc gave 0.637 raw and 0.660 strength-adjusted, but that exclusion is not used to pass the gate."
+  },
+  "rule_added": {
+    "training_quality_rule": "Any zoo model with validation AUC below 0.80 under the short recipe is retrained with the full stabilized ViT recipe of TRAIN_eyepacs_v2_VIT_ALLSEEDS (AdamW lr 3e-5, wd 0.05, 5-epoch linear warm-up then cosine, layer-wise LR decay 0.65, clip 1.0, batch 32, 15 epochs, best-validation checkpoint). The short-recipe checkpoint, predictions and fingerprints are kept, renamed with the suffix _shortrecipe, for audit.",
+    "expected_to_trigger_for": ["vit_b_dinov2 (val AUC 0.619)", "vit_b_clip (val AUC 0.695)"],
+    "no_other_changes_to_models": "the other 20 zoo models keep their checkpoints, predictions and fingerprints unchanged"
+  },
+  "gate": "recomputed on all 8 anchors (28 pairs) with no exclusions after retraining; threshold unchanged at Spearman 0.6 on raw severe co-miss. If it fails, the notebook halts and the pilot stops.",
+  "analysis_changes": {
+    "strength_handling_primary": "each fingerprint's association with severe co-miss is reported as a partial rank correlation controlling for the pair's mean and gap in severe misses, with model-level bootstrap intervals; and within tertiles of pair mean severe misses",
+    "leave_one_family_out": "unchanged; the fingerprint model must beat accuracy-only",
+    "clinical_test": "primary unchanged (partner within 10% of best severe-miss count); because the 10% tier contained a single model for every anchor in the first run, a secondary tier of 25% is added and reported alongside, with the number of candidates per anchor"
+  },
+  "status": "still exploratory; confirmatory test reserved for BRSET"
+}

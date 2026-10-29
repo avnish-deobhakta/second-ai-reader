@@ -1,0 +1,25 @@
+{
+  "plan": "pretraining experiment (paper 2 groundwork)",
+  "written": "2026-09-25, before any of the new models were trained",
+  "status": "exploratory; APTOS previously used. Fixes the comparison in advance so it cannot be tuned after the fact.",
+  "question": "Does changing only the starting weights of a model reduce shared blind spots, and by how much relative to changing the architecture?",
+  "models": {
+    "vit_base_imagenet_supervised": "existing vit_base_5class, 3 seeds (timm vit_base_patch16_224)",
+    "vit_base_mae": "vit_base_patch16_224.mae, 3 seeds, new",
+    "vit_base_dinov2": "vit_base_patch14_dinov2.lvd142m at 224 px, 3 seeds, new (14-pixel patches: recorded caveat)",
+    "different_architecture_reference": "existing EyePACS-trained 5-class DenseNet121, EfficientNet-B3, ResNet50, RETFound, 3 seeds each"
+  },
+  "training": "EyePACS v2 train split, stabilized ViT recipe identical to TRAIN_eyepacs_v2_VIT_ALLSEEDS; only initialisation differs",
+  "evaluation_set": "APTOS 2019 (3,662 images), f = 1.31 x referable prevalence, image-level bootstrap (1,000)",
+  "outcomes": {
+    "primary": "co-miss ratio for referable disease (grade 2 or worse) by pair type",
+    "secondary": ["co-miss ratio for grade 3 or worse", "co-miss ratio for PDR (expected to be sparse)", "matched-volume net referable eyes rescued", "binary error correlation"]
+  },
+  "pair_types": {
+    "vit_seed_siblings": "same initialisation, different seed",
+    "vit_different_init": "ViT-Base pairs with different initialisations (supervised vs MAE, supervised vs DINOv2, MAE vs DINOv2), each also reported separately",
+    "different_architecture_same_data": "pairs among the existing non-ViT EyePACS models and between them and ViT-Base supervised"
+  },
+  "what_counts_as_a_signal": "co-miss ratio for vit_different_init clearly below vit_seed_siblings (bootstrap interval of the difference excludes zero). Secondary reading: where vit_different_init falls relative to different_architecture_same_data. If comparable, initialisation rather than architecture drives shared blind spots.",
+  "quality_note": "Validation and APTOS AUC are reported for every model; if one initialisation is markedly weaker, a partner-strength-adjusted comparison is reported alongside."
+}

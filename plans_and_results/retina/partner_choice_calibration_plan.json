@@ -1,0 +1,24 @@
+{
+  "plan": "choosing a partner without knowing strength in advance: calibration-sample simulation",
+  "written": "2026-09-26, before the simulation is run",
+  "status": "exploratory; uses predictions from previously opened sets (EyePACS confirmation set, lock v3; DDR, lock v5.1)",
+  "question": "How much of the achievable severe-disease rescue does each partner-selection rule capture, as a function of how many local images are graded?",
+  "sites": {
+    "EyePACS": "22 full-recipe zoo models on the confirmation set (15,794 eyes); 25% referral; calibration samples drawn by patient",
+    "DDR": "11 paper-one architectures (seed 0) on DDR (12,422 images); 55.5% referral; calibration samples drawn by filename group"
+  },
+  "setup": "Each model in turn is the deployed model. Eligible partners are models of a different architecture family (the no-siblings rule). Referral sets and matched-volume ensembles use thresholds on the full set; the outcome for a chosen partner is net severe (grade 3 or worse) eyes rescued at matched volume, counted only on eyes outside the calibration sample.",
+  "rules": {
+    "random": "expected value over eligible partners",
+    "sample_auc": "partner with the highest referable-disease AUC in the graded calibration sample",
+    "sample_severe_misses": "partner with the fewest severe misses in the graded calibration sample",
+    "consensus_label_free": "partner whose scores agree most (mean Spearman) with all other candidates on unlabelled images; no grading",
+    "consensus_plus_degradation_label_free": "EyePACS only: among the top half of eligible partners by consensus, the one whose degradation-response fingerprint is least similar to the deployed model's; no grading",
+    "true_strongest_benchmark": "partner with the fewest severe misses on the full set (what full knowledge gives)",
+    "oracle": "best eligible partner on the evaluation eyes"
+  },
+  "calibration_sizes": [50, 100, 200, 500, 1000, 2000],
+  "draws_per_size": 200,
+  "outputs": ["mean net severe eyes rescued per deployed model, by rule and calibration size, with 5th to 95th percentile across draws", "share of the oracle's advantage over random captured", "how often each rule picks the true strongest", "rank correlation of the consensus score with true strength"],
+  "what_counts_as_useful": "a calibration size at which sample-based choice captures most (for example 80% or more) of the true-strongest benchmark's advantage over random; and whether a label-free rule matches it"
+}

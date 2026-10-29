@@ -1,0 +1,145 @@
+{
+  "locked_at_utc": "2026-09-22T21:39:22.157905+00:00",
+  "locked_on": "EyePACS validation predictions only (33 files); no fresh prediction opened",
+  "validation_file_sha256": {
+    "eyepacs_predictions_val_densenet121_binary_v2.csv": "ad8bf70ccb2c5f5a771a94c466d89b61c7f0c850e982d72ae885acbee4ef0a53",
+    "eyepacs_predictions_val_densenet121_binary_seed1_v2.csv": "59ac80d42960b61e6149a1051ebb82c63fb0e4a6d52666a78329cc65156514c6",
+    "eyepacs_predictions_val_densenet121_binary_seed2_v2.csv": "fb15dca3d6db22d1218b02c87611e462f83c532ea728adb5728263b7ffad8ba9",
+    "eyepacs_predictions_val_densenet121_5class_v2.csv": "a5d312c428454183aeaa4ac4b454e5adc0637f8da4b07d382e1b1cdfc5ac2824",
+    "eyepacs_predictions_val_densenet121_5class_seed1_v2.csv": "58c9ea32229a11d20e2ecf78bd80dc213abe60e257f3109a7c991656f7b10e45",
+    "eyepacs_predictions_val_densenet121_5class_seed2_v2.csv": "9865d1e62c31f2c8269068814c441cb0e4f38fbdea142bd66a18836a5f0f1599",
+    "eyepacs_predictions_val_efficientnet_b3_binary_v2.csv": "c3773f38e50b30623cce3bb0f1be7be27690d43be6fb6b3cd80ddc5427df1099",
+    "eyepacs_predictions_val_efficientnet_b3_binary_seed1_v2.csv": "886bbfee9d3b0e49bde23d22c6d3a0dd99bd09712e00d12132f9e79e3cd2bf9c",
+    "eyepacs_predictions_val_efficientnet_b3_binary_seed2_v2.csv": "63947dff19abedad7c611475392de1fc9bc10fdde3fbeaf9a9bdfdbbd9f23705",
+    "eyepacs_predictions_val_efficientnet_b3_5class_v2.csv": "2687044bbd4b82105940293bf19002d15bc068ca7a7bfc473096768f36219d77",
+    "eyepacs_predictions_val_efficientnet_b3_5class_seed1_v2.csv": "ceb732b23ab8134962e8010359716a8f8a1c01b9da53666ac7cf670de9f1d9d6",
+    "eyepacs_predictions_val_efficientnet_b3_5class_seed2_v2.csv": "d48f09ce4e52bfbbb14abf1a89838376e89a1c2d242bbf2e330745b166943e23",
+    "eyepacs_predictions_val_resnet50_binary_v2.csv": "1ad887d34f276d725b7c400968d69f0114a7643c1c8dc56c2eed8a4e5e06edbd",
+    "eyepacs_predictions_val_resnet50_binary_seed1_v2.csv": "3bb731a2fb38fc33d0a37d3ab6e21446808f35ea118f974e9d85fc6f7017d06d",
+    "eyepacs_predictions_val_resnet50_binary_seed2_v2.csv": "2d0807e1aea636e0a2f60022792c4fd37b2715319adf8181764d382105c7c647",
+    "eyepacs_predictions_val_resnet50_5class_v2.csv": "ce226942f5e9218da187a67fedb687b120e1e78ca1268ac1b73feef4480556b4",
+    "eyepacs_predictions_val_resnet50_5class_seed1_v2.csv": "17e6b82a13b2369797cf38fce6ffa62e7cbcd9a6d20d82aaf40fd33817657121",
+    "eyepacs_predictions_val_resnet50_5class_seed2_v2.csv": "9a086402aabaf12c1b6ff0e71060182b62e340cbe7364d317088435447a546a8",
+    "eyepacs_predictions_val_vit_base_binary_v2.csv": "b3761b52410b6cacdc6f4da3a7ac5fc920add07610654a001e12f110299762a0",
+    "eyepacs_predictions_val_vit_base_binary_seed1_v2.csv": "fdb8ff72ead820071828f6e8d7a44ec41b9e70f0845ec53668683bb8e0718410",
+    "eyepacs_predictions_val_vit_base_binary_seed2_v2.csv": "14ac2f2655234621f3e212e81c46bea2e7933ea65d9595fff3839050f11702d0",
+    "eyepacs_predictions_val_vit_base_5class_v2.csv": "7485deda873b58341c972a4e4015db53212db8856a26353a54c0b292947f4da7",
+    "eyepacs_predictions_val_vit_base_5class_seed1_v2.csv": "052c567595c6f829ac3f8533c36a3458d4432307087345b3d6e357a82cc09205",
+    "eyepacs_predictions_val_vit_base_5class_seed2_v2.csv": "d88154b7e5185e966bda24a29a0a467072b58a4c8d9957f26c25e141979de244",
+    "eyepacs_predictions_val_retfound_binary_v2.csv": "c46e6bfd40f0ecd669974d96b9e7e65b116f82cc2bfb0760eefee3c8b3b6123e",
+    "eyepacs_predictions_val_retfound_binary_seed1_v2.csv": "fe2644bd38ec752c7343d86bbbeb6eb9addbe5498e8c5219ce3348378693bc8d",
+    "eyepacs_predictions_val_retfound_binary_seed2_v2.csv": "d8e5db8945098c1c5db54cd9c6cdc119b6e46f828bb910c69b45a587c3f203ff",
+    "eyepacs_predictions_val_retfound_5class_v2.csv": "70709c49b252f77583a97e6be1bbd4640dbf54662aa5fbbd76f8cbaff95c2a94",
+    "eyepacs_predictions_val_retfound_5class_seed1_v2.csv": "ea7e468734ca043d8141c3b04c1294eb146cdb23bf65a3d40e61f674e833ddfc",
+    "eyepacs_predictions_val_retfound_5class_seed2_v2.csv": "4a61e3d53312fe483c3ff8affd4b0e116c8fabe15532e89d0698cb9ed74bba2e",
+    "eyepacs_predictions_val_retfound_adversarial_v2.csv": "d87b89ebdf02d20ea82497694484cd77b055fbb01d3f9e4621fa2505104682a3",
+    "eyepacs_predictions_val_retfound_adversarial_seed1_v2.csv": "42750acd5d9179f25f39e3b98c1da6690ca0aa48e3c0cdf83d233998ae41de2b",
+    "eyepacs_predictions_val_retfound_adversarial_seed2_v2.csv": "4e52a93d36b01968b50bb5fd57add1a7e0bb7e342203afbfdcd8d94a20a4404a"
+  },
+  "lock_v2_sha256": "0338c4fff7f3400c848d58e32fbcbbb0c6ad7f6035a8cdebffff2bee8b2b9699",
+  "carried_from_v2": {
+    "witness": [
+      "vit_base_5class",
+      "retfound_adversarial"
+    ],
+    "engineering": [
+      "densenet121_binary",
+      "retfound_adversarial"
+    ],
+    "control_added_pre_test": [
+      "densenet121_binary",
+      "retfound_binary"
+    ],
+    "rho_validation": "reused from lock v2 (same definition, same validation data)"
+  },
+  "or_gate": "rank-based: max of within-set ranks; both models at the same individual referral rate",
+  "referral_matching": "refer top round(r*n) by score; label-free",
+  "confirmatory": {
+    "primary": {
+      "statistic": "net severe misses (grade>=3) avoided vs better constituent at 25% burden, mean over 55 pairs x 9 seed combinations",
+      "uncertainty": "patient-clustered bootstrap, 1000 resamples, patients resampled jointly",
+      "supported_if": "95% interval excludes zero",
+      "note": "model-level resampling reported alongside but is not the decision rule"
+    },
+    "capacity_crossing": {
+      "enrichment": "drop non-referable patients at random until referable rate = 0.406; all severe eyes retained; 50 draws",
+      "prediction": "mean advantage negative at 25% burden and positive at 50%",
+      "positive_control": "unenriched fresh set at 25%",
+      "limit": "shows prevalence is sufficient to flip the sign; does not prove it caused the APTOS reversal (APTOS also differs in grading, cameras, population)"
+    }
+  },
+  "exploratory_no_verdict": [
+    "number needed to refer at natural operating points, split into volume and complementarity effects",
+    "validation rho as out-of-sample predictor of fresh advantage",
+    "severity-weighted cost index across the 25-cell weight grid",
+    "witness and engineering pairs on the fresh set",
+    "10-50% curves",
+    "grade-4-only misses"
+  ],
+  "benchmark_not_a_gate": "1 additional severe case caught per 1,000 patients screened at equal referral volume",
+  "cost_weights_secondary": {
+    "w4": 500,
+    "w3": 200,
+    "w2": 15,
+    "wfp": 1
+  },
+  "weight_grid": {
+    "miss": [
+      [
+        500,
+        200,
+        15
+      ],
+      [
+        250,
+        100,
+        10
+      ],
+      [
+        1000,
+        400,
+        20
+      ],
+      [
+        100,
+        50,
+        10
+      ],
+      [
+        50,
+        25,
+        5
+      ]
+    ],
+    "wfp": [
+      1,
+      5,
+      20,
+      50,
+      100
+    ]
+  },
+  "burdens": [
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25,
+    0.275,
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5
+  ],
+  "validation_context": {
+    "mean_net_severe_avoided_at_25pct": 0.846,
+    "validation_severe_cases": 132
+  }
+}

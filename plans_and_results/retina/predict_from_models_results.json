@@ -1,0 +1,113 @@
+{
+  "generated_utc": "2026-09-26T03:11:35.234426+00:00",
+  "plan": "predict_from_models_plan.json",
+  "status": "exploratory",
+  "P1_disagreement_identity": {
+    "mean_abs_error": 0.00229,
+    "mean_actual": 0.0802,
+    "mean_relative_error": 0.0289,
+    "spearman_pred_vs_actual": 0.9439
+  },
+  "spearman_across_36_pairs": {
+    "cka_pretrained": {
+      "tetra_miss": {
+        "rho": 0.455,
+        "ci95": [
+          -0.644,
+          0.941
+        ]
+      },
+      "comiss_ref": {
+        "rho": 0.403,
+        "ci95": [
+          -0.326,
+          0.932
+        ]
+      },
+      "comiss_g3": {
+        "rho": 0.165,
+        "ci95": [
+          -0.604,
+          0.867
+        ]
+      },
+      "phi_err": {
+        "rho": 0.28,
+        "ci95": [
+          -0.666,
+          0.932
+        ]
+      }
+    },
+    "cka_trained": {
+      "tetra_miss": {
+        "rho": 0.551,
+        "ci95": [
+          -0.342,
+          0.94
+        ]
+      },
+      "comiss_ref": {
+        "rho": 0.45,
+        "ci95": [
+          -0.396,
+          0.953
+        ]
+      },
+      "comiss_g3": {
+        "rho": -0.14,
+        "ci95": [
+          -0.759,
+          0.765
+        ]
+      },
+      "phi_err": {
+        "rho": 0.293,
+        "ci95": [
+          -0.472,
+          0.909
+        ]
+      }
+    },
+    "struct_shared": {
+      "tetra_miss": {
+        "rho": 0.513,
+        "ci95": [
+          -0.277,
+          0.929
+        ]
+      },
+      "comiss_ref": {
+        "rho": -0.152,
+        "ci95": [
+          -0.771,
+          0.538
+        ]
+      },
+      "comiss_g3": {
+        "rho": -0.265,
+        "ci95": [
+          -0.816,
+          0.55
+        ]
+      },
+      "phi_err": {
+        "rho": 0.648,
+        "ci95": [
+          -0.102,
+          0.94
+        ]
+      }
+    }
+  },
+  "variance_components": {
+    "floor_intercept": 0.764,
+    "same_family": 0.0111,
+    "same_architecture": 0.0156,
+    "same_pretraining_data": 0.0146,
+    "same_objective": 0.0041,
+    "seed_sibling_extra": 0.0956
+  },
+  "signal_pretrained_cka_predicts": false,
+  "n_images_for_cka": 2000
+}

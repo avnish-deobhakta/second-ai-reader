@@ -1,0 +1,296 @@
+{
+  "generated_utc": "2026-10-03T03:56:29.671433+00:00",
+  "plan": "locked_config_v6_brset.json",
+  "plan_sha256": "b8d4c97a1167ba777e3f41e2fe7d67efcce5725a2b8d63a78770a9ac74ab70a6",
+  "cohort": {
+    "images_in_label_file": 16266,
+    "cohort_images": 16266,
+    "patients": 8524,
+    "grade_counts": {
+      "0": 15183,
+      "1": 158,
+      "2": 451,
+      "3": 78,
+      "4": 396
+    },
+    "excluded_no_valid_grade": 0,
+    "icdr_column": "DR_ICDR",
+    "quality_column": "quality"
+  },
+  "referral_share_f": 0.0745,
+  "events": {
+    "referable": 925,
+    "severe": 474,
+    "pdr": 396
+  },
+  "auc_referable_by_training_source_all_models": {
+    "eyepacs": {
+      "median": 0.9509,
+      "range": [
+        0.8222,
+        0.9651
+      ]
+    },
+    "ddr": {
+      "median": 0.8891,
+      "range": [
+        0.861,
+        0.9352
+      ]
+    }
+  },
+  "auc_referable_core24_median": {
+    "eyepacs": 0.9533,
+    "ddr": 0.8891
+  },
+  "B1_training_data": {
+    "referable": {
+      "repeat_runs": {
+        "mean": 2.54,
+        "ci95": [
+          2.3709,
+          2.7419
+        ]
+      },
+      "diff_design_same_source": {
+        "mean": 2.068,
+        "ci95": [
+          1.9435,
+          2.2086
+        ]
+      },
+      "same_design_diff_source": {
+        "mean": 1.822,
+        "ci95": [
+          1.7334,
+          1.9306
+        ]
+      },
+      "diff_design_diff_source": {
+        "mean": 1.682,
+        "ci95": [
+          1.6019,
+          1.7761
+        ]
+      },
+      "diff_design_same_source__minus__diff_design_diff_source": {
+        "mean": 0.386,
+        "ci95": [
+          0.3178,
+          0.4648
+        ]
+      },
+      "repeat_runs__minus__same_design_diff_source": {
+        "mean": 0.718,
+        "ci95": [
+          0.6048,
+          0.8704
+        ]
+      },
+      "same_design_diff_source__minus__diff_design_same_source": {
+        "mean": -0.246,
+        "ci95": [
+          -0.327,
+          -0.1747
+        ]
+      },
+      "events": 925
+    },
+    "severe": {
+      "repeat_runs": {
+        "mean": 4.801,
+        "ci95": [
+          4.0582,
+          5.9989
+        ]
+      },
+      "diff_design_same_source": {
+        "mean": 2.973,
+        "ci95": [
+          2.5961,
+          3.4364
+        ]
+      },
+      "same_design_diff_source": {
+        "mean": 2.201,
+        "ci95": [
+          2.0037,
+          2.4447
+        ]
+      },
+      "diff_design_diff_source": {
+        "mean": 1.937,
+        "ci95": [
+          1.751,
+          2.1338
+        ]
+      },
+      "diff_design_same_source__minus__diff_design_diff_source": {
+        "mean": 1.035,
+        "ci95": [
+          0.7619,
+          1.3945
+        ]
+      },
+      "repeat_runs__minus__same_design_diff_source": {
+        "mean": 2.6,
+        "ci95": [
+          1.9128,
+          3.6926
+        ]
+      },
+      "same_design_diff_source__minus__diff_design_same_source": {
+        "mean": -0.772,
+        "ci95": [
+          -1.1414,
+          -0.4721
+        ]
+      },
+      "events": 474
+    }
+  },
+  "B1_primary": {
+    "mean": 0.386,
+    "ci95": [
+      0.3178,
+      0.4648
+    ]
+  },
+  "B1_supported": true,
+  "B2_benefit": {
+    "a_eyepacs_all_110_pairings": {
+      "sev": {
+        "relative_reduction": 0.2469,
+        "ci95": [
+          0.1968,
+          0.3082
+        ],
+        "deployed_misses_per_pair": 63.03,
+        "ordered_pairs_x_runs": 990
+      },
+      "pdr": {
+        "relative_reduction": 0.2457,
+        "ci95": [
+          0.195,
+          0.3075
+        ],
+        "deployed_misses_per_pair": 60.03,
+        "ordered_pairs_x_runs": 990
+      },
+      "ref": {
+        "relative_reduction": 0.118,
+        "ci95": [
+          0.095,
+          0.1419
+        ],
+        "deployed_misses_per_pair": 226.91,
+        "ordered_pairs_x_runs": 990
+      }
+    },
+    "a_eyepacs_secondary_f_equals_prevalence": {
+      "sev": {
+        "relative_reduction": 0.1679,
+        "ci95": [
+          0.1343,
+          0.2084
+        ],
+        "deployed_misses_per_pair": 93.39,
+        "ordered_pairs_x_runs": 990
+      }
+    },
+    "b_core24_different_architecture": {
+      "sev": {
+        "relative_reduction": 0.2503,
+        "ci95": [
+          0.2116,
+          0.2935
+        ],
+        "deployed_misses_per_pair": 114.46,
+        "ordered_pairs_x_runs": 432
+      },
+      "pdr": {
+        "relative_reduction": 0.2439,
+        "ci95": [
+          0.2056,
+          0.2897
+        ],
+        "deployed_misses_per_pair": 107.0,
+        "ordered_pairs_x_runs": 432
+      },
+      "ref": {
+        "relative_reduction": 0.1358,
+        "ci95": [
+          0.1148,
+          0.159
+        ],
+        "deployed_misses_per_pair": 324.17,
+        "ordered_pairs_x_runs": 432
+      }
+    }
+  },
+  "B3_decomposition": {
+    "floor_intercept": 0.5698,
+    "same_training_source": 0.0953,
+    "same_architecture": 0.0775,
+    "repeat_runs_extra": 0.1053,
+    "pairs": 276
+  },
+  "B4_sibling_test": {
+    "relative_threshold_95th_pct_diff_design": 0.6721,
+    "repeat_runs_flagged": 0.625,
+    "same_design_diff_source_flagged": 0.083,
+    "median_kappa_by_type": {
+      "diff_design_diff_source": 0.446,
+      "diff_design_same_source": 0.531,
+      "repeat_runs": 0.728,
+      "same_design_diff_source": 0.499
+    },
+    "supported": false
+  },
+  "B5_miss_rate_by_grade": {
+    "grade_2": {
+      "images": 451,
+      "median_per_model_miss_rate": 0.4268,
+      "median_rescue_share_matched_volume": 0.057
+    },
+    "grade_3": {
+      "images": 78,
+      "median_per_model_miss_rate": 0.0577,
+      "median_rescue_share_matched_volume": 0.3333
+    },
+    "grade_4": {
+      "images": 396,
+      "median_per_model_miss_rate": 0.2664,
+      "median_rescue_share_matched_volume": 0.0966
+    }
+  },
+  "sensitivity_quality": {
+    "excluded_inadequate_quality": 1986,
+    "B1_referable_primary_contrast": {
+      "mean": 0.402,
+      "ci95": [
+        0.3185,
+        0.4923
+      ]
+    },
+    "B2a_severe": {
+      "relative_reduction": 0.2476,
+      "ci95": [
+        0.1905,
+        0.3139
+      ],
+      "deployed_misses_per_pair": 54.85,
+      "ordered_pairs_x_runs": 990
+    },
+    "B2b_severe": {
+      "relative_reduction": 0.2606,
+      "ci95": [
+        0.2204,
+        0.3022
+      ],
+      "deployed_misses_per_pair": 100.25,
+      "ordered_pairs_x_runs": 432
+    }
+  },
+  "note": "Aggregate results only. Run once under plan v6."
+}

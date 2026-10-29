@@ -1,0 +1,327 @@
+{
+  "generated_utc": "2026-09-25T21:58:13.466450+00:00",
+  "plan": "pretraining_experiment_plan.json",
+  "status": "exploratory; APTOS previously used",
+  "f": 0.5319,
+  "quality": {
+    "vit_base_5class": {
+      "aptos_auc": 0.9645,
+      "referable_missed": 13.0
+    },
+    "vit_base_mae_5class": {
+      "aptos_auc": 0.961,
+      "referable_missed": 20.7
+    },
+    "vit_base_dinov2_5class": {
+      "aptos_auc": 0.9632,
+      "referable_missed": 5.7
+    },
+    "densenet121_5class": {
+      "aptos_auc": 0.9579,
+      "referable_missed": 11.7
+    },
+    "efficientnet_b3_5class": {
+      "aptos_auc": 0.951,
+      "referable_missed": 23.0
+    },
+    "resnet50_5class": {
+      "aptos_auc": 0.9574,
+      "referable_missed": 22.7
+    },
+    "retfound_5class": {
+      "aptos_auc": 0.9596,
+      "referable_missed": 40.3
+    }
+  },
+  "co_miss_ratio": {
+    "referable": {
+      "seed_siblings": {
+        "mean": 46.44,
+        "ci95": [
+          34.05,
+          66.4
+        ]
+      },
+      "vit_different_init": {
+        "mean": 37.85,
+        "ci95": [
+          24.24,
+          55.37
+        ]
+      },
+      "different_architecture": {
+        "mean": 16.55,
+        "ci95": [
+          12.38,
+          22.65
+        ]
+      },
+      "vit_newinit_vs_other_architecture": {
+        "mean": 19.94,
+        "ci95": [
+          13.5,
+          28.45
+        ]
+      },
+      "ViT sup vs ViT MAE": {
+        "mean": 29.52,
+        "ci95": [
+          17.43,
+          43.87
+        ]
+      },
+      "ViT sup vs ViT DINOv2": {
+        "mean": 51.59,
+        "ci95": [
+          28.88,
+          82.37
+        ]
+      },
+      "ViT MAE vs ViT DINOv2": {
+        "mean": 32.45,
+        "ci95": [
+          11.63,
+          55.87
+        ]
+      },
+      "seed_siblings_minus_vit_different_init": {
+        "mean": 8.59,
+        "ci95": [
+          -3.15,
+          24.25
+        ]
+      },
+      "vit_different_init_minus_different_architecture": {
+        "mean": 21.3,
+        "ci95": [
+          8.01,
+          38.14
+        ]
+      }
+    },
+    "grade3plus": {
+      "seed_siblings": {
+        "mean": 57.14,
+        "ci95": [
+          29.52,
+          115.11
+        ]
+      },
+      "vit_different_init": {
+        "mean": 45.0,
+        "ci95": [
+          4.04,
+          99.23
+        ]
+      },
+      "different_architecture": {
+        "mean": 15.62,
+        "ci95": [
+          7.65,
+          28.76
+        ]
+      },
+      "vit_newinit_vs_other_architecture": {
+        "mean": 17.96,
+        "ci95": [
+          6.18,
+          36.72
+        ]
+      },
+      "ViT sup vs ViT MAE": {
+        "mean": 53.24,
+        "ci95": [
+          0.0,
+          138.58
+        ]
+      },
+      "ViT sup vs ViT DINOv2": {
+        "mean": 62.74,
+        "ci95": [
+          0.0,
+          144.5
+        ]
+      },
+      "ViT MAE vs ViT DINOv2": {
+        "mean": 19.01,
+        "ci95": [
+          0.0,
+          68.75
+        ]
+      },
+      "seed_siblings_minus_vit_different_init": {
+        "mean": 12.14,
+        "ci95": [
+          -29.49,
+          71.94
+        ]
+      },
+      "vit_different_init_minus_different_architecture": {
+        "mean": 29.38,
+        "ci95": [
+          -6.0,
+          77.18
+        ]
+      }
+    },
+    "pdr": {
+      "seed_siblings": {
+        "mean": 39.06,
+        "ci95": [
+          20.64,
+          89.81
+        ]
+      },
+      "vit_different_init": {
+        "mean": 36.49,
+        "ci95": [
+          0.0,
+          83.22
+        ]
+      },
+      "different_architecture": {
+        "mean": 10.88,
+        "ci95": [
+          5.32,
+          21.43
+        ]
+      },
+      "vit_newinit_vs_other_architecture": {
+        "mean": 15.75,
+        "ci95": [
+          6.95,
+          35.14
+        ]
+      },
+      "ViT sup vs ViT MAE": {
+        "mean": 39.33,
+        "ci95": [
+          0.0,
+          105.12
+        ]
+      },
+      "ViT sup vs ViT DINOv2": {
+        "mean": 52.44,
+        "ci95": [
+          0.0,
+          118.4
+        ]
+      },
+      "ViT MAE vs ViT DINOv2": {
+        "mean": 17.7,
+        "ci95": [
+          0.0,
+          67.54
+        ]
+      },
+      "seed_siblings_minus_vit_different_init": {
+        "mean": 2.57,
+        "ci95": [
+          -33.99,
+          59.19
+        ]
+      },
+      "vit_different_init_minus_different_architecture": {
+        "mean": 25.61,
+        "ci95": [
+          -6.88,
+          68.8
+        ]
+      }
+    }
+  },
+  "pair_co_miss_referable": {
+    "ViT sup | ViT sup": 45.93,
+    "ViT sup | ViT MAE": 29.52,
+    "ViT sup | ViT DINOv2": 51.59,
+    "ViT sup | DenseNet": 19.61,
+    "ViT sup | EffNet": 16.02,
+    "ViT sup | ResNet": 20.19,
+    "ViT sup | RETFound": 13.55,
+    "ViT MAE | ViT MAE": 45.69,
+    "ViT MAE | ViT DINOv2": 32.45,
+    "ViT MAE | DenseNet": 29.47,
+    "ViT MAE | EffNet": 23.98,
+    "ViT MAE | ResNet": 21.51,
+    "ViT MAE | RETFound": 13.48,
+    "ViT DINOv2 | ViT DINOv2": 95.59,
+    "ViT DINOv2 | DenseNet": 17.49,
+    "ViT DINOv2 | EffNet": 13.94,
+    "ViT DINOv2 | ResNet": 24.44,
+    "ViT DINOv2 | RETFound": 15.18,
+    "DenseNet | DenseNet": 51.15,
+    "DenseNet | EffNet": 22.17,
+    "DenseNet | ResNet": 25.62,
+    "DenseNet | RETFound": 9.48,
+    "EffNet | EffNet": 29.99,
+    "EffNet | ResNet": 20.92,
+    "EffNet | RETFound": 8.55,
+    "ResNet | ResNet": 28.48,
+    "ResNet | RETFound": 9.4,
+    "RETFound | RETFound": 28.29
+  },
+  "strength_adjusted": {
+    "vit_different_init_vs_different_architecture_ratio": 1.79,
+    "note": "multiplicative difference in referable co-miss ratio after adjusting for the pair mean and gap in referable misses (pair-level OLS on log ratio, 20 pairs; descriptive)"
+  },
+  "benefit_by_type": {
+    "different_architecture": {
+      "mv_net": 12.022,
+      "rho": 0.66
+    },
+    "vit_different_init": {
+      "mv_net": 6.37,
+      "rho": 0.71
+    },
+    "vit_newinit_vs_other_architecture": {
+      "mv_net": 10.75,
+      "rho": 0.684
+    }
+  },
+  "vit_pairs_benefit": [
+    {
+      "anchor": "ViT sup",
+      "partner": "ViT MAE",
+      "mv_net": 3.0,
+      "rho": 0.695
+    },
+    {
+      "anchor": "ViT sup",
+      "partner": "ViT DINOv2",
+      "mv_net": 8.333,
+      "rho": 0.717
+    },
+    {
+      "anchor": "ViT MAE",
+      "partner": "ViT sup",
+      "mv_net": 10.667,
+      "rho": 0.695
+    },
+    {
+      "anchor": "ViT MAE",
+      "partner": "ViT DINOv2",
+      "mv_net": 15.111,
+      "rho": 0.72
+    },
+    {
+      "anchor": "ViT DINOv2",
+      "partner": "ViT sup",
+      "mv_net": 1.0,
+      "rho": 0.717
+    },
+    {
+      "anchor": "ViT DINOv2",
+      "partner": "ViT MAE",
+      "mv_net": 0.111,
+      "rho": 0.72
+    }
+  ],
+  "signal": {
+    "different_init_lower_than_seed_siblings_referable": false
+  },
+  "caveats": [
+    "MAE validation AUC still rising at epoch 15 under the fixed recipe (undertrained)",
+    "DINOv2 uses 14-pixel patches",
+    "DINOv2 is the strongest ViT-Base (EyePACS test AUC about 0.91 vs 0.86 to 0.87)"
+  ]
+}

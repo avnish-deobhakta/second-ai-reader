@@ -1,0 +1,44 @@
+{
+  "lock": "dermatology arm, lock v1",
+  "written": "2026-09-26, after intake (derm_intake_record.json) and before any model is trained on or evaluated against these images",
+  "purpose": "Test whether the diabetic-retinopathy findings generalise to a second medical imaging domain with asymmetric stakes, and test the training-data hypothesis directly (two training sources, neutral external test sets).",
+  "data": {
+    "HAM10000": "ISIC collection 212; 11,720 images, 8,838 lesions, no patient ids; training source A",
+    "BCN20000": "ISIC collection 249; 18,946 images, 5,440 lesions, no patient ids; training source B",
+    "HIBA": "ISIC collection 251 (Hospital Italiano de Buenos Aires 2019 to 2022); 1,616 images, 1,246 lesions, 623 patients; PRIMARY external test (dermoscopy)",
+    "PAD-UFES-20": "Mendeley zr7vgbcyr2 v1; 2,298 images, 1,641 lesions, 1,373 patients; SECONDARY external test (smartphone photographs)"
+  },
+  "cleaning": {
+    "unlabelled": "BCN20000 images with no diagnosis in any field (the rows printed as nan across all diagnosis fields: 1,156 images) are excluded",
+    "scar": "BCN20000 'Benign soft tissue proliferations, Fibro-histiocytic, Scar' (314 images) mapped to OTHER (benign) and excluded from training; none occur in the test sets",
+    "duplicates": "15 byte-identical groups (30 images), all within a source: one image per group is kept (first by image id); no cross-source duplicates",
+    "classes": "MEL, BCC, SCC (incl. Bowen and in situ), AK, NV, BKL, DF, VASC"
+  },
+  "splits": "Within each training source, lesion-disjoint 80/10/10 train/validation/internal-test split, seed 20261601. Patient ids are unavailable for HAM10000 and BCN20000, so a patient with several lesions may appear in more than one split (recorded limitation). HIBA and PAD-UFES-20 are used only for evaluation.",
+  "models": {
+    "architectures": ["resnet50 (timm a1_in1k)", "densenet121", "efficientnet_b3", "convnext_tiny.fb_in1k", "vit_base_patch16_224 (supervised)", "vit_base_patch14_dinov2.lvd142m at 224"],
+    "training_sources": ["HAM10000", "BCN20000"],
+    "seeds": 2,
+    "total": 24,
+    "recipes": "identical to the DR full-recipe zoo: CNNs AdamW lr 1e-4, wd 1e-4, cosine, batch 32, 15 epochs; ViTs stabilized recipe (lr 3e-5, wd 0.05, 5-epoch warm-up, layer-wise decay 0.65, clip 1.0, 15 epochs); 8-class cross-entropy; best-validation-AUC (malignant vs benign) checkpoint; 224-pixel inputs from the 512-pixel stored images with the same augmentations as DR",
+    "scores": "malignancy score = summed softmax of MEL, BCC, SCC (used for referral); melanoma score = softmax of MEL (reported)"
+  },
+  "evaluation": {
+    "opened_once": "HIBA and PAD-UFES-20 predictions are generated only after all 24 models are trained and their checkpoints hashed; each set is analysed once",
+    "referral": "each model refers its top f of images, f = 1.31 x malignant prevalence of the test set (the DDR rule); secondary f = malignant prevalence",
+    "outcomes": {
+      "severe": "melanoma missed (primary for HIBA; descriptive only for PAD-UFES-20, 52 melanomas)",
+      "referable": "any malignancy (MEL, BCC, SCC) missed (primary for PAD-UFES-20; secondary for HIBA)"
+    },
+    "unit_and_intervals": "image level, patient-cluster bootstrap (1,000) for HIBA and PAD-UFES-20"
+  },
+  "hypotheses": {
+    "H1_benefit": "at matched referral volume, adding a second reader of a different architecture reduces missed melanoma (HIBA) and missed malignancy (PAD) relative to the deployed model (all ordered pairs, mean and per-pair)",
+    "H2_severity_gradient": "the share of the deployed model's misses rescued at matched volume is higher for melanoma than for BCC and SCC (HIBA); descriptive with intervals",
+    "H3_training_data": "PRIMARY. Among pairs of different architectures, pairs trained on different sources (HAM vs BCN) have a lower melanoma co-miss ratio on HIBA than pairs trained on the same source; the same comparison for malignancy on HIBA and PAD is secondary. Signal: patient-bootstrap interval of the difference excludes zero.",
+    "H4_floor": "variance decomposition of the latent correlation of misses into shared training source, shared architecture and seed, with the intercept as the floor; the training-source term is expected to be positive",
+    "H5_degradation_fingerprint": "similarity of degradation-response vectors (the ballistics perturbation set) predicts shared malignancy misses beyond model strength (partial rank correlation, model-level bootstrap). To avoid the overlap in the DR analysis, fingerprints are measured on a fixed random half of HIBA patients (unlabelled) and shared misses are scored on the other half.",
+    "H6_partner_choice": "the enriched-calibration rules (k severe plus k controls) are applied on HIBA with k = 25 and 50; descriptive"
+  },
+  "what_is_not_changed_after_this_lock": "datasets, cleaning, splits, architectures, recipes, seeds, referral rule, outcomes, hypotheses and signal definitions"
+}

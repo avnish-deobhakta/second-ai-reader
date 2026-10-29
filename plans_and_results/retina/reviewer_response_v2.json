@@ -1,0 +1,638 @@
+{
+  "generated_utc": "2026-09-23T15:11:23.025232+00:00",
+  "status": "descriptive; fresh set already opened under lock v3; no selection performed",
+  "section1_v3_headline_reproduction": {
+    "eye": {
+      "net_severe_vs_better": 4.741,
+      "net_severe_vs_anchor_mean": 10.721,
+      "net_pdr_vs_better": 3.014
+    },
+    "patient": {
+      "net_severe_vs_better": 2.727,
+      "net_severe_vs_anchor_mean": 6.422,
+      "net_pdr_vs_better": 0.414
+    },
+    "v3_reported_net_severe_per_pair": 4.74,
+    "note": "The unit and comparator whose value matches 4.74 identify how v3 computed its headline."
+  },
+  "section2_operating_characteristics": [
+    {
+      "reader": "densenet121_binary",
+      "type": "single",
+      "sens": 0.7491,
+      "spec": 0.8712,
+      "ppv": 0.5854,
+      "npv": 0.9347,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9411,
+      "sev_sens": 0.9396,
+      "pdr_missed": 19.3333,
+      "severe_missed": 43.0,
+      "fp": 1637.0
+    },
+    {
+      "reader": "densenet121_5class",
+      "type": "single",
+      "sens": 0.745,
+      "spec": 0.8702,
+      "ppv": 0.5822,
+      "npv": 0.9336,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9451,
+      "sev_sens": 0.9405,
+      "pdr_missed": 18.0,
+      "severe_missed": 42.3333,
+      "fp": 1649.6667
+    },
+    {
+      "reader": "efficientnet_b3_binary",
+      "type": "single",
+      "sens": 0.698,
+      "spec": 0.8588,
+      "ppv": 0.5454,
+      "npv": 0.9214,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9431,
+      "sev_sens": 0.934,
+      "pdr_missed": 18.6667,
+      "severe_missed": 47.0,
+      "fp": 1794.6667
+    },
+    {
+      "reader": "efficientnet_b3_5class",
+      "type": "single",
+      "sens": 0.7018,
+      "spec": 0.8597,
+      "ppv": 0.5484,
+      "npv": 0.9223,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9472,
+      "sev_sens": 0.9368,
+      "pdr_missed": 17.3333,
+      "severe_missed": 45.0,
+      "fp": 1783.0
+    },
+    {
+      "reader": "resnet50_binary",
+      "type": "single",
+      "sens": 0.6986,
+      "spec": 0.8589,
+      "ppv": 0.5459,
+      "npv": 0.9215,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9167,
+      "sev_sens": 0.9181,
+      "pdr_missed": 27.3333,
+      "severe_missed": 58.3333,
+      "fp": 1792.6667
+    },
+    {
+      "reader": "resnet50_5class",
+      "type": "single",
+      "sens": 0.7001,
+      "spec": 0.8593,
+      "ppv": 0.547,
+      "npv": 0.9219,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9228,
+      "sev_sens": 0.9218,
+      "pdr_missed": 25.3333,
+      "severe_missed": 55.6667,
+      "fp": 1788.3333
+    },
+    {
+      "reader": "vit_base_binary",
+      "type": "single",
+      "sens": 0.7173,
+      "spec": 0.8635,
+      "ppv": 0.5605,
+      "npv": 0.9264,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9482,
+      "sev_sens": 0.9396,
+      "pdr_missed": 17.0,
+      "severe_missed": 43.0,
+      "fp": 1735.0
+    },
+    {
+      "reader": "vit_base_5class",
+      "type": "single",
+      "sens": 0.71,
+      "spec": 0.8617,
+      "ppv": 0.5548,
+      "npv": 0.9245,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9502,
+      "sev_sens": 0.9331,
+      "pdr_missed": 16.3333,
+      "severe_missed": 47.6667,
+      "fp": 1757.6667
+    },
+    {
+      "reader": "retfound_binary",
+      "type": "single",
+      "sens": 0.7281,
+      "spec": 0.8661,
+      "ppv": 0.569,
+      "npv": 0.9292,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9675,
+      "sev_sens": 0.9555,
+      "pdr_missed": 10.6667,
+      "severe_missed": 31.6667,
+      "fp": 1701.6667
+    },
+    {
+      "reader": "retfound_5class",
+      "type": "single",
+      "sens": 0.7329,
+      "spec": 0.8673,
+      "ppv": 0.5727,
+      "npv": 0.9304,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9685,
+      "sev_sens": 0.9588,
+      "pdr_missed": 10.3333,
+      "severe_missed": 29.3333,
+      "fp": 1687.0
+    },
+    {
+      "reader": "retfound_adversarial",
+      "type": "single",
+      "sens": 0.7251,
+      "spec": 0.8654,
+      "ppv": 0.5666,
+      "npv": 0.9284,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9715,
+      "sev_sens": 0.9546,
+      "pdr_missed": 9.3333,
+      "severe_missed": 32.3333,
+      "fp": 1711.0
+    },
+    {
+      "reader": "pairs_union",
+      "type": "ensemble mean over 55 pairs",
+      "sens": 0.8068,
+      "spec": 0.7911,
+      "ppv": 0.4844,
+      "npv": 0.9441,
+      "referral_rate": 0.3257,
+      "pdr_sens": 0.98,
+      "sev_sens": 0.9701,
+      "pdr_missed": 6.5737,
+      "severe_missed": 21.2929,
+      "fp": 2655.1899
+    },
+    {
+      "reader": "pairs_max_rank",
+      "type": "ensemble mean over 55 pairs",
+      "sens": 0.7426,
+      "spec": 0.8696,
+      "ppv": 0.5803,
+      "npv": 0.933,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9682,
+      "sev_sens": 0.9544,
+      "pdr_missed": 10.4283,
+      "severe_missed": 32.4909,
+      "fp": 1656.9434
+    },
+    {
+      "reader": "pairs_mean_prob",
+      "type": "ensemble mean over 55 pairs",
+      "sens": 0.7468,
+      "spec": 0.8706,
+      "ppv": 0.5836,
+      "npv": 0.9341,
+      "referral_rate": 0.25,
+      "pdr_sens": 0.9687,
+      "sev_sens": 0.9557,
+      "pdr_missed": 10.2707,
+      "severe_missed": 31.5455,
+      "fp": 1644.0364
+    }
+  ],
+  "section3_mean_vs_max": {
+    "auc_single_better": 0.8746,
+    "auc_mean": 0.8869,
+    "auc_max": 0.8843,
+    "cost_single_better": 25364.8747,
+    "cost_mean": 22276.703,
+    "cost_max": 22705.398,
+    "pairs_max_beats_better_single_on_cost": 55,
+    "pairs_mean_beats_better_single_on_cost": 55,
+    "pairs_max_beats_better_single_on_auc": 55,
+    "pairs_mean_beats_better_single_on_auc": 55
+  },
+  "section4_union_vs_single_at_equal_volume": [
+    {
+      "burden_each": 0.05,
+      "union_referral_rate": 0.0642,
+      "union_cost": 110029.6,
+      "single_cost_at_same_volume": 116499.8,
+      "union_severe_missed": 237.33,
+      "single_severe_missed_at_same_volume": 255.44
+    },
+    {
+      "burden_each": 0.075,
+      "union_referral_rate": 0.0937,
+      "union_cost": 73528.1,
+      "single_cost_at_same_volume": 80880.7,
+      "union_severe_missed": 148.15,
+      "single_severe_missed_at_same_volume": 166.72
+    },
+    {
+      "burden_each": 0.1,
+      "union_referral_rate": 0.1253,
+      "union_cost": 52045.7,
+      "single_cost_at_same_volume": 58710.1,
+      "union_severe_missed": 98.89,
+      "single_severe_missed_at_same_volume": 113.82
+    },
+    {
+      "burden_each": 0.125,
+      "union_referral_rate": 0.1583,
+      "union_cost": 39113.1,
+      "single_cost_at_same_volume": 45218.3,
+      "union_severe_missed": 69.15,
+      "single_severe_missed_at_same_volume": 82.85
+    },
+    {
+      "burden_each": 0.15,
+      "union_referral_rate": 0.1917,
+      "union_cost": 31149.9,
+      "single_cost_at_same_volume": 36809.1,
+      "union_severe_missed": 51.43,
+      "single_severe_missed_at_same_volume": 63.19
+    },
+    {
+      "burden_each": 0.175,
+      "union_referral_rate": 0.2254,
+      "union_cost": 25468.2,
+      "single_cost_at_same_volume": 31092.6,
+      "union_severe_missed": 38.81,
+      "single_severe_missed_at_same_volume": 50.41
+    },
+    {
+      "burden_each": 0.2,
+      "union_referral_rate": 0.259,
+      "union_cost": 22017.6,
+      "single_cost_at_same_volume": 26982.3,
+      "union_severe_missed": 30.77,
+      "single_severe_missed_at_same_volume": 41.19
+    },
+    {
+      "burden_each": 0.225,
+      "union_referral_rate": 0.2926,
+      "union_cost": 19351.6,
+      "single_cost_at_same_volume": 23808.8,
+      "union_severe_missed": 25.26,
+      "single_severe_missed_at_same_volume": 34.14
+    },
+    {
+      "burden_each": 0.25,
+      "union_referral_rate": 0.3257,
+      "union_cost": 17505.3,
+      "single_cost_at_same_volume": 21369.0,
+      "union_severe_missed": 21.29,
+      "single_severe_missed_at_same_volume": 28.82
+    },
+    {
+      "burden_each": 0.275,
+      "union_referral_rate": 0.3587,
+      "union_cost": 15997.1,
+      "single_cost_at_same_volume": 19537.9,
+      "union_severe_missed": 18.11,
+      "single_severe_missed_at_same_volume": 24.91
+    },
+    {
+      "burden_each": 0.3,
+      "union_referral_rate": 0.3909,
+      "union_cost": 14762.9,
+      "single_cost_at_same_volume": 18054.9,
+      "union_severe_missed": 15.14,
+      "single_severe_missed_at_same_volume": 21.7
+    },
+    {
+      "burden_each": 0.325,
+      "union_referral_rate": 0.4229,
+      "union_cost": 13855.6,
+      "single_cost_at_same_volume": 16785.8,
+      "union_severe_missed": 13.09,
+      "single_severe_missed_at_same_volume": 18.82
+    },
+    {
+      "burden_each": 0.35,
+      "union_referral_rate": 0.4544,
+      "union_cost": 13197.9,
+      "single_cost_at_same_volume": 15838.1,
+      "union_severe_missed": 11.64,
+      "single_severe_missed_at_same_volume": 16.6
+    },
+    {
+      "burden_each": 0.375,
+      "union_referral_rate": 0.4853,
+      "union_cost": 12625.3,
+      "single_cost_at_same_volume": 15010.6,
+      "union_severe_missed": 10.24,
+      "single_severe_missed_at_same_volume": 14.54
+    },
+    {
+      "burden_each": 0.4,
+      "union_referral_rate": 0.5157,
+      "union_cost": 12105.0,
+      "single_cost_at_same_volume": 14638.7,
+      "union_severe_missed": 8.94,
+      "single_severe_missed_at_same_volume": 13.64
+    },
+    {
+      "burden_each": 0.425,
+      "union_referral_rate": 0.5451,
+      "union_cost": 11745.4,
+      "single_cost_at_same_volume": 14638.7,
+      "union_severe_missed": 7.82,
+      "single_severe_missed_at_same_volume": 13.64
+    },
+    {
+      "burden_each": 0.45,
+      "union_referral_rate": 0.5743,
+      "union_cost": 11481.9,
+      "single_cost_at_same_volume": 14638.7,
+      "union_severe_missed": 6.81,
+      "single_severe_missed_at_same_volume": 13.64
+    },
+    {
+      "burden_each": 0.475,
+      "union_referral_rate": 0.6026,
+      "union_cost": 11234.1,
+      "single_cost_at_same_volume": 14638.7,
+      "union_severe_missed": 5.81,
+      "single_severe_missed_at_same_volume": 13.64
+    },
+    {
+      "burden_each": 0.5,
+      "union_referral_rate": 0.6303,
+      "union_cost": 11069.9,
+      "single_cost_at_same_volume": 14638.7,
+      "union_severe_missed": 5.0,
+      "single_severe_missed_at_same_volume": 13.64
+    }
+  ],
+  "section5_fp_weight_sensitivity_matched_volume": [
+    {
+      "fp_weight": 1,
+      "mean_cost_reduction_vs_better_single": 2659.5,
+      "share_of_pair_seed_combos_improved": 0.937
+    },
+    {
+      "fp_weight": 5,
+      "mean_cost_reduction_vs_better_single": 2856.8,
+      "share_of_pair_seed_combos_improved": 0.949
+    },
+    {
+      "fp_weight": 10,
+      "mean_cost_reduction_vs_better_single": 3097.7,
+      "share_of_pair_seed_combos_improved": 0.958
+    },
+    {
+      "fp_weight": 20,
+      "mean_cost_reduction_vs_better_single": 3567.2,
+      "share_of_pair_seed_combos_improved": 0.968
+    }
+  ],
+  "section6_decision_curves": {
+    "thresholds": [
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22,
+      0.24,
+      0.26,
+      0.28,
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4,
+      0.42,
+      0.44,
+      0.46,
+      0.48,
+      0.5
+    ],
+    "treat all": [
+      0.17891,
+      0.1618,
+      0.14397,
+      0.12536,
+      0.10592,
+      0.0856,
+      0.06433,
+      0.04206,
+      0.01869,
+      -0.00584,
+      -0.03163,
+      -0.05878,
+      -0.0874,
+      -0.1176,
+      -0.14953,
+      -0.18334,
+      -0.2192,
+      -0.2573,
+      -0.29786,
+      -0.34112,
+      -0.38737,
+      -0.43692,
+      -0.49013,
+      -0.54745,
+      -0.60935
+    ],
+    "single (mean over 33)": [
+      0.17281,
+      0.15796,
+      0.14741,
+      0.13931,
+      0.13269,
+      0.12717,
+      0.12249,
+      0.11835,
+      0.11467,
+      0.11128,
+      0.10829,
+      0.10541,
+      0.10257,
+      0.09997,
+      0.09752,
+      0.0952,
+      0.09302,
+      0.09095,
+      0.08893,
+      0.08683,
+      0.08482,
+      0.08277,
+      0.08086,
+      0.07894,
+      0.07721
+    ],
+    "mean(p) pairs (mean over 495)": [
+      0.17746,
+      0.16392,
+      0.15394,
+      0.14614,
+      0.13987,
+      0.13458,
+      0.13,
+      0.12599,
+      0.12237,
+      0.11913,
+      0.11614,
+      0.11335,
+      0.11082,
+      0.10842,
+      0.10611,
+      0.10393,
+      0.1018,
+      0.09981,
+      0.09787,
+      0.09597,
+      0.09413,
+      0.09235,
+      0.09054,
+      0.08876,
+      0.08691
+    ],
+    "max(p) pairs (mean over 495)": [
+      0.17837,
+      0.16511,
+      0.15477,
+      0.1466,
+      0.13964,
+      0.13374,
+      0.12869,
+      0.12423,
+      0.12013,
+      0.11645,
+      0.11309,
+      0.10994,
+      0.10676,
+      0.10383,
+      0.1011,
+      0.09843,
+      0.09592,
+      0.09361,
+      0.09132,
+      0.0889,
+      0.08661,
+      0.08414,
+      0.08183,
+      0.07966,
+      0.07762
+    ],
+    "caveat": "Net benefit uses raw probabilities; binary and 5-class models are not calibrated alike, which is why the primary analyses use rank-based matched volume."
+  },
+  "section7_sensitivity": {
+    "headline_eye_level_net_severe_vs_better": 4.741,
+    "leave_one_severe_eye_out": {
+      "max_abs_change": 0.3616,
+      "n_cases": 712
+    },
+    "label_noise": {
+      "0.05": {
+        "mean": 5.327,
+        "p2_5": 4.354,
+        "p97_5": 6.439
+      },
+      "0.1": {
+        "mean": 5.817,
+        "p2_5": 4.431,
+        "p97_5": 7.684
+      }
+    },
+    "patient_cluster_bootstrap_95": [
+      1.255,
+      7.7
+    ],
+    "bootstrap_note": "500 patient-level resamples, seed-0 combination per pair"
+  },
+  "section8_sample_flow": {
+    "eyepacs_split_fresh_v2.csv": {
+      "images": 15794,
+      "patients": 7897,
+      "grades": {
+        "0": 11578,
+        "1": 1131,
+        "2": 2373,
+        "3": 384,
+        "4": 328
+      }
+    },
+    "eyepacs_split_kaggletest_estconf_v2.csv": {
+      "images": 53576,
+      "patients": 26788,
+      "grades": {
+        "0": 39533,
+        "1": 3762,
+        "2": 7861,
+        "3": 1214,
+        "4": 1206
+      },
+      "by_pool": {
+        "estimation": 35718,
+        "confirmation": 17858
+      }
+    },
+    "eyepacs_split_kaggletest_v2.csv": {
+      "images": 53576,
+      "patients": 26788,
+      "grades": {
+        "0": 39533,
+        "1": 3762,
+        "2": 7861,
+        "3": 1214,
+        "4": 1206
+      }
+    },
+    "eyepacs_split_test_v2.csv": {
+      "images": 2900,
+      "patients": 1450,
+      "grades": {
+        "0": 2134,
+        "1": 203,
+        "2": 433,
+        "3": 75,
+        "4": 55
+      }
+    },
+    "eyepacs_split_train_v2.csv": {
+      "images": 13532,
+      "patients": 6766,
+      "grades": {
+        "0": 9961,
+        "1": 911,
+        "2": 2053,
+        "3": 340,
+        "4": 267
+      }
+    },
+    "eyepacs_split_val_v2.csv": {
+      "images": 2900,
+      "patients": 1450,
+      "grades": {
+        "0": 2137,
+        "1": 198,
+        "2": 433,
+        "3": 74,
+        "4": 58
+      }
+    }
+  }
+}

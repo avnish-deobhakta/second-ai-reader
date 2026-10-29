@@ -1,0 +1,618 @@
+{
+  "generated_utc": "2026-09-26T19:06:19.444028+00:00",
+  "plan": "partner_choice_calibration_plan.json",
+  "status": "exploratory",
+  "consensus_vs_true_strength": {
+    "EyePACS": 0.489,
+    "DDR": 0.264
+  },
+  "summary": {
+    "EyePACS": {
+      "50": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 15.12,
+          "p5": 6.73,
+          "p95": 18.82,
+          "share_of_true_strongest_advantage_over_random": 0.557,
+          "share_of_oracle_advantage_over_random": 0.409,
+          "picks_true_strongest": 0.115
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 13.97,
+          "p5": 12.78,
+          "p95": 14.32,
+          "share_of_true_strongest_advantage_over_random": 0.377,
+          "share_of_oracle_advantage_over_random": 0.277,
+          "picks_true_strongest": 0.0
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.28,
+          "p5": 14.05,
+          "p95": 14.41,
+          "share_of_true_strongest_advantage_over_random": 0.426,
+          "share_of_oracle_advantage_over_random": 0.313
+        },
+        "consensus_plus_degradation": {
+          "mean_net_severe_rescued": 17.04,
+          "p5": 16.77,
+          "p95": 17.09,
+          "share_of_true_strongest_advantage_over_random": 0.858,
+          "share_of_oracle_advantage_over_random": 0.63
+        },
+        "random": {
+          "mean_net_severe_rescued": 11.56,
+          "p5": 11.39,
+          "p95": 11.6,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 17.95,
+          "p5": 17.63,
+          "p95": 18.0,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.734
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 20.26,
+          "p5": 19.95,
+          "p95": 20.32,
+          "share_of_true_strongest_advantage_over_random": 1.362,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "100": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 16.28,
+          "p5": 9.36,
+          "p95": 18.82,
+          "share_of_true_strongest_advantage_over_random": 0.747,
+          "share_of_oracle_advantage_over_random": 0.549,
+          "picks_true_strongest": 0.138
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 13.99,
+          "p5": 9.81,
+          "p95": 16.48,
+          "share_of_true_strongest_advantage_over_random": 0.388,
+          "share_of_oracle_advantage_over_random": 0.285,
+          "picks_true_strongest": 0.011
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.23,
+          "p5": 13.86,
+          "p95": 14.5,
+          "share_of_true_strongest_advantage_over_random": 0.425,
+          "share_of_oracle_advantage_over_random": 0.312
+        },
+        "consensus_plus_degradation": {
+          "mean_net_severe_rescued": 16.97,
+          "p5": 16.64,
+          "p95": 17.09,
+          "share_of_true_strongest_advantage_over_random": 0.855,
+          "share_of_oracle_advantage_over_random": 0.628
+        },
+        "random": {
+          "mean_net_severe_rescued": 11.52,
+          "p5": 11.28,
+          "p95": 11.64,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 17.89,
+          "p5": 17.54,
+          "p95": 18.14,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.735
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 20.19,
+          "p5": 19.77,
+          "p95": 20.32,
+          "share_of_true_strongest_advantage_over_random": 1.361,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "200": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 17.15,
+          "p5": 14.71,
+          "p95": 18.77,
+          "share_of_true_strongest_advantage_over_random": 0.902,
+          "share_of_oracle_advantage_over_random": 0.66,
+          "picks_true_strongest": 0.157
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 13.91,
+          "p5": 9.18,
+          "p95": 16.42,
+          "share_of_true_strongest_advantage_over_random": 0.388,
+          "share_of_oracle_advantage_over_random": 0.284,
+          "picks_true_strongest": 0.011
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.15,
+          "p5": 13.63,
+          "p95": 14.5,
+          "share_of_true_strongest_advantage_over_random": 0.427,
+          "share_of_oracle_advantage_over_random": 0.313
+        },
+        "consensus_plus_degradation": {
+          "mean_net_severe_rescued": 16.89,
+          "p5": 16.45,
+          "p95": 17.18,
+          "share_of_true_strongest_advantage_over_random": 0.859,
+          "share_of_oracle_advantage_over_random": 0.63
+        },
+        "random": {
+          "mean_net_severe_rescued": 11.45,
+          "p5": 11.18,
+          "p95": 11.6,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 17.77,
+          "p5": 17.23,
+          "p95": 18.18,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.732
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 20.08,
+          "p5": 19.63,
+          "p95": 20.37,
+          "share_of_true_strongest_advantage_over_random": 1.365,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "500": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 17.2,
+          "p5": 15.18,
+          "p95": 18.64,
+          "share_of_true_strongest_advantage_over_random": 0.966,
+          "share_of_oracle_advantage_over_random": 0.704,
+          "picks_true_strongest": 0.111
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 13.6,
+          "p5": 8.09,
+          "p95": 16.87,
+          "share_of_true_strongest_advantage_over_random": 0.384,
+          "share_of_oracle_advantage_over_random": 0.28,
+          "picks_true_strongest": 0.048
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 13.84,
+          "p5": 13.0,
+          "p95": 14.45,
+          "share_of_true_strongest_advantage_over_random": 0.423,
+          "share_of_oracle_advantage_over_random": 0.309
+        },
+        "consensus_plus_degradation": {
+          "mean_net_severe_rescued": 16.54,
+          "p5": 15.86,
+          "p95": 17.05,
+          "share_of_true_strongest_advantage_over_random": 0.858,
+          "share_of_oracle_advantage_over_random": 0.626
+        },
+        "random": {
+          "mean_net_severe_rescued": 11.22,
+          "p5": 10.74,
+          "p95": 11.55,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 17.41,
+          "p5": 16.72,
+          "p95": 18.0,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.729
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 19.72,
+          "p5": 19.04,
+          "p95": 20.27,
+          "share_of_true_strongest_advantage_over_random": 1.372,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "1000": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 16.56,
+          "p5": 14.22,
+          "p95": 18.41,
+          "share_of_true_strongest_advantage_over_random": 0.95,
+          "share_of_oracle_advantage_over_random": 0.688,
+          "picks_true_strongest": 0.114
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 13.79,
+          "p5": 7.77,
+          "p95": 17.0,
+          "share_of_true_strongest_advantage_over_random": 0.485,
+          "share_of_oracle_advantage_over_random": 0.352,
+          "picks_true_strongest": 0.108
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 13.41,
+          "p5": 12.59,
+          "p95": 14.19,
+          "share_of_true_strongest_advantage_over_random": 0.422,
+          "share_of_oracle_advantage_over_random": 0.306
+        },
+        "consensus_plus_degradation": {
+          "mean_net_severe_rescued": 16.03,
+          "p5": 15.09,
+          "p95": 16.73,
+          "share_of_true_strongest_advantage_over_random": 0.861,
+          "share_of_oracle_advantage_over_random": 0.624
+        },
+        "random": {
+          "mean_net_severe_rescued": 10.9,
+          "p5": 10.44,
+          "p95": 11.34,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 16.86,
+          "p5": 15.91,
+          "p95": 17.68,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.724
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 19.13,
+          "p5": 18.18,
+          "p95": 19.95,
+          "share_of_true_strongest_advantage_over_random": 1.38,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "2000": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 15.86,
+          "p5": 13.72,
+          "p95": 17.64,
+          "share_of_true_strongest_advantage_over_random": 1.018,
+          "share_of_oracle_advantage_over_random": 0.726,
+          "picks_true_strongest": 0.043
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 13.3,
+          "p5": 8.43,
+          "p95": 16.23,
+          "share_of_true_strongest_advantage_over_random": 0.565,
+          "share_of_oracle_advantage_over_random": 0.403,
+          "picks_true_strongest": 0.194
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 12.49,
+          "p5": 11.27,
+          "p95": 13.82,
+          "share_of_true_strongest_advantage_over_random": 0.42,
+          "share_of_oracle_advantage_over_random": 0.3
+        },
+        "consensus_plus_degradation": {
+          "mean_net_severe_rescued": 14.95,
+          "p5": 13.68,
+          "p95": 15.96,
+          "share_of_true_strongest_advantage_over_random": 0.857,
+          "share_of_oracle_advantage_over_random": 0.611
+        },
+        "random": {
+          "mean_net_severe_rescued": 10.12,
+          "p5": 9.26,
+          "p95": 10.77,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 15.76,
+          "p5": 14.36,
+          "p95": 16.91,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.713
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 18.02,
+          "p5": 16.59,
+          "p95": 19.14,
+          "share_of_true_strongest_advantage_over_random": 1.402,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      }
+    },
+    "DDR": {
+      "50": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 12.71,
+          "p5": 5.36,
+          "p95": 21.46,
+          "share_of_true_strongest_advantage_over_random": -0.257,
+          "share_of_oracle_advantage_over_random": -0.235,
+          "picks_true_strongest": 0.069
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 15.11,
+          "p5": 11.36,
+          "p95": 20.64,
+          "share_of_true_strongest_advantage_over_random": 0.021,
+          "share_of_oracle_advantage_over_random": 0.019,
+          "picks_true_strongest": 0.013
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.76,
+          "p5": 14.45,
+          "p95": 15.0,
+          "share_of_true_strongest_advantage_over_random": -0.02,
+          "share_of_oracle_advantage_over_random": -0.018
+        },
+        "random": {
+          "mean_net_severe_rescued": 14.93,
+          "p5": 14.72,
+          "p95": 15.09,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 23.53,
+          "p5": 23.09,
+          "p95": 23.73,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.913
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 24.36,
+          "p5": 24.0,
+          "p95": 24.55,
+          "share_of_true_strongest_advantage_over_random": 1.096,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "100": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 12.14,
+          "p5": 5.63,
+          "p95": 21.0,
+          "share_of_true_strongest_advantage_over_random": -0.318,
+          "share_of_oracle_advantage_over_random": -0.29,
+          "picks_true_strongest": 0.049
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 15.32,
+          "p5": 11.18,
+          "p95": 21.93,
+          "share_of_true_strongest_advantage_over_random": 0.053,
+          "share_of_oracle_advantage_over_random": 0.048,
+          "picks_true_strongest": 0.023
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.7,
+          "p5": 14.27,
+          "p95": 15.0,
+          "share_of_true_strongest_advantage_over_random": -0.019,
+          "share_of_oracle_advantage_over_random": -0.017
+        },
+        "random": {
+          "mean_net_severe_rescued": 14.87,
+          "p5": 14.54,
+          "p95": 15.17,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 23.45,
+          "p5": 23.0,
+          "p95": 23.82,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.914
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 24.27,
+          "p5": 23.82,
+          "p95": 24.64,
+          "share_of_true_strongest_advantage_over_random": 1.095,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "200": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 11.6,
+          "p5": 5.18,
+          "p95": 19.09,
+          "share_of_true_strongest_advantage_over_random": -0.369,
+          "share_of_oracle_advantage_over_random": -0.336,
+          "picks_true_strongest": 0.025
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 15.81,
+          "p5": 10.81,
+          "p95": 21.19,
+          "share_of_true_strongest_advantage_over_random": 0.127,
+          "share_of_oracle_advantage_over_random": 0.116,
+          "picks_true_strongest": 0.044
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.54,
+          "p5": 13.91,
+          "p95": 15.0,
+          "share_of_true_strongest_advantage_over_random": -0.023,
+          "share_of_oracle_advantage_over_random": -0.021
+        },
+        "random": {
+          "mean_net_severe_rescued": 14.73,
+          "p5": 14.35,
+          "p95": 15.03,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 23.22,
+          "p5": 22.45,
+          "p95": 23.73,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.911
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 24.05,
+          "p5": 23.45,
+          "p95": 24.45,
+          "share_of_true_strongest_advantage_over_random": 1.098,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "500": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 10.88,
+          "p5": 5.27,
+          "p95": 18.36,
+          "share_of_true_strongest_advantage_over_random": -0.425,
+          "share_of_oracle_advantage_over_random": -0.385,
+          "picks_true_strongest": 0.009
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 17.29,
+          "p5": 11.26,
+          "p95": 22.1,
+          "share_of_true_strongest_advantage_over_random": 0.351,
+          "share_of_oracle_advantage_over_random": 0.318,
+          "picks_true_strongest": 0.125
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 14.21,
+          "p5": 13.27,
+          "p95": 14.91,
+          "share_of_true_strongest_advantage_over_random": -0.021,
+          "share_of_oracle_advantage_over_random": -0.019
+        },
+        "random": {
+          "mean_net_severe_rescued": 14.39,
+          "p5": 13.81,
+          "p95": 14.95,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 22.65,
+          "p5": 21.73,
+          "p95": 23.46,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.906
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 23.51,
+          "p5": 22.64,
+          "p95": 24.27,
+          "share_of_true_strongest_advantage_over_random": 1.104,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "1000": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 10.35,
+          "p5": 5.0,
+          "p95": 17.28,
+          "share_of_true_strongest_advantage_over_random": -0.434,
+          "share_of_oracle_advantage_over_random": -0.393,
+          "picks_true_strongest": 0.003
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 17.11,
+          "p5": 10.0,
+          "p95": 21.0,
+          "share_of_true_strongest_advantage_over_random": 0.415,
+          "share_of_oracle_advantage_over_random": 0.375,
+          "picks_true_strongest": 0.212
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 13.64,
+          "p5": 12.55,
+          "p95": 14.91,
+          "share_of_true_strongest_advantage_over_random": -0.02,
+          "share_of_oracle_advantage_over_random": -0.018
+        },
+        "random": {
+          "mean_net_severe_rescued": 13.8,
+          "p5": 12.9,
+          "p95": 14.52,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 21.76,
+          "p5": 20.27,
+          "p95": 22.91,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.904
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 22.6,
+          "p5": 21.36,
+          "p95": 23.64,
+          "share_of_true_strongest_advantage_over_random": 1.106,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      },
+      "2000": {
+        "sample_auc": {
+          "mean_net_severe_rescued": 8.86,
+          "p5": 4.54,
+          "p95": 16.28,
+          "share_of_true_strongest_advantage_over_random": -0.506,
+          "share_of_oracle_advantage_over_random": -0.453,
+          "picks_true_strongest": 0.001
+        },
+        "sample_severe_misses": {
+          "mean_net_severe_rescued": 16.79,
+          "p5": 11.54,
+          "p95": 20.2,
+          "share_of_true_strongest_advantage_over_random": 0.576,
+          "share_of_oracle_advantage_over_random": 0.516,
+          "picks_true_strongest": 0.356
+        },
+        "consensus": {
+          "mean_net_severe_rescued": 12.44,
+          "p5": 10.72,
+          "p95": 13.91,
+          "share_of_true_strongest_advantage_over_random": -0.017,
+          "share_of_oracle_advantage_over_random": -0.016
+        },
+        "random": {
+          "mean_net_severe_rescued": 12.57,
+          "p5": 11.46,
+          "p95": 13.78,
+          "share_of_true_strongest_advantage_over_random": 0.0,
+          "share_of_oracle_advantage_over_random": 0.0
+        },
+        "true_strongest": {
+          "mean_net_severe_rescued": 19.9,
+          "p5": 17.73,
+          "p95": 21.37,
+          "share_of_true_strongest_advantage_over_random": 1.0,
+          "share_of_oracle_advantage_over_random": 0.895
+        },
+        "oracle": {
+          "mean_net_severe_rescued": 20.76,
+          "p5": 19.0,
+          "p95": 22.0,
+          "share_of_true_strongest_advantage_over_random": 1.117,
+          "share_of_oracle_advantage_over_random": 1.0
+        }
+      }
+    }
+  },
+  "deviation_from_plan": "DDR calibration samples drawn by image, not filename group: groups of consecutively numbered DDR images are grade-clustered, which made group-sampled calibration sets unrepresentative (first run)",
+  "n_models": {
+    "EyePACS": 22,
+    "DDR": 11
+  },
+  "referral_fraction": {
+    "EyePACS": 0.25,
+    "DDR": 0.555
+  }
+}

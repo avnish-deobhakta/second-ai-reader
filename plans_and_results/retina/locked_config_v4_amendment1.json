@@ -1,0 +1,79 @@
+{
+  "amendment": "v4.1",
+  "amends": "locked_config_v4.json",
+  "amends_sha256": "9b78257ece485d0266b222a69e48f8eaa94f7b351911238d16195a5b087eb6cc",
+  "written_at_utc": "2026-09-23T13:04:28.343103+00:00",
+  "confirmation_status": "CLOSED; not read by this notebook",
+  "outcome_definition": "anchor_relative",
+  "outcome_definition_changed_from_v4": true,
+  "outcome_definition_rationale": "anchor_relative counts PDR eyes missed by the deployed anchor that the partner catches. The v4 pair_min outcome measures gain over the better of the two readers, which penalises a partner stronger than the anchor by construction and so biases the decision-relevant secondary against best_partner_marginal.",
+  "unchanged": [
+    "PDR as the outcome grade (diagnostic 3)",
+    "predictor C and competing rules",
+    "uncertainty method",
+    "success criterion",
+    "reliability gate verdict (failed)"
+  ],
+  "reason": "The v4 power expectation used between-pair reliability of C, whereas the primary is a within-anchor rank correlation; used C reliability in place of outcome reliability; and hardcoded implied requirements (25,000 patients for 0.90; patient axis satisfied) that the v4 run itself contradicts.",
+  "within_anchor_reliability": {
+    "C_split_half": 0.5579,
+    "C_full_estimation": 0.7162,
+    "outcome_confirmation_size": 0.5562,
+    "C_between_pair_split_half_reproduced": 0.5891
+  },
+  "corrected_power_expectation": {
+    "underlying_assumed_from_v3": 0.33,
+    "expected_observed_primary": 0.208,
+    "detection_threshold_eleven_anchors": 0.28,
+    "expected_below_threshold": true,
+    "interpretation": "Expected observed effect is below the detection threshold. A null is a power statement and does not rule out a relationship of the size v3 implies."
+  },
+  "pseudo_confirmation_preview_estimation_only": {
+    "note": "Split-half within the estimation pool: predictor on one half, outcome on the other. Recorded before confirmation as the empirical expectation.",
+    "C_vs_outcome_half_predictor": 0.4572,
+    "C_vs_outcome_scaled_to_full_predictor": 0.518,
+    "best_marginal_vs_outcome": 0.2421,
+    "C_partial_on_partner_marginal": 0.5192,
+    "alternative_outcome": "pair_min",
+    "alt_outcome_reliability_split_half": 0.5941,
+    "alt_C_vs_outcome_half_predictor": 0.3173,
+    "alt_best_marginal_vs_outcome": -0.4943,
+    "alt_C_partial_on_partner_marginal": 0.381,
+    "sd_over_splits": {
+      "rel_C_between": 0.1451,
+      "rel_C_within": 0.1173,
+      "rel_out_within": 0.118,
+      "preview_C": 0.0782,
+      "preview_marginal": 0.074,
+      "preview_C_partial": 0.0921,
+      "alt_rel_out_within": 0.1243,
+      "alt_preview_C": 0.0723,
+      "alt_preview_marginal": 0.0765,
+      "alt_preview_C_partial": 0.0834
+    }
+  },
+  "implied_requirements_corrected": {
+    "within_anchor_C_rel_0.80_patients": 28309,
+    "within_anchor_C_rel_0.90_patients": 63694,
+    "between_pair_C_rel_0.80_patients": 24912,
+    "between_pair_C_rel_0.90_patients": 56052,
+    "estimation_pool_patients": 17859,
+    "patient_axis_satisfied_for_0.80": false,
+    "architecture_axis_satisfied": false,
+    "supersedes": "power_expectation.implied_requirements in locked_config_v4.json"
+  },
+  "best_partner_marginal_seed_agreement_note": {
+    "top_model_by_seed": {
+      "_seed0": "retfound_binary",
+      "_seed1": "densenet121_binary",
+      "_seed2": "densenet121_5class"
+    },
+    "relative_gap_top_two_by_seed": {
+      "_seed0": 0.006,
+      "_seed1": 0.0279,
+      "_seed2": 0.0032
+    },
+    "distinct_top_models": 3,
+    "interpretation": "best_partner_marginal picks the same partner for nearly every anchor, so its seed agreement is all-or-nothing and the 0.10 chance line does not apply. Three different top models across three seeds accounts for the v4 figure of 0.000."
+  }
+}

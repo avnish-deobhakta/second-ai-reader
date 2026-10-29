@@ -1,0 +1,16 @@
+{
+  "plan": "BRSET exploratory follow-ups to plan v6: model-strength check on B1, and diagnosis of the B4 sibling result",
+  "written": "2026-10-03, after brset_results_v6.json; exploratory, does not change any confirmatory result",
+  "part_A_strength": {
+    "reason": "DDR-trained models are weaker on BRSET (median AUC 0.89 vs 0.95), so different-source pairs always contain one weaker model",
+    "A1": "split same-source pairs into EyePACS-EyePACS and DDR-DDR; compare each with different-source pairs (different designs only), referable and severe; patient bootstrap",
+    "A2": "pair-level regression of the shared-miss ratio on same-source, adjusting for the pair's mean miss count and miss-count gap; coefficient with patient bootstrap"
+  },
+  "part_B_siblings": {
+    "reason": "the pre-registered relative rule flagged 63% of repeat-run pairs (bar 80%) at a referral share of 7.5%; agreement over so few referrals may be noisy",
+    "B1": "area under the curve separating repeat-run pairs from different-design pairs, using kappa at the plan's share (7.5%)",
+    "B2": "the same AUC and the relative-rule flag rate with agreement measured at shares of 15%, 25% and 50% (no labels needed), and with rank correlation of scores",
+    "B3": "flag rates separately for EyePACS-trained and DDR-trained repeat runs"
+  },
+  "reporting": "aggregate only; reported in full whatever it shows, labelled exploratory, alongside the failed pre-registered B4"
+}

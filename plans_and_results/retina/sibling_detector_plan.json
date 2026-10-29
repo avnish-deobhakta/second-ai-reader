@@ -1,0 +1,16 @@
+{
+  "plan": "sibling definition, label-free sibling detector, and expected benefit from output agreement",
+  "written": "2026-09-26, before either analysis is run",
+  "status": "exploratory (EyePACS confirmation set and DDR previously opened); to be repeated on the dermatology arm",
+  "definition": "A sibling is a model that starts from the same pretrained checkpoint (same architecture and same starting weights), whatever its seed, output format (binary or 5-class), fine-tuning variant or training recipe.",
+  "part_A_checkpoint_rule": "Rerun the enriched-calibration simulation (k severe plus k controls, k = 25, 50, 100, 200; 200 draws) with eligibility defined by the checkpoint rule instead of the architecture-family rule; rules: enriched AUC, random, true strongest, oracle; sites EyePACS (22-model zoo, all distinct checkpoints) and DDR (11 paper architectures).",
+  "part_B_detector": {
+    "pool_EyePACS": "confirmation set: 33 paper models (11 variants x 3 seeds), 6 starting-weights models (ViT-B MAE and DINOv2, ResNet50 SWSL and DINO, 3 seeds each), and the 22 full-recipe zoo models (different seed and recipe from the paper models sharing their checkpoints)",
+    "pool_DDR": "33 paper models on DDR",
+    "pair_labels": "sibling (same checkpoint id) vs non-sibling; sibling subtypes: seed only, output format, fine-tuning variant (RETFound family), recipe (zoo vs paper model)",
+    "label_free_agreement": ["Spearman rank correlation of scores on all images", "Cohen's kappa of refer/not-refer decisions at the site referral fraction"],
+    "analyses": ["distribution of agreement by relationship", "AUC for separating siblings from non-siblings", "threshold chosen on EyePACS (Youden) and applied unchanged to DDR (sensitivity, specificity)"]
+  },
+  "part_C_expected_benefit": "For every ordered non-identical pair, share of the deployed model's severe misses rescued at matched referral volume, plotted and regressed against label-free kappa; reported with and without the deployed model's own miss count as a covariate; fitted on EyePACS and checked on DDR",
+  "what_counts_as_useful": "sibling vs non-sibling AUC of 0.9 or more with a threshold that transfers to DDR; and a monotone relationship between label-free agreement and expected severe rescue that holds at both sites"
+}

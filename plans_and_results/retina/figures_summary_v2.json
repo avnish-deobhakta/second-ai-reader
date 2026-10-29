@@ -1,0 +1,15 @@
+{
+  "generated_utc": "2026-09-24T01:56:50.853007+00:00",
+  "co_miss_ratio_mean_EyePACS": 8.45,
+  "co_miss_ratio_range_EyePACS": [
+    4.44,
+    26.49
+  ],
+  "co_miss_ratio_mean_DDR": 10.0,
+  "co_miss_ratio_range_DDR": [
+    6.75,
+    25.95
+  ],
+  "pairs_with_ratio_above_1_EyePACS": 110,
+  "pairs_with_ratio_above_1_DDR": 110
+}

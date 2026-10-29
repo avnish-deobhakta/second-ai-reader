@@ -1,0 +1,146 @@
+{
+  "HAM10000_resnet50_seed0": {
+    "val_malignant_auc": 0.9274,
+    "best_epoch": 12,
+    "seed": 20261601,
+    "minutes": 5.1
+  },
+  "HAM10000_resnet50_seed1": {
+    "val_malignant_auc": 0.9202,
+    "best_epoch": 13,
+    "seed": 20261602,
+    "minutes": 4.1
+  },
+  "HAM10000_densenet121_seed0": {
+    "val_malignant_auc": 0.9431,
+    "best_epoch": 7,
+    "seed": 20261611,
+    "minutes": 9.6
+  },
+  "HAM10000_densenet121_seed1": {
+    "val_malignant_auc": 0.9363,
+    "best_epoch": 6,
+    "seed": 20261612,
+    "minutes": 7.4
+  },
+  "HAM10000_efficientnet_b3_seed0": {
+    "val_malignant_auc": 0.9339,
+    "best_epoch": 7,
+    "seed": 20261621,
+    "minutes": 9.5
+  },
+  "HAM10000_efficientnet_b3_seed1": {
+    "val_malignant_auc": 0.9241,
+    "best_epoch": 11,
+    "seed": 20261622,
+    "minutes": 6.9
+  },
+  "HAM10000_convnext_t_seed0": {
+    "val_malignant_auc": 0.93,
+    "best_epoch": 5,
+    "seed": 20261631,
+    "minutes": 5.2
+  },
+  "HAM10000_convnext_t_seed1": {
+    "val_malignant_auc": 0.9391,
+    "best_epoch": 5,
+    "seed": 20261632,
+    "minutes": 4.4
+  },
+  "HAM10000_vit_b_seed0": {
+    "val_malignant_auc": 0.9378,
+    "best_epoch": 6,
+    "seed": 20261641,
+    "minutes": 4.5
+  },
+  "HAM10000_vit_b_seed1": {
+    "val_malignant_auc": 0.934,
+    "best_epoch": 15,
+    "seed": 20261642,
+    "minutes": 4.5
+  },
+  "HAM10000_vit_b_dinov2_seed0": {
+    "val_malignant_auc": 0.9353,
+    "best_epoch": 8,
+    "seed": 20261651,
+    "minutes": 5.2
+  },
+  "HAM10000_vit_b_dinov2_seed1": {
+    "val_malignant_auc": 0.9386,
+    "best_epoch": 13,
+    "seed": 20261652,
+    "minutes": 5.2
+  },
+  "BCN20000_resnet50_seed0": {
+    "val_malignant_auc": 0.829,
+    "best_epoch": 6,
+    "seed": 20261701,
+    "minutes": 6.8
+  },
+  "BCN20000_resnet50_seed1": {
+    "val_malignant_auc": 0.8163,
+    "best_epoch": 13,
+    "seed": 20261702,
+    "minutes": 6.0
+  },
+  "BCN20000_densenet121_seed0": {
+    "val_malignant_auc": 0.8285,
+    "best_epoch": 8,
+    "seed": 20261711,
+    "minutes": 12.9
+  },
+  "BCN20000_densenet121_seed1": {
+    "val_malignant_auc": 0.8327,
+    "best_epoch": 10,
+    "seed": 20261712,
+    "minutes": 10.8
+  },
+  "BCN20000_efficientnet_b3_seed0": {
+    "val_malignant_auc": 0.8292,
+    "best_epoch": 12,
+    "seed": 20261721,
+    "minutes": 10.4
+  },
+  "BCN20000_efficientnet_b3_seed1": {
+    "val_malignant_auc": 0.8273,
+    "best_epoch": 8,
+    "seed": 20261722,
+    "minutes": 10.2
+  },
+  "BCN20000_convnext_t_seed0": {
+    "val_malignant_auc": 0.8536,
+    "best_epoch": 6,
+    "seed": 20261731,
+    "minutes": 6.7
+  },
+  "BCN20000_convnext_t_seed1": {
+    "val_malignant_auc": 0.8574,
+    "best_epoch": 13,
+    "seed": 20261732,
+    "minutes": 6.4
+  },
+  "BCN20000_vit_b_seed0": {
+    "val_malignant_auc": 0.8399,
+    "best_epoch": 13,
+    "seed": 20261741,
+    "minutes": 6.6
+  },
+  "BCN20000_vit_b_seed1": {
+    "val_malignant_auc": 0.8461,
+    "best_epoch": 14,
+    "seed": 20261742,
+    "minutes": 6.6
+  },
+  "BCN20000_vit_b_dinov2_seed0": {
+    "val_malignant_auc": 0.8695,
+    "best_epoch": 11,
+    "seed": 20261751,
+    "minutes": 7.6
+  },
+  "BCN20000_vit_b_dinov2_seed1": {
+    "val_malignant_auc": 0.8742,
+    "best_epoch": 14,
+    "seed": 20261752,
+    "minutes": 7.6
+  }
+}

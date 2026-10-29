@@ -1,0 +1,250 @@
+{
+  "generated_utc": "2026-09-27T02:23:06.692443+00:00",
+  "plan": "sibling_detector_plan.json",
+  "status": "exploratory",
+  "A_checkpoint_rule_enriched": {
+    "EyePACS": {
+      "25": {
+        "enriched_auc_share_of_true_strongest": 0.429,
+        "true_strongest_share_of_oracle": 0.744,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 13.91,
+          "random": 11.17,
+          "true_strongest": 17.55,
+          "oracle": 19.75
+        }
+      },
+      "50": {
+        "enriched_auc_share_of_true_strongest": 0.547,
+        "true_strongest_share_of_oracle": 0.742,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 14.18,
+          "random": 10.77,
+          "true_strongest": 17.0,
+          "oracle": 19.17
+        }
+      },
+      "100": {
+        "enriched_auc_share_of_true_strongest": 0.792,
+        "true_strongest_share_of_oracle": 0.729,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 14.53,
+          "random": 9.98,
+          "true_strongest": 15.73,
+          "oracle": 17.87
+        }
+      },
+      "200": {
+        "enriched_auc_share_of_true_strongest": 0.841,
+        "true_strongest_share_of_oracle": 0.682,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 12.24,
+          "random": 8.25,
+          "true_strongest": 13.0,
+          "oracle": 15.21
+        }
+      }
+    },
+    "DDR": {
+      "25": {
+        "enriched_auc_share_of_true_strongest": 0.505,
+        "true_strongest_share_of_oracle": 0.912,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 18.94,
+          "random": 14.67,
+          "true_strongest": 23.14,
+          "oracle": 23.95
+        }
+      },
+      "50": {
+        "enriched_auc_share_of_true_strongest": 0.697,
+        "true_strongest_share_of_oracle": 0.91,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 20.09,
+          "random": 14.32,
+          "true_strongest": 22.61,
+          "oracle": 23.43
+        }
+      },
+      "100": {
+        "enriched_auc_share_of_true_strongest": 0.788,
+        "true_strongest_share_of_oracle": 0.901,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 19.8,
+          "random": 13.63,
+          "true_strongest": 21.47,
+          "oracle": 22.33
+        }
+      },
+      "200": {
+        "enriched_auc_share_of_true_strongest": 0.822,
+        "true_strongest_share_of_oracle": 0.891,
+        "mean_net_severe_rescued": {
+          "enriched_auc": 18.28,
+          "random": 12.39,
+          "true_strongest": 19.56,
+          "oracle": 20.43
+        }
+      }
+    }
+  },
+  "B_sibling_detector": {
+    "kappa": {
+      "auc_EyePACS": 0.99,
+      "auc_DDR": 1.0,
+      "threshold_from_EyePACS": 0.6336,
+      "EyePACS": {
+        "sensitivity": 0.967,
+        "specificity": 0.921
+      },
+      "DDR_threshold_transferred": {
+        "sensitivity": 1.0,
+        "specificity": 0.81
+      },
+      "by_relationship_median": {
+        "EyePACS": {
+          "non-sibling": 0.584,
+          "sibling: different recipe/seed": 0.721,
+          "sibling: fine-tuning variant": 0.849,
+          "sibling: output format": 0.686,
+          "sibling: seed only": 0.722
+        },
+        "DDR": {
+          "non-sibling": 0.613,
+          "sibling: fine-tuning variant": 0.865,
+          "sibling: output format": 0.716,
+          "sibling: seed only": 0.74
+        }
+      }
+    },
+    "rank_corr": {
+      "auc_EyePACS": 0.996,
+      "auc_DDR": 1.0,
+      "threshold_from_EyePACS": 0.7424,
+      "EyePACS": {
+        "sensitivity": 0.98,
+        "specificity": 0.969
+      },
+      "DDR_threshold_transferred": {
+        "sensitivity": 1.0,
+        "specificity": 0.037
+      },
+      "by_relationship_median": {
+        "EyePACS": {
+          "non-sibling": 0.669,
+          "sibling: different recipe/seed": 0.823,
+          "sibling: fine-tuning variant": 0.937,
+          "sibling: output format": 0.78,
+          "sibling: seed only": 0.83
+        },
+        "DDR": {
+          "non-sibling": 0.81,
+          "sibling: fine-tuning variant": 0.97,
+          "sibling: output format": 0.899,
+          "sibling: seed only": 0.916
+        }
+      }
+    }
+  },
+  "C_expected_benefit": {
+    "spearman_kappa_vs_rescue": {
+      "EyePACS": -0.121,
+      "DDR": -0.213
+    },
+    "model_fitted_on_EyePACS": {
+      "intercept": -0.9611,
+      "kappa": -0.1918,
+      "log_deployed_misses": 0.3569
+    },
+    "DDR_transfer_spearman_pred_vs_obs": 0.679,
+    "rescue_share_by_kappa_band": {
+      "EyePACS": [
+        {
+          "kappa": "(-1.0, 0.5]",
+          "count": "0",
+          "median": "nan"
+        },
+        {
+          "kappa": "(0.5, 0.6]",
+          "count": "2958",
+          "median": "0.268"
+        },
+        {
+          "kappa": "(0.6, 0.7]",
+          "count": "1264",
+          "median": "0.25"
+        },
+        {
+          "kappa": "(0.7, 0.8]",
+          "count": "108",
+          "median": "0.13"
+        },
+        {
+          "kappa": "(0.8, 0.9]",
+          "count": "92",
+          "median": "0.08"
+        },
+        {
+          "kappa": "(0.9, 1.0]",
+          "count": "0",
+          "median": "nan"
+        }
+      ],
+      "DDR": [
+        {
+          "kappa": "(-1.0, 0.5]",
+          "count": "0",
+          "median": "nan"
+        },
+        {
+          "kappa": "(0.5, 0.6]",
+          "count": "284",
+          "median": "0.275"
+        },
+        {
+          "kappa": "(0.6, 0.7]",
+          "count": "608",
+          "median": "0.252"
+        },
+        {
+          "kappa": "(0.7, 0.8]",
+          "count": "92",
+          "median": "0.147"
+        },
+        {
+          "kappa": "(0.8, 0.9]",
+          "count": "72",
+          "median": "0.038"
+        },
+        {
+          "kappa": "(0.9, 1.0]",
+          "count": "0",
+          "median": "nan"
+        }
+      ]
+    },
+    "rescue_share_by_relationship": {
+      "EyePACS": {
+        "non-sibling": 0.267,
+        "sibling: different recipe/seed": 0.122,
+        "sibling: fine-tuning variant": 0.084,
+        "sibling: output format": 0.139,
+        "sibling: seed only": 0.133
+      },
+      "DDR": {
+        "non-sibling": 0.258,
+        "sibling: fine-tuning variant": 0.066,
+        "sibling: output format": 0.186,
+        "sibling: seed only": 0.134
+      }
+    }
+  },
+  "n_pairs": {
+    "EyePACS": 2211,
+    "DDR": 528
+  },
+  "n_siblings": {
+    "EyePACS": 150,
+    "DDR": 96
+  }
+}

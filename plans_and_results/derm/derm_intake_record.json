@@ -1,0 +1,84 @@
+{
+  "generated_utc": "2026-09-26T20:15:40.533687+00:00",
+  "isic_collections": {
+    "HAM10000": 212,
+    "BCN20000": 249,
+    "HIBA": 251
+  },
+  "preprocessing": "RGB, shorter side resized to 512 (Lanczos), centre crop 512x512, JPEG quality 95",
+  "sources": {
+    "HAM10000": {
+      "images": 11720,
+      "lesions": 8838,
+      "patients": 0,
+      "classes": {
+        "NV": 7737,
+        "BKL": 1338,
+        "MEL": 1305,
+        "BCC": 622,
+        "SCC": 229,
+        "VASC": 180,
+        "DF": 160,
+        "AK": 149
+      },
+      "malignant": 2156,
+      "melanoma": 1305,
+      "unmapped": 0
+    },
+    "BCN20000": {
+      "images": 18946,
+      "lesions": 5440,
+      "patients": 0,
+      "classes": {
+        "NV": 5647,
+        "MEL": 4636,
+        "BCC": 3676,
+        "BKL": 1551,
+        "AK": 1088,
+        "SCC": 559,
+        "DF": 168,
+        "VASC": 151
+      },
+      "malignant": 8871,
+      "melanoma": 4636,
+      "unmapped": 1470
+    },
+    "HIBA": {
+      "images": 1616,
+      "lesions": 1246,
+      "patients": 623,
+      "classes": {
+        "NV": 602,
+        "BCC": 340,
+        "MEL": 253,
+        "SCC": 158,
+        "BKL": 88,
+        "AK": 63,
+        "DF": 61,
+        "VASC": 51
+      },
+      "malignant": 751,
+      "melanoma": 253,
+      "unmapped": 0
+    },
+    "PAD": {
+      "images": 2298,
+      "lesions": 1641,
+      "patients": 1373,
+      "classes": {
+        "BCC": 845,
+        "AK": 730,
+        "NV": 244,
+        "BKL": 235,
+        "SCC": 192,
+        "MEL": 52
+      },
+      "malignant": 1089,
+      "melanoma": 52,
+      "unmapped": 0
+    }
+  },
+  "byte_duplicate_groups": 15,
+  "cross_source_duplicate_groups": 0,
+  "note": "intake only; no model has seen these images; lock to be written from these counts"
+}

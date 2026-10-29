@@ -1,0 +1,56 @@
+{
+  "lock": "v5.1",
+  "supersedes": "locked_config_v5_ddr.json (renamed SUPERSEDED_; written 2026-09-23T14:03Z, before any DDR prediction existed, never used)",
+  "reason_for_revision": "Framing clarified: the primary claim is intraset (within one deployment context, a second reader reduces missed PDR at a stated referral price, and site-measured complementarity and quality describe the benefit). DDR is analysed as a second site with operating points and measurements taken on DDR itself; applying EyePACS measurements to DDR (transport) becomes secondary. No DDR prediction existed when this revision was written.",
+  "written_before": "any DDR preprocessing or inference",
+  "depends_on": {
+    "ddr_intake_record": "99_audit/ddr_intake_v2.json",
+    "ddr_manifest": "01_splits/ddr_manifest_v2.csv",
+    "ddr_manifest_sha256": "9c6b9cd1bf1872d9c6c84b173b1fabc5f03c8942754f2ee66fc3fadffe95848a",
+    "ddr_assembled_zip_sha256": "a50cf62cf68031e7ebde6312e17a3c65ce5f7aa2294f7f4c3484bf1ac54e9178",
+    "models": "the 33 frozen v2 checkpoints (11 architectures x 3 seeds), trained on EyePACS only; no retraining, fine-tuning or recalibration on DDR",
+    "preprocessing": "recovered v1 pipeline used for every v2 set: RGB, resize 512x512 Lanczos, PNG; evaluation transform Resize 256, CenterCrop 224, ImageNet normalisation",
+    "referral_probability": "binary models: sigmoid of the single logit; 5-class models: softmax mass on grades 2 to 4"
+  },
+  "cohort": {
+    "include": "all DDR grading images with grade 0 to 4, DDR's own train, valid and test files pooled",
+    "exclude_ungradable": "grade 5",
+    "byte_duplicates": "within each group of byte-identical images keep one copy if labels agree, drop the group if labels disagree"
+  },
+  "grouping_and_split": {
+    "purpose": "DDR releases no patient identifier. Groups are defined from filenames only (label-free), coarse enough that both eyes of a patient fall in the same group under the assumptions stated, and are used as the unit for the intraset split and for cluster bootstrap intervals.",
+    "timestamp_named_images": "17-digit capture timestamp names: group = capture date (first 8 digits)",
+    "numbered_images": "names of the form SSS-NNNN-XYZ: group = SSS plus floor(NNNN / 50), i.e. blocks of 50 consecutive image numbers",
+    "other_names": "own singleton group",
+    "assumption_check_reported_not_decisive": "grade agreement (quadratic-weighted kappa) for adjacent-number pairs and for timestamp pairs under 120 seconds apart, against random pairs. High agreement supports adjacency of fellow eyes; low agreement means the grouping may not hold fellow eyes together, and the intraset selection result is then flagged for possible optimistic leakage. Reported either way; does not change the analysis.",
+    "split": "groups shuffled with seed 20260924 and assigned alternately to halves A and B, balancing image counts; file 01_splits/ddr_split_intraset_v2.csv written by the inference notebook before any prediction is made"
+  },
+  "operating_points": {
+    "intraset_primary": "each model refers its own top fraction f of images in the evaluated set, f = 1.31 x referable prevalence, prevalence measured on half A (the site's calibration data). 1.31 fixed from EyePACS (25% referral / 19.08% prevalence).",
+    "fixed_25_percent_secondary": "each model refers its own top 25%",
+    "pre_registered_prediction": "Fixed 25% sits below DDR referable prevalence (about 45%), the regime where APTOS showed most pairs losing at matched volume. Predicted: no benefit at fixed 25% matched volume; benefit at the prevalence-relative operating point."
+  },
+  "primary_endpoints_intraset": {
+    "P1_matched_volume_benefit": "all included DDR images, operating point f: PDR eyes missed by the anchor minus PDR eyes missed by the max-percentile-rank ensemble referring the same fraction f, averaged over 110 ordered pairs and 9 seed combinations. Supported if the mean is positive and the group-cluster bootstrap 95% interval (2,000 resamples of groups) excludes zero.",
+    "P2_union_benefit_and_price": "union rule at f: anchor-relative PDR rescued, incremental referrals and incremental false positives (grade 0 or 1) per pair, with cluster bootstrap intervals. Descriptive of the guaranteed benefit and its price; no hypothesis test on the rescued count, since it cannot be negative."
+  },
+  "secondary_intraset_selection": {
+    "predictors": "C (ceiling-normalised severity-weighted complementarity), rho_cost and partner marginal cost, each measured on half A at operating point f, averaged over 9 seed combinations",
+    "outcome": "anchor-relative PDR rescued under the union rule at f, measured on half B",
+    "statistics": "within-anchor Spearman of C with the outcome, mean over 11 anchors, architecture bootstrap (1,000); partial on partner marginal; rule comparison (least overlap, least weighted dependence, best marginal, two-stage, random, oracle); paired differences against best marginal at matched volume and in incremental false positives",
+    "two_stage_rule": "restrict to partners whose half-A marginal cost is at most 1.10 x the lowest candidate marginal cost; choose the highest C among them; ties broken by lower marginal cost. Hypothesis generated from lock v4 confirmation (partial correlation 0.44); DDR is its first test.",
+    "swap_sensitivity": "repeat with halves exchanged (predictors on B, outcome on A); reported, not decisive"
+  },
+  "secondary_transport": {
+    "T1": "P1 and P2 at the fixed 25% operating point",
+    "T2": "partner ranking from EyePACS estimation-pool C (pair_quantities_estimation_v4.csv) against the DDR half-B outcome, same statistics as the intraset selection test"
+  },
+  "also_reported": ["grade 3 or worse in place of PDR", "results with and without retfound_adversarial", "APTOS: exploratory only, not part of this lock"],
+  "not_permitted": [
+    "choosing any operating point, aggregation rule, grouping or subgroup after DDR predictions exist",
+    "recalibrating or thresholding models on DDR labels beyond the rank-based fractions defined here",
+    "printing or inspecting any DDR performance metric in the inference notebook",
+    "reporting the best DDR pair as a headline"
+  ],
+  "confirmation_status": "DDR predictions do not exist at the time of writing. The inference notebook asserts this file exists and predates every DDR prediction file; the analysis notebook is written only after inference completes and runs once."
+}

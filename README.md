@@ -1,4 +1,4 @@
-# 👁️ A second AI reader catches more missed disease when trained on different data
+# A second AI reader catches more missed disease when trained on different data
 
 **Does pairing two AI screening systems actually catch more disease, or do they just miss the same patients?**
 
@@ -18,19 +18,19 @@ Avnish A. Deobhakta · Richard B. Rosen · Tak Yee Tania Tai · James C. Tsai ·
 
 ---
 
-## ✨ In one paragraph
+## In one paragraph
 
 Screening programmes are starting to put a second AI system behind the first, on the assumption that it gives an independent opinion. We tested that with **69 models** in **diabetic retinopathy and skin cancer** across **five populations**. Every comparison was made at **equal referral volume**, so the pair can't win simply by referring more people. A second reader cut missed sight-threatening and malignant disease in every population, but less than independence would predict, because systems miss the same cases far more often than chance. **What mattered most was training data:** in pre-registered tests in both domains, systems trained on different data shared fewer missed cases than systems that differed only in design.
 
-## 📊 Headline results
+## Headline results
 
 | Population | Outcome | Reduction in missed disease (95% CI) | Compared with |
 |:--|:--|:--:|:--|
-| 🇺🇸 EyePACS (US screening) | Proliferative DR | **22%** (12% to 34%) | better system of each pair |
-| 🇨🇳 DDR (Chinese hospitals) | Proliferative DR | **27%** (19% to 40%) | deployed system |
-| 🇧🇷 BRSET (Brazil) | Severe DR | **25%** (20% to 31%) | deployed system |
-| 🇦🇷 HIBA (Argentina) | Any skin cancer | **17%** (12% to 22%) | deployed system |
-| 🇧🇷 PAD-UFES-20 (Brazil, smartphone) | Any skin cancer | **10%** (7% to 12%) | deployed system |
+| EyePACS (US screening) | Proliferative DR | **22%** (12% to 34%) | better system of each pair |
+| DDR (Chinese hospitals) | Proliferative DR | **27%** (19% to 40%) | deployed system |
+| BRSET (Brazil) | Severe DR | **25%** (20% to 31%) | deployed system |
+| HIBA (Argentina) | Any skin cancer | **17%** (12% to 22%) | deployed system |
+| PAD-UFES-20 (Brazil, smartphone) | Any skin cancer | **10%** (7% to 12%) | deployed system |
 
 > [!TIP]
 > **Different data beats different design.** Pairs trained on different collections shared fewer missed cases than pairs trained on the same one. In BRSET the primary contrast was 0.39 (0.32 to 0.46) for referable DR; in HIBA it was 0.44 (0.23 to 0.75) for melanoma.
@@ -38,16 +38,16 @@ Screening programmes are starting to put a second AI system behind the first, on
 > [!NOTE]
 > **It survives pricing false referrals** (secondary, post hoc). When every strategy picks its own referral volume, pairing beats the better system in EyePACS and DDR for any programme willing to accept more than about 50 false referrals to save one eye. In BRSET, where disease is rarest, it helps against a system chosen without hindsight, but not against the better of the two.
 
-## 🧭 Study design
+## Study design
 
 ```mermaid
 flowchart LR
-    subgraph R["🩺 Retina"]
+    subgraph R["Retina"]
         direction TB
         E1["EyePACS training: 33 models"]:::train
         D1["DDR training: 12 models"]:::train
     end
-    subgraph S["🔬 Skin"]
+    subgraph S["Skin"]
         direction TB
         H1["HAM10000: 12 models"]:::train
         B1["BCN20000: 12 models"]:::train
@@ -65,27 +65,27 @@ flowchart LR
 ```
 
 **Three rules held for every comparison**
-1. 🔒 **Specified in advance.** Each confirmatory plan was written, dated and hashed before its data were opened, and each test set was scored once.
-2. ⚖️ **Equal referral volume.** A pair refers exactly as many cases as one system, so any benefit comes from choosing better whom to refer.
-3. 🧮 **Honest uncertainty.** Bootstrap intervals resample patients (or image groups), and systems themselves wherever pairs share members.
+1. **Specified in advance.** Each confirmatory plan was written, dated and hashed before its data were opened, and each test set was scored once.
+2. **Equal referral volume.** A pair refers exactly as many cases as one system, so any benefit comes from choosing better whom to refer.
+3. **Honest uncertainty.** Bootstrap intervals resample patients (or image groups), and systems themselves wherever pairs share members.
 
-## 🗂️ What's in here
+## What's in here
 
 | Folder | Contents |
 |:--|:--|
-| 📁 [`notebooks/01_eyepacs/`](notebooks/01_eyepacs) | Splits, training of the 33 EyePACS models, the held-back test set, the **primary analysis**, partner choice, exploratory and harm-weighted analyses |
-| 📁 [`notebooks/02_ddr/`](notebooks/02_ddr) | DDR intake, inference, the confirmatory DDR analysis, training of the 12 DDR models |
-| 📁 [`notebooks/03_brset/`](notebooks/03_brset) | BRSET download, inference, the confirmatory analysis and follow-ups |
-| 📁 [`notebooks/04_skin/`](notebooks/04_skin) | Skin intake, training of the 24 skin models, the confirmatory analysis and follow-ups |
-| 📁 [`notebooks/05_similarity/`](notebooks/05_similarity) | Degradation fingerprints, and predicting shared misses from the models |
-| 📁 [`notebooks/06_figures/`](notebooks/06_figures) | Figure notebooks |
-| 📁 [`plans_and_results/`](plans_and_results) | Dated plans, locks with their hashes, aggregate results |
+| [`notebooks/01_eyepacs/`](notebooks/01_eyepacs) | Splits, training of the 33 EyePACS models, the held-back test set, the **primary analysis**, partner choice, exploratory and harm-weighted analyses |
+| [`notebooks/02_ddr/`](notebooks/02_ddr) | DDR intake, inference, the confirmatory DDR analysis, training of the 12 DDR models |
+| [`notebooks/03_brset/`](notebooks/03_brset) | BRSET download, inference, the confirmatory analysis and follow-ups |
+| [`notebooks/04_skin/`](notebooks/04_skin) | Skin intake, training of the 24 skin models, the confirmatory analysis and follow-ups |
+| [`notebooks/05_similarity/`](notebooks/05_similarity) | Degradation fingerprints, and predicting shared misses from the models |
+| [`notebooks/06_figures/`](notebooks/06_figures) | Figure notebooks |
+| [`plans_and_results/`](plans_and_results) | Dated plans, locks with their hashes, aggregate results |
 
-## 🔎 Where each result comes from
+## Where each result comes from
 
 | Result | Notebook |
 |:--|:--|
-| ⭐ **Primary:** net severe misses against the better member, EyePACS | [`09_lock_v3_and_fresh_eval`](notebooks/01_eyepacs/09_lock_v3_and_fresh_eval.ipynb) |
+| **Primary:** net severe misses against the better member, EyePACS | [`09_lock_v3_and_fresh_eval`](notebooks/01_eyepacs/09_lock_v3_and_fresh_eval.ipynb) |
 | DDR results, and the copied 25% referral share | [`DDR_analysis_v5_1`](notebooks/02_ddr/DDR_analysis_v5_1.ipynb) |
 | BRSET results, training-data effect, sibling test | [`BRSET_analysis_v6`](notebooks/03_brset/BRSET_analysis_v6.ipynb), [`BRSET_exploratory`](notebooks/03_brset/BRSET_exploratory.ipynb) |
 | Skin results, training-data effect, fingerprint test | [`DERM_analysis`](notebooks/04_skin/DERM_analysis.ipynb) |
@@ -96,7 +96,7 @@ flowchart LR
 | Floor of shared misses among EyePACS models | [`PREDICT_from_models_v2`](notebooks/05_similarity/PREDICT_from_models_v2.ipynb) |
 | Harm-weighted analysis and the two bounds | [`18_literature_weighted_secondary_v2`](notebooks/01_eyepacs/18_literature_weighted_secondary_v2.ipynb), [`18b_two_bounds_v2`](notebooks/01_eyepacs/18b_two_bounds_v2.ipynb) |
 
-## 📝 Notes
+## Notes
 
 - `TRAIN_ddr_v2_pilot` is the full training run of the 12 DDR-trained models; the name is kept as run.
 - `03b_aptos_inference_allseeds_v2` made predictions on APTOS 2019. APTOS was not analysed because it releases no patient identifiers, so patient-level analysis is impossible.
@@ -106,7 +106,7 @@ flowchart LR
 > [!IMPORTANT]
 > **BRSET** is available to credentialed users from [PhysioNet](https://physionet.org/content/brazilian-ophthalmological/). No BRSET record-level data are in this repository, and only aggregate results are shown. Credentialed users can regenerate the predictions with these notebooks.
 
-## 📦 Data
+## Data
 
 | Dataset | Source |
 |:--|:--|
@@ -118,8 +118,8 @@ flowchart LR
 
 Per-image predictions for the openly available test sets, the split files and the model checkpoints are archived at Zenodo: *DOI to be added*.
 
-## 📚 Citation
+## Citation
 
 *Citation to be added on publication.*
 
-*Built and run on Google Colab. Every notebook is shown exactly as it was run.*
+Built and run on Google Colab. Every notebook is shown exactly as it was run.

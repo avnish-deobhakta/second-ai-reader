@@ -33,3 +33,6 @@ Code for the study by Deobhakta, Rosen, Tai, Tsai, Harris and Pasquale (New York
 - `03b_aptos_inference_allseeds_v2` made predictions on APTOS 2019. APTOS was not analysed because it releases no patient identifiers, so patient-level analysis is impossible.
 - BRSET is available to credentialed users from PhysioNet. No BRSET record-level data are in this repository; credentialed users can regenerate the predictions with these notebooks.
 - Per-image predictions for the openly available test sets, the split files and the model checkpoints are archived at Zenodo: [DOI to be added].
+- Figures 1, 2, 3 and 7 were drawn outside the notebooks from the results files in `plans_and_results/`; Figures 4 to 6 and Supplementary Figure 8 come from `06_figures/FIGURES_final`, and the BRSET panels from `03_brset/FIGURES_brset`.
+- The HIBA degradation-fingerprint test (a confirmatory skin hypothesis) is run inside `04_skin/DERM_analysis`.
+- Notebook 18's introduction was edited after the run to remove a reference to an unrelated study's notebook; no code, outputs or results were changed.

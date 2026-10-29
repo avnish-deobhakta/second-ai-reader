@@ -1,38 +1,125 @@
-# A second AI reader catches more missed disease when trained on different data
+# 👁️ A second AI reader catches more missed disease when trained on different data
 
-Code for the study by Deobhakta, Rosen, Tai, Tsai, Harris and Pasquale (New York Eye and Ear Infirmary of Mount Sinai). Every notebook is published as it was run on Google Colab, with its outputs. The plan, lock and results files sit in `plans_and_results/`; each confirmatory plan was written, dated and hashed before the data it tests were examined.
+**Does pairing two AI screening systems actually catch more disease, or do they just miss the same patients?**
 
-## Layout
+![Models](https://img.shields.io/badge/models-69-1f6feb?style=for-the-badge)
+![Populations](https://img.shields.io/badge/test%20populations-5-8250df?style=for-the-badge)
+![Pre-registered](https://img.shields.io/badge/analyses-pre--registered-2da44e?style=for-the-badge)
+![Domains](https://img.shields.io/badge/domains-retina%20%2B%20skin-d4a72c?style=for-the-badge)
 
-- `notebooks/01_eyepacs/`: splits, training of the 33 EyePACS models, the held-back test set, the primary analysis (`09_lock_v3_and_fresh_eval`), partner choice (lock v4), exploratory analyses and the harm-weighted secondary analyses (`18`, `18b`).
-- `notebooks/02_ddr/`: DDR intake, inference and the confirmatory DDR analysis (lock v5.1); training of the 12 DDR-trained models.
-- `notebooks/03_brset/`: BRSET download, inference and the confirmatory BRSET analysis (plan v6), with follow-ups.
-- `notebooks/04_skin/`: skin intake, training of the 24 skin models, the confirmatory analysis and exploratory follow-ups.
-- `notebooks/05_similarity/`: degradation fingerprints and predicting shared misses from the models.
-- `notebooks/06_figures/`: figure notebooks.
-- `plans_and_results/`: plans, locks and aggregate results.
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.11-EE4C2C?logo=pytorch&logoColor=white)
+![Colab](https://img.shields.io/badge/run%20on-Google%20Colab-F9AB00?logo=googlecolab&logoColor=white)
+![Notebooks](https://img.shields.io/badge/notebooks-published%20as%20run-0d1117?logo=jupyter&logoColor=F37626)
 
-## Where each main result comes from
+Avnish A. Deobhakta · Richard B. Rosen · Tak Yee Tania Tai · James C. Tsai · Alon Harris · Louis Pasquale
+
+*New York Eye and Ear Infirmary of Mount Sinai · Icahn School of Medicine at Mount Sinai*
+
+---
+
+## ✨ In one paragraph
+
+Screening programmes are starting to put a second AI system behind the first, on the assumption that it gives an independent opinion. We tested that with **69 models** in **diabetic retinopathy and skin cancer** across **five populations**. Every comparison was made at **equal referral volume**, so the pair can't win simply by referring more people. A second reader cut missed sight-threatening and malignant disease in every population, but less than independence would predict, because systems miss the same cases far more often than chance. **What mattered most was training data:** in pre-registered tests in both domains, systems trained on different data shared fewer missed cases than systems that differed only in design.
+
+## 📊 Headline results
+
+| Population | Outcome | Reduction in missed disease (95% CI) | Compared with |
+|:--|:--|:--:|:--|
+| 🇺🇸 EyePACS (US screening) | Proliferative DR | **22%** (12% to 34%) | better system of each pair |
+| 🇨🇳 DDR (Chinese hospitals) | Proliferative DR | **27%** (19% to 40%) | deployed system |
+| 🇧🇷 BRSET (Brazil) | Severe DR | **25%** (20% to 31%) | deployed system |
+| 🇦🇷 HIBA (Argentina) | Any skin cancer | **17%** (12% to 22%) | deployed system |
+| 🇧🇷 PAD-UFES-20 (Brazil, smartphone) | Any skin cancer | **10%** (7% to 12%) | deployed system |
+
+> [!TIP]
+> **Different data beats different design.** Pairs trained on different collections shared fewer missed cases than pairs trained on the same one. In BRSET the primary contrast was 0.39 (0.32 to 0.46) for referable DR; in HIBA it was 0.44 (0.23 to 0.75) for melanoma.
+
+> [!NOTE]
+> **It survives pricing false referrals** (secondary, post hoc). When every strategy picks its own referral volume, pairing beats the better system in EyePACS and DDR for any programme willing to accept more than about 50 false referrals to save one eye. In BRSET, where disease is rarest, it helps against a system chosen without hindsight, but not against the better of the two.
+
+## 🧭 Study design
+
+```mermaid
+flowchart LR
+    subgraph R["🩺 Retina"]
+        direction TB
+        E1["EyePACS training: 33 models"]:::train
+        D1["DDR training: 12 models"]:::train
+    end
+    subgraph S["🔬 Skin"]
+        direction TB
+        H1["HAM10000: 12 models"]:::train
+        B1["BCN20000: 12 models"]:::train
+    end
+    E1 --> T1["EyePACS held-back set: 15,794 eyes"]:::test
+    E1 --> T2["DDR: 12,422 images"]:::test
+    E1 --> T3["BRSET: 16,266 images"]:::test
+    D1 --> T3
+    H1 --> T4["HIBA: 1,616 images"]:::test
+    B1 --> T4
+    H1 --> T5["PAD-UFES-20: 2,283 images"]:::test
+    B1 --> T5
+    classDef train fill:#ddf4ff,stroke:#1f6feb,color:#0a3069
+    classDef test fill:#dafbe1,stroke:#2da44e,color:#0f5323
+```
+
+**Three rules held for every comparison**
+1. 🔒 **Specified in advance.** Each confirmatory plan was written, dated and hashed before its data were opened, and each test set was scored once.
+2. ⚖️ **Equal referral volume.** A pair refers exactly as many cases as one system, so any benefit comes from choosing better whom to refer.
+3. 🧮 **Honest uncertainty.** Bootstrap intervals resample patients (or image groups), and systems themselves wherever pairs share members.
+
+## 🗂️ What's in here
+
+| Folder | Contents |
+|:--|:--|
+| 📁 [`notebooks/01_eyepacs/`](notebooks/01_eyepacs) | Splits, training of the 33 EyePACS models, the held-back test set, the **primary analysis**, partner choice, exploratory and harm-weighted analyses |
+| 📁 [`notebooks/02_ddr/`](notebooks/02_ddr) | DDR intake, inference, the confirmatory DDR analysis, training of the 12 DDR models |
+| 📁 [`notebooks/03_brset/`](notebooks/03_brset) | BRSET download, inference, the confirmatory analysis and follow-ups |
+| 📁 [`notebooks/04_skin/`](notebooks/04_skin) | Skin intake, training of the 24 skin models, the confirmatory analysis and follow-ups |
+| 📁 [`notebooks/05_similarity/`](notebooks/05_similarity) | Degradation fingerprints, and predicting shared misses from the models |
+| 📁 [`notebooks/06_figures/`](notebooks/06_figures) | Figure notebooks |
+| 📁 [`plans_and_results/`](plans_and_results) | Dated plans, locks with their hashes, aggregate results |
+
+## 🔎 Where each result comes from
 
 | Result | Notebook |
-|---|---|
-| Primary: net severe misses against the better member, EyePACS | `01_eyepacs/09_lock_v3_and_fresh_eval` |
-| DDR results, and the copied 25% share | `02_ddr/DDR_analysis_v5_1` |
-| BRSET results, training-data effect, sibling test | `03_brset/BRSET_analysis_v6`, `03_brset/BRSET_exploratory` |
-| Skin results and training-data effect | `04_skin/DERM_analysis` |
-| Choosing by error overlap (partner-choice test) | `01_eyepacs/CONFIRM_lock_v4`, with `EXPLORE_frontier_v2` and `EXPLORE_buying_rule_v2` |
-| Starting weights against architecture | `01_eyepacs/STARTING_WEIGHTS_part2` |
-| Sibling agreement and local partner choice | `01_eyepacs/SIBLINGS_detector`, `PARTNER_choice_calibration`, `ENRICHED_calibration` |
-| Degradation fingerprints | `05_similarity/BALLISTICS_*` |
-| Floor of shared misses among EyePACS-trained models | `05_similarity/PREDICT_from_models_v2` |
-| Harm-weighted analysis and the two bounds | `01_eyepacs/18_literature_weighted_secondary_v2`, `18b_two_bounds_v2` |
+|:--|:--|
+| ⭐ **Primary:** net severe misses against the better member, EyePACS | [`09_lock_v3_and_fresh_eval`](notebooks/01_eyepacs/09_lock_v3_and_fresh_eval.ipynb) |
+| DDR results, and the copied 25% referral share | [`DDR_analysis_v5_1`](notebooks/02_ddr/DDR_analysis_v5_1.ipynb) |
+| BRSET results, training-data effect, sibling test | [`BRSET_analysis_v6`](notebooks/03_brset/BRSET_analysis_v6.ipynb), [`BRSET_exploratory`](notebooks/03_brset/BRSET_exploratory.ipynb) |
+| Skin results, training-data effect, fingerprint test | [`DERM_analysis`](notebooks/04_skin/DERM_analysis.ipynb) |
+| Choosing a partner by error overlap | [`CONFIRM_lock_v4`](notebooks/01_eyepacs/CONFIRM_lock_v4.ipynb), with [`EXPLORE_frontier_v2`](notebooks/01_eyepacs/EXPLORE_frontier_v2.ipynb) and [`EXPLORE_buying_rule_v2`](notebooks/01_eyepacs/EXPLORE_buying_rule_v2.ipynb) |
+| Starting weights against architecture | [`STARTING_WEIGHTS_part2`](notebooks/01_eyepacs/STARTING_WEIGHTS_part2.ipynb) |
+| Sibling agreement and local partner choice | [`SIBLINGS_detector`](notebooks/01_eyepacs/SIBLINGS_detector.ipynb), [`PARTNER_choice_calibration`](notebooks/01_eyepacs/PARTNER_choice_calibration.ipynb), [`ENRICHED_calibration`](notebooks/01_eyepacs/ENRICHED_calibration.ipynb) |
+| Degradation fingerprints (22-model zoo) | [`BALLISTICS_fullrecipe`](notebooks/05_similarity/BALLISTICS_fullrecipe.ipynb) and its pilots |
+| Floor of shared misses among EyePACS models | [`PREDICT_from_models_v2`](notebooks/05_similarity/PREDICT_from_models_v2.ipynb) |
+| Harm-weighted analysis and the two bounds | [`18_literature_weighted_secondary_v2`](notebooks/01_eyepacs/18_literature_weighted_secondary_v2.ipynb), [`18b_two_bounds_v2`](notebooks/01_eyepacs/18b_two_bounds_v2.ipynb) |
 
-## Notes
+## 📝 Notes
 
 - `TRAIN_ddr_v2_pilot` is the full training run of the 12 DDR-trained models; the name is kept as run.
 - `03b_aptos_inference_allseeds_v2` made predictions on APTOS 2019. APTOS was not analysed because it releases no patient identifiers, so patient-level analysis is impossible.
-- BRSET is available to credentialed users from PhysioNet. No BRSET record-level data are in this repository; credentialed users can regenerate the predictions with these notebooks.
-- Per-image predictions for the openly available test sets, the split files and the model checkpoints are archived at Zenodo: [DOI to be added].
-- Figures 1, 2, 3 and 7 were drawn outside the notebooks from the results files in `plans_and_results/`; Figures 4 to 6 and Supplementary Figure 8 come from `06_figures/FIGURES_final`, and the BRSET panels from `03_brset/FIGURES_brset`.
-- The HIBA degradation-fingerprint test (a confirmatory skin hypothesis) is run inside `04_skin/DERM_analysis`.
+- Figures 1, 2, 3 and 7 were drawn outside the notebooks from the results files in `plans_and_results/`. Figures 4 to 6 and Supplementary Figure 8 come from `06_figures/FIGURES_final`, and the BRSET panels from `03_brset/FIGURES_brset`.
 - Notebook 18's introduction was edited after the run to remove a reference to an unrelated study's notebook; no code, outputs or results were changed.
+
+> [!IMPORTANT]
+> **BRSET** is available to credentialed users from [PhysioNet](https://physionet.org/content/brazilian-ophthalmological/). No BRSET record-level data are in this repository, and only aggregate results are shown. Credentialed users can regenerate the predictions with these notebooks.
+
+## 📦 Data
+
+| Dataset | Source |
+|:--|:--|
+| EyePACS | Kaggle Diabetic Retinopathy Detection |
+| DDR | Li et al., *Information Sciences* 2019 |
+| BRSET | PhysioNet (credentialed access) |
+| HAM10000, BCN20000, HIBA | ISIC Archive |
+| PAD-UFES-20 | Mendeley Data |
+
+Per-image predictions for the openly available test sets, the split files and the model checkpoints are archived at Zenodo: *DOI to be added*.
+
+## 📚 Citation
+
+*Citation to be added on publication.*
+
+*Built and run on Google Colab. Every notebook is shown exactly as it was run.*

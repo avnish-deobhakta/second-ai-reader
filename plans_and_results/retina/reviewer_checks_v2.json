@@ -1,0 +1,920 @@
+{
+ "status": "descriptive, post hoc; answers reviewer requests; not specified in a dated lock",
+ "written_utc": "2026-10-29T21:45:18.735008+00:00",
+ "referral_rule": "top f by within-population rank; pair = higher of the two ranks; f as locked per population",
+ "populations": {
+  "eyepacs": {
+   "eyes": 15794,
+   "f": 0.25
+  },
+  "ddr": {
+   "eyes": 12422,
+   "f": 0.555
+  },
+  "brset": {
+   "eyes": 16266,
+   "f": 0.0745
+  }
+ },
+ "operating_characteristics": [
+  {
+   "population": "eyepacs",
+   "reader": "single model (33)",
+   "measure": "sensitivity_referable",
+   "mean": 0.7187368007465251,
+   "min": 0.6826580226904376,
+   "max": 0.7552674230145867
+  },
+  {
+   "population": "eyepacs",
+   "reader": "single model (33)",
+   "measure": "specificity",
+   "mean": 0.8638211527502581,
+   "min": 0.8550633409394917,
+   "max": 0.8726886458415296
+  },
+  {
+   "population": "eyepacs",
+   "reader": "single model (33)",
+   "measure": "PPV",
+   "mean": 0.561626907371588,
+   "min": 0.5334346504559271,
+   "max": 0.5901722391084093
+  },
+  {
+   "population": "eyepacs",
+   "reader": "single model (33)",
+   "measure": "NPV",
+   "mean": 0.9267519019333978,
+   "min": 0.9173560695593449,
+   "max": 0.9362654060442344
+  },
+  {
+   "population": "eyepacs",
+   "reader": "single model (33)",
+   "measure": "referral_rate",
+   "mean": 0.24996834240850957,
+   "min": 0.24996834240850957,
+   "max": 0.24996834240850957
+  },
+  {
+   "population": "eyepacs",
+   "reader": "single model (33)",
+   "measure": "sensitivity_severe",
+   "mean": 0.9393088185223016,
+   "min": 0.9143258426966292,
+   "max": 0.9648876404494382
+  },
+  {
+   "population": "eyepacs",
+   "reader": "pair (495)",
+   "measure": "sensitivity_referable",
+   "mean": 0.7426432886400472,
+   "min": 0.7059967585089141,
+   "max": 0.773419773095624
+  },
+  {
+   "population": "eyepacs",
+   "reader": "pair (495)",
+   "measure": "specificity",
+   "mean": 0.8696242462392435,
+   "min": 0.8607286175151467,
+   "max": 0.8770949720670391
+  },
+  {
+   "population": "eyepacs",
+   "reader": "pair (495)",
+   "measure": "PPV",
+   "mean": 0.5803076356267846,
+   "min": 0.5516717325227963,
+   "max": 0.6043566362715299
+  },
+  {
+   "population": "eyepacs",
+   "reader": "pair (495)",
+   "measure": "NPV",
+   "mean": 0.9329777600417479,
+   "min": 0.9234340705723451,
+   "max": 0.9409927401654566
+  },
+  {
+   "population": "eyepacs",
+   "reader": "pair (495)",
+   "measure": "referral_rate",
+   "mean": 0.24996834240850954,
+   "min": 0.24996834240850957,
+   "max": 0.24996834240850957
+  },
+  {
+   "population": "eyepacs",
+   "reader": "pair (495)",
+   "measure": "sensitivity_severe",
+   "mean": 0.9543638633526275,
+   "min": 0.9269662921348315,
+   "max": 0.9705056179775281
+  },
+  {
+   "population": "ddr",
+   "reader": "single model (33)",
+   "measure": "sensitivity_referable",
+   "mean": 0.8576145385601481,
+   "min": 0.8382509776039815,
+   "max": 0.9027728403839318
+  },
+  {
+   "population": "ddr",
+   "reader": "single model (33)",
+   "measure": "specificity",
+   "mean": 0.6955472916332245,
+   "min": 0.6795173631547969,
+   "max": 0.7329311359623308
+  },
+  {
+   "population": "ddr",
+   "reader": "single model (33)",
+   "measure": "PPV",
+   "mean": 0.6998751659326072,
+   "min": 0.6840731070496083,
+   "max": 0.736727589208007
+  },
+  {
+   "population": "ddr",
+   "reader": "single model (33)",
+   "measure": "NPV",
+   "mean": 0.8550903389904838,
+   "min": 0.835383502170767,
+   "max": 0.9010492040520984
+  },
+  {
+   "population": "ddr",
+   "reader": "single model (33)",
+   "measure": "referral_rate",
+   "mean": 0.5549830945097408,
+   "min": 0.5549830945097408,
+   "max": 0.5549830945097408
+  },
+  {
+   "population": "ddr",
+   "reader": "single model (33)",
+   "measure": "sensitivity_severe",
+   "mean": 0.9586992641822929,
+   "min": 0.9312445604873804,
+   "max": 0.9773716275021758
+  },
+  {
+   "population": "ddr",
+   "reader": "pair (495)",
+   "measure": "sensitivity_referable",
+   "mean": 0.8753787429933892,
+   "min": 0.8437611091361535,
+   "max": 0.9075719872022752
+  },
+  {
+   "population": "ddr",
+   "reader": "pair (495)",
+   "measure": "specificity",
+   "mean": 0.7102532089583297,
+   "min": 0.6840788699234844,
+   "max": 0.736904061212478
+  },
+  {
+   "population": "ddr",
+   "reader": "pair (495)",
+   "measure": "PPV",
+   "mean": 0.7143720348246022,
+   "min": 0.6885697708152017,
+   "max": 0.7406440382941688
+  },
+  {
+   "population": "ddr",
+   "reader": "pair (495)",
+   "measure": "NPV",
+   "mean": 0.8731694660059348,
+   "min": 0.8409913169319826,
+   "max": 0.9059334298118669
+  },
+  {
+   "population": "ddr",
+   "reader": "pair (495)",
+   "measure": "referral_rate",
+   "mean": 0.5549830945097407,
+   "min": 0.5549830945097408,
+   "max": 0.5549830945097408
+  },
+  {
+   "population": "ddr",
+   "reader": "pair (495)",
+   "measure": "sensitivity_severe",
+   "mean": 0.9702736679237983,
+   "min": 0.9495213228894691,
+   "max": 0.9834638816362054
+  },
+  {
+   "population": "brset",
+   "reader": "single model (33)",
+   "measure": "sensitivity_referable",
+   "mean": 0.7546928746928747,
+   "min": 0.5848648648648649,
+   "max": 0.8086486486486486
+  },
+  {
+   "population": "brset",
+   "reader": "single model (33)",
+   "measure": "specificity",
+   "mean": 0.9665009392536934,
+   "min": 0.9562609999348152,
+   "max": 0.9697542533081286
+  },
+  {
+   "population": "brset",
+   "reader": "single model (33)",
+   "measure": "PPV",
+   "mean": 0.575982598259826,
+   "min": 0.44636963696369636,
+   "max": 0.6171617161716172
+  },
+  {
+   "population": "brset",
+   "reader": "single model (33)",
+   "measure": "NPV",
+   "mean": 0.9849269901083372,
+   "min": 0.9744918294141092,
+   "max": 0.988242327620566
+  },
+  {
+   "population": "brset",
+   "reader": "single model (33)",
+   "measure": "referral_rate",
+   "mean": 0.07451125046108448,
+   "min": 0.07451125046108448,
+   "max": 0.07451125046108448
+  },
+  {
+   "population": "brset",
+   "reader": "single model (33)",
+   "measure": "sensitivity_severe",
+   "mean": 0.8670246771512594,
+   "min": 0.6497890295358649,
+   "max": 0.9556962025316456
+  },
+  {
+   "population": "brset",
+   "reader": "pair (495)",
+   "measure": "sensitivity_referable",
+   "mean": 0.7836527436527436,
+   "min": 0.6778378378378378,
+   "max": 0.84
+  },
+  {
+   "population": "brset",
+   "reader": "pair (495)",
+   "measure": "specificity",
+   "mean": 0.9682471017455699,
+   "min": 0.9618668926406362,
+   "max": 0.9716446124763705
+  },
+  {
+   "population": "brset",
+   "reader": "pair (495)",
+   "measure": "PPV",
+   "mean": 0.5980848084808481,
+   "min": 0.5173267326732673,
+   "max": 0.6410891089108911
+  },
+  {
+   "population": "brset",
+   "reader": "pair (495)",
+   "measure": "NPV",
+   "mean": 0.9867064426649919,
+   "min": 0.9802045967849077,
+   "max": 0.9901687259200213
+  },
+  {
+   "population": "brset",
+   "reader": "pair (495)",
+   "measure": "referral_rate",
+   "mean": 0.07451125046108449,
+   "min": 0.07451125046108448,
+   "max": 0.07451125046108448
+  },
+  {
+   "population": "brset",
+   "reader": "pair (495)",
+   "measure": "sensitivity_severe",
+   "mean": 0.8998508289647529,
+   "min": 0.7573839662447257,
+   "max": 0.959915611814346
+  }
+ ],
+ "case_influence": {
+  "primary_all_eyes": 4.739393939393939,
+  "removal_curve": [
+   {
+    "removed": 0,
+    "net_severe_avoided": 4.739393939393939
+   },
+   {
+    "removed": 1,
+    "net_severe_avoided": 4.383838383838384
+   },
+   {
+    "removed": 2,
+    "net_severe_avoided": 4.054545454545455
+   },
+   {
+    "removed": 3,
+    "net_severe_avoided": 3.709090909090909
+   },
+   {
+    "removed": 4,
+    "net_severe_avoided": 3.4101010101010103
+   },
+   {
+    "removed": 5,
+    "net_severe_avoided": 3.1737373737373735
+   },
+   {
+    "removed": 6,
+    "net_severe_avoided": 2.9171717171717173
+   },
+   {
+    "removed": 7,
+    "net_severe_avoided": 2.727272727272727
+   },
+   {
+    "removed": 8,
+    "net_severe_avoided": 2.5373737373737373
+   },
+   {
+    "removed": 9,
+    "net_severe_avoided": 2.3838383838383836
+   },
+   {
+    "removed": 10,
+    "net_severe_avoided": 2.22020202020202
+   },
+   {
+    "removed": 11,
+    "net_severe_avoided": 2.084848484848485
+   },
+   {
+    "removed": 12,
+    "net_severe_avoided": 1.9575757575757575
+   },
+   {
+    "removed": 13,
+    "net_severe_avoided": 1.8101010101010102
+   },
+   {
+    "removed": 14,
+    "net_severe_avoided": 1.715151515151515
+   },
+   {
+    "removed": 15,
+    "net_severe_avoided": 1.6262626262626263
+   },
+   {
+    "removed": 16,
+    "net_severe_avoided": 1.511111111111111
+   },
+   {
+    "removed": 17,
+    "net_severe_avoided": 1.4303030303030304
+   },
+   {
+    "removed": 18,
+    "net_severe_avoided": 1.301010101010101
+   },
+   {
+    "removed": 19,
+    "net_severe_avoided": 1.2141414141414142
+   },
+   {
+    "removed": 20,
+    "net_severe_avoided": 1.1393939393939394
+   },
+   {
+    "removed": 21,
+    "net_severe_avoided": 1.0585858585858585
+   },
+   {
+    "removed": 22,
+    "net_severe_avoided": 0.9535353535353536
+   },
+   {
+    "removed": 23,
+    "net_severe_avoided": 0.8505050505050505
+   },
+   {
+    "removed": 24,
+    "net_severe_avoided": 0.7737373737373737
+   },
+   {
+    "removed": 25,
+    "net_severe_avoided": 0.7111111111111111
+   },
+   {
+    "removed": 26,
+    "net_severe_avoided": 0.6242424242424243
+   },
+   {
+    "removed": 27,
+    "net_severe_avoided": 0.5636363636363636
+   },
+   {
+    "removed": 28,
+    "net_severe_avoided": 0.48484848484848486
+   },
+   {
+    "removed": 29,
+    "net_severe_avoided": 0.4101010101010101
+   },
+   {
+    "removed": 30,
+    "net_severe_avoided": 0.37575757575757573
+   }
+  ],
+  "influential_eyes_to_reach_zero": null,
+  "severe_eyes": 712,
+  "random_removal": {
+   "5": [
+    4.691212121212121,
+    4.331313131313132,
+    4.8
+   ],
+   "10": [
+    4.643030303030303,
+    4.365656565656566,
+    4.876767676767677
+   ],
+   "20": [
+    4.6466666666666665,
+    4.345454545454546,
+    4.955555555555556
+   ]
+  }
+ },
+ "cnn_vs_transformer": [
+  {
+   "population": "eyepacs",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 135,
+   "estimate": 4.4086127281188965,
+   "ci_lo": 2.5270965099334717,
+   "ci_hi": 5.670460224151611
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 135,
+   "estimate": 7.884598255157471,
+   "ci_lo": 6.66046142578125,
+   "ci_hi": 9.630660057067871
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 108,
+   "estimate": 4.672426223754883,
+   "ci_lo": 2.6895759105682373,
+   "ci_hi": 6.138494968414307
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 108,
+   "estimate": 7.548247814178467,
+   "ci_lo": 6.350292205810547,
+   "ci_hi": 9.230171203613281
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 270,
+   "estimate": 3.090718984603882,
+   "ci_lo": 0.9770469665527344,
+   "ci_hi": 4.528441905975342
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 270,
+   "estimate": 8.003962516784668,
+   "ci_lo": 6.585650444030762,
+   "ci_hi": 10.065930366516113
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 270,
+   "estimate": 3.090718984603882,
+   "ci_lo": 0.9770469665527344,
+   "ci_hi": 4.528441905975342
+  },
+  {
+   "population": "eyepacs",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 270,
+   "estimate": 8.003962516784668,
+   "ci_lo": 6.585650444030762,
+   "ci_hi": 10.065930366516113
+  },
+  {
+   "population": "eyepacs",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 90,
+   "estimate": 0.6190818548202515,
+   "ci_lo": -1.1963053941726685,
+   "ci_hi": 1.8785260915756226
+  },
+  {
+   "population": "eyepacs",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 90,
+   "estimate": 11.971715927124023,
+   "ci_lo": 9.47599983215332,
+   "ci_hi": 16.38784408569336
+  },
+  {
+   "population": "eyepacs",
+   "group": "transformer with transformer",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 54,
+   "estimate": 0.5393516421318054,
+   "ci_lo": -2.0167055130004883,
+   "ci_hi": 2.8374574184417725
+  },
+  {
+   "population": "eyepacs",
+   "group": "transformer with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 54,
+   "estimate": 9.11134147644043,
+   "ci_lo": 7.064516067504883,
+   "ci_hi": 12.385261535644531
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 135,
+   "estimate": 4.770510673522949,
+   "ci_lo": 1.8688215017318726,
+   "ci_hi": 6.927392482757568
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 135,
+   "estimate": 10.135934829711914,
+   "ci_lo": 8.135334014892578,
+   "ci_hi": 13.118547439575195
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 108,
+   "estimate": 5.001580238342285,
+   "ci_lo": 1.8474799394607544,
+   "ci_hi": 7.315974712371826
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 108,
+   "estimate": 9.653039932250977,
+   "ci_lo": 7.817992210388184,
+   "ci_hi": 12.312342643737793
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 270,
+   "estimate": 3.723982095718384,
+   "ci_lo": 1.1625593900680542,
+   "ci_hi": 5.769839763641357
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 270,
+   "estimate": 10.56533432006836,
+   "ci_lo": 8.006606101989746,
+   "ci_hi": 13.824628829956055
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 270,
+   "estimate": 3.723982095718384,
+   "ci_lo": 1.1625593900680542,
+   "ci_hi": 5.769839763641357
+  },
+  {
+   "population": "ddr",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 270,
+   "estimate": 10.56533432006836,
+   "ci_lo": 8.006606101989746,
+   "ci_hi": 13.824628829956055
+  },
+  {
+   "population": "ddr",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 90,
+   "estimate": 2.504516839981079,
+   "ci_lo": -0.19818036258220673,
+   "ci_hi": 5.068925857543945
+  },
+  {
+   "population": "ddr",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 90,
+   "estimate": 16.963451385498047,
+   "ci_lo": 12.318387985229492,
+   "ci_hi": 26.000110626220703
+  },
+  {
+   "population": "ddr",
+   "group": "transformer with transformer",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 54,
+   "estimate": 3.7716829776763916,
+   "ci_lo": -0.06636934727430344,
+   "ci_hi": 7.536663055419922
+  },
+  {
+   "population": "ddr",
+   "group": "transformer with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 54,
+   "estimate": 11.210140228271484,
+   "ci_lo": 8.21945571899414,
+   "ci_hi": 14.861085891723633
+  },
+  {
+   "population": "brset",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 135,
+   "estimate": -1.771475076675415,
+   "ci_lo": -4.171695709228516,
+   "ci_hi": -0.10889720171689987
+  },
+  {
+   "population": "brset",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 135,
+   "estimate": 3.5322508811950684,
+   "ci_lo": 3.0854341983795166,
+   "ci_hi": 4.150757312774658
+  },
+  {
+   "population": "brset",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 108,
+   "estimate": -2.6355817317962646,
+   "ci_lo": -5.188286304473877,
+   "ci_hi": -0.7173786759376526
+  },
+  {
+   "population": "brset",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 108,
+   "estimate": 3.3795011043548584,
+   "ci_lo": 2.952265739440918,
+   "ci_hi": 3.9731814861297607
+  },
+  {
+   "population": "brset",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 270,
+   "estimate": -1.7054436206817627,
+   "ci_lo": -3.9840145111083984,
+   "ci_hi": 0.13901570439338684
+  },
+  {
+   "population": "brset",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 270,
+   "estimate": 3.72664737701416,
+   "ci_lo": 3.174199342727661,
+   "ci_hi": 4.504334926605225
+  },
+  {
+   "population": "brset",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 270,
+   "estimate": -1.7054436206817627,
+   "ci_lo": -3.9840145111083984,
+   "ci_hi": 0.13901570439338684
+  },
+  {
+   "population": "brset",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 270,
+   "estimate": 3.72664737701416,
+   "ci_lo": 3.174199342727661,
+   "ci_hi": 4.504334926605225
+  },
+  {
+   "population": "brset",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 90,
+   "estimate": -2.302006483078003,
+   "ci_lo": -4.605352401733398,
+   "ci_hi": -0.21156705915927887
+  },
+  {
+   "population": "brset",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 90,
+   "estimate": 6.221171855926514,
+   "ci_lo": 5.082884311676025,
+   "ci_hi": 7.987106800079346
+  },
+  {
+   "population": "brset",
+   "group": "transformer with transformer",
+   "subset": "excluding same family",
+   "measure": "net severe misses avoided per 10,000",
+   "combinations": 54,
+   "estimate": -3.233283042907715,
+   "ci_lo": -6.782321929931641,
+   "ci_hi": 0.0031370052602142096
+  },
+  {
+   "population": "brset",
+   "group": "transformer with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio, severe DR",
+   "combinations": 54,
+   "estimate": 4.237427711486816,
+   "ci_lo": 3.311999559402466,
+   "ci_hi": 5.480634689331055
+  }
+ ],
+ "input_sha256": {
+  "eyepacs_predictions_fresh_densenet121_binary_v2.csv": "8a0ad16214e8a2f5994049019908fa3ddaa32b45194b337c16b1b1d5a5ddf0e7",
+  "eyepacs_predictions_fresh_densenet121_binary_seed1_v2.csv": "c3f0279e20b38c2562d4d5542e7517a3e31c2502b6e2f4fe82e22e93bed14459",
+  "eyepacs_predictions_fresh_densenet121_binary_seed2_v2.csv": "6d39964163b7e62246ef58a612b18a8e9cd0903c86a893b54cae711cc13826a3",
+  "eyepacs_predictions_fresh_densenet121_5class_v2.csv": "45a5ad9352cef88e6ea762cda01efa3373918ec58a23daafa17c2876c3f8486a",
+  "eyepacs_predictions_fresh_densenet121_5class_seed1_v2.csv": "5f6693250427587b3e720a69fb36a95bd1715b05e23535d5a19fa2d58071b2ee",
+  "eyepacs_predictions_fresh_densenet121_5class_seed2_v2.csv": "edea200f3fc4271f1f884ecc1bc837a3ba3b03de088877aacbaa7635a5873d6d",
+  "eyepacs_predictions_fresh_efficientnet_b3_binary_v2.csv": "a9006b8c5269461ba59ebb67770e6cb4e3c9bc522684b9a16d86bff3f003fc46",
+  "eyepacs_predictions_fresh_efficientnet_b3_binary_seed1_v2.csv": "432a2de14c7f1f5c92b291a748bc19a28164839093a8bd0990300a0e5e20f419",
+  "eyepacs_predictions_fresh_efficientnet_b3_binary_seed2_v2.csv": "f5fa669cb81cded993ebf8a7b1fca7f2ef60c9a3808e82688e2fe47ca84e05aa",
+  "eyepacs_predictions_fresh_efficientnet_b3_5class_v2.csv": "5a60ac4d166e0ec3a7f92890daa70d72d64375a97ad4ad24e2a9baa96052868b",
+  "eyepacs_predictions_fresh_efficientnet_b3_5class_seed1_v2.csv": "4b06bbe20cefcc9701ba1efa430c94a007da93b1a62fdfef99fd043c670b37a7",
+  "eyepacs_predictions_fresh_efficientnet_b3_5class_seed2_v2.csv": "c37744678b11848539abc6a0088bcd62d9d5dba7a5840017e810e99e39bca73d",
+  "eyepacs_predictions_fresh_resnet50_binary_v2.csv": "29ce81be12712baa81c3303f8094d9e6c960dbd5ac7c77efd91e5b6bf034a8c7",
+  "eyepacs_predictions_fresh_resnet50_binary_seed1_v2.csv": "f854c70943c87c0acb5cc981ae9b5c672f95ce91b102cadfe7725caa5236deb7",
+  "eyepacs_predictions_fresh_resnet50_binary_seed2_v2.csv": "732539214c3c16429c4ab79fb6f84efb8bc25c0a0b0fcd6d85a87d0ee1888fce",
+  "eyepacs_predictions_fresh_resnet50_5class_v2.csv": "d0d5b5cd0813dde43189e3074e41305554cfac31f9de32f5f529f0b5c0eba216",
+  "eyepacs_predictions_fresh_resnet50_5class_seed1_v2.csv": "88fe87634fe5dea6cf7e2f7db501dfc8bc14c197a2f096700c98c146882545a1",
+  "eyepacs_predictions_fresh_resnet50_5class_seed2_v2.csv": "c1095fae6b5f9e68af968a2daa4a42f685cce478432179b7a87f0863cd87defe",
+  "eyepacs_predictions_fresh_vit_base_binary_v2.csv": "fd8179335d164ac91f0fd5bc21c84992bbe8721dfa511e19980803e2e83f62c4",
+  "eyepacs_predictions_fresh_vit_base_binary_seed1_v2.csv": "b19fe32bc16c9215b4cb610b6741c1a4d9c6b38de896bbf8da13a54ef8f5f0f0",
+  "eyepacs_predictions_fresh_vit_base_binary_seed2_v2.csv": "2c72f6ab37996e5447bc5831f3074899342be92faaa0b9b2349bafdf6c83eab5",
+  "eyepacs_predictions_fresh_vit_base_5class_v2.csv": "492c9321f161362d17d34ecda60eade4546ae1e717acb59bc1e470c2d6f440f6",
+  "eyepacs_predictions_fresh_vit_base_5class_seed1_v2.csv": "68b30b5577543604ceba9157474478991b2e1cfb65e3129d01048b19fa0bd668",
+  "eyepacs_predictions_fresh_vit_base_5class_seed2_v2.csv": "9d563caec213004cb7b7b6a00dff6a9465027158ab2ec82f684297bc2f9c9a8a",
+  "eyepacs_predictions_fresh_retfound_binary_v2.csv": "f4967e19a43389231180e82faba16a184a5001c840b37f97a93aea624734481a",
+  "eyepacs_predictions_fresh_retfound_binary_seed1_v2.csv": "00e031d1742d4a89ed54dc34b0f9fe5975fd0d162534faf02d15962b25f51887",
+  "eyepacs_predictions_fresh_retfound_binary_seed2_v2.csv": "697d58a05e38cc5d6f904093604e52f3e4c71779007da4583972151c9fcdb922",
+  "eyepacs_predictions_fresh_retfound_5class_v2.csv": "d99c43516f4e7705fc73bb2707810fa2227aff540c31689c71c609d15b8aeeb7",
+  "eyepacs_predictions_fresh_retfound_5class_seed1_v2.csv": "6b3aca664f0af54e05a8f4ef5c977e2b996434376ae23eec4ee2d9df4fc5501b",
+  "eyepacs_predictions_fresh_retfound_5class_seed2_v2.csv": "e36439e8ffbde41883893c0a173d78487f9f54c6164fc27b43371215ea81beb0",
+  "eyepacs_predictions_fresh_retfound_adversarial_v2.csv": "b180074b275f5bfef714cc6d137c6fe72f665cb6875beb979dfe9febbd47639a",
+  "eyepacs_predictions_fresh_retfound_adversarial_seed1_v2.csv": "9b8e5c7269369acb679b96d50885723113eb6d8ee999d9a486d9bc23393d4119",
+  "eyepacs_predictions_fresh_retfound_adversarial_seed2_v2.csv": "d78053b9e4fca74a860afea28927077845c330af450e4672da2d4a94d8cf2890",
+  "ddr_predictions_densenet121_binary_v2.csv": "28dbd35302e53209cc6e6a896656bc0df5bf32552909c6efa9f0c94a488b040a",
+  "ddr_predictions_densenet121_binary_seed1_v2.csv": "c14b77368c7ed3c33db5493b59cc950f78e88d130ebe559dbbb6f58fa6a78249",
+  "ddr_predictions_densenet121_binary_seed2_v2.csv": "6e217a86eebe495fc0ce1658c7eb821fbd0829fc6ba44305d2932be631e3188b",
+  "ddr_predictions_densenet121_5class_v2.csv": "02232b3accf861ebe5ed1dec25d8571d93d93e57cea798dc928b4a0564c1c70d",
+  "ddr_predictions_densenet121_5class_seed1_v2.csv": "e2f37041793d166a66aaae34d67915098bbaf10744cfefb2f749a77cd6e04832",
+  "ddr_predictions_densenet121_5class_seed2_v2.csv": "145a2f05dfce12ac9f5d344584dc4b39e9a3633d1d5aeb1c7f5522389f14d175",
+  "ddr_predictions_efficientnet_b3_binary_v2.csv": "2b03849e23b9cd23b63cf7e95aae2300a113d1a8ea7dcc8bf5b1975f35cb64b9",
+  "ddr_predictions_efficientnet_b3_binary_seed1_v2.csv": "3e26df912388d0f33cac6e20d840c1c89e6e2635007d72a1f332976d82bcf92c",
+  "ddr_predictions_efficientnet_b3_binary_seed2_v2.csv": "dc4988aad1be0cf722b0c4f4088dc81b38133350f7902c4032ca8b5e9b9e3487",
+  "ddr_predictions_efficientnet_b3_5class_v2.csv": "e6843c65ecbb3ad8b704ec67d9938430bdccd6c4c76f5cb14c5ebb3c47d28c29",
+  "ddr_predictions_efficientnet_b3_5class_seed1_v2.csv": "beb0c4b01d7ac6712d996f8e4aed53e8fd55cefc456216d53bd1b88f9ed31be2",
+  "ddr_predictions_efficientnet_b3_5class_seed2_v2.csv": "77b764fcea5c67c8b3b91fa16b6fc157a0438400869c20bc47da13bfd1801d1d",
+  "ddr_predictions_resnet50_binary_v2.csv": "a455b57564f957bb94b20088776656e2b3356ad4acf11feba53499b3dfe0b5d9",
+  "ddr_predictions_resnet50_binary_seed1_v2.csv": "f204f6002e7a4511548ca1dbdbaf34f5085041a0e9e6acd8d4f0f32c55d7de8d",
+  "ddr_predictions_resnet50_binary_seed2_v2.csv": "2f98646ca56f634b6a238188b89396f2c9c2ccb01ad482ffc3c9dc4e81a53979",
+  "ddr_predictions_resnet50_5class_v2.csv": "28000ff59317d56cfe4e0c10f5e7c9bab2e846bfdd965b3226b4716bbb377973",
+  "ddr_predictions_resnet50_5class_seed1_v2.csv": "7ec13b3d554698b9727947624959caf41d30fb9649151601ee536a44fb7294fa",
+  "ddr_predictions_resnet50_5class_seed2_v2.csv": "c3c124a265c2891dbafef7174e5854b673b59a971d6680c985c1d963aa609737",
+  "ddr_predictions_vit_base_binary_v2.csv": "a7c29c63441a4c9d1d994980820a8d1314cf2938e8c368cdcfafea0cc84819dc",
+  "ddr_predictions_vit_base_binary_seed1_v2.csv": "27a71240f97968313206b555928dbb3c45e10c03dd5d7686d3584c214a885b1b",
+  "ddr_predictions_vit_base_binary_seed2_v2.csv": "d5457ece72d3b3c938c61f3ce47051b9f43c9bda1c340b2c7cd7512afb96ccf6",
+  "ddr_predictions_vit_base_5class_v2.csv": "9cbdc385771faab0ad581e68f99a7e358fd21e877c2b4c3131ad3cde629588b6",
+  "ddr_predictions_vit_base_5class_seed1_v2.csv": "c7e88ae83266c89678ee81e23cace30546f62a58ba6d8cf889f59e264bf8e238",
+  "ddr_predictions_vit_base_5class_seed2_v2.csv": "135c8004f71937108bdc566187e87a85870ca4b273b6fc7da28ee3d389fc6e2b",
+  "ddr_predictions_retfound_binary_v2.csv": "00efdae860d245dc3457009d492fa1334b262f1de56832e702b24c91637f8354",
+  "ddr_predictions_retfound_binary_seed1_v2.csv": "9757b4a298904899c296aff23f4a6bf760ea16c5c5c2cc550f2d1c347ddb8b76",
+  "ddr_predictions_retfound_binary_seed2_v2.csv": "b176f35c8aaaf6dcfc30b067d81f63ae7c0d4260efb0928ffa40e6361283a9b8",
+  "ddr_predictions_retfound_5class_v2.csv": "c520b8e9a6484a82f480d84d39371268657b2bd43bd0be590bf061f273f14f24",
+  "ddr_predictions_retfound_5class_seed1_v2.csv": "bc59477ee9efeb87724e2db8f99a366559949322289cf6421aae281c4f3feb8b",
+  "ddr_predictions_retfound_5class_seed2_v2.csv": "6529636eaf3f863dc43df9fc4f710096a9180d661d58947d3e6f505f4f83c910",
+  "ddr_predictions_retfound_adversarial_v2.csv": "106290e570ca64576f624214695e0481b0da350022abcaccf5d1e9c4f3eef2d0",
+  "ddr_predictions_retfound_adversarial_seed1_v2.csv": "45f1cade764634a2af841d3a165db7d076a8ebbf87cd85aa5492a6b393d2b92c",
+  "ddr_predictions_retfound_adversarial_seed2_v2.csv": "bdb2fe01d2da96c329878fb125693b9dcc231d35c064be70818a2bec7a69b63a",
+  "brset_predictions_eyepacs_densenet121_binary_v2.csv": "a8906f6a51f12771fab6090cf07a212ec8c79242da78fe4b08737dcc86c9accc",
+  "brset_predictions_eyepacs_densenet121_binary_seed1_v2.csv": "958f859d76df85cdc78b350cc893978562c866c57a4813ac39f64bd5a8e87eb0",
+  "brset_predictions_eyepacs_densenet121_binary_seed2_v2.csv": "d20992dab4dfb649357107dc88debf321a82c0b491b85761fd0c4701a75754b3",
+  "brset_predictions_eyepacs_densenet121_5class_v2.csv": "d68556c77b85c85136ce5bb13e7cc0605664254190a5c4e3448a79f32d782116",
+  "brset_predictions_eyepacs_densenet121_5class_seed1_v2.csv": "df5436620cd1df474ccf17e881af5bd3bfb3bd5103d2d31b8e173f1ba88d941f",
+  "brset_predictions_eyepacs_densenet121_5class_seed2_v2.csv": "2191ffc76271f447334459fe3439c5b01696d789f87a02b770c6a9b0c3f369ae",
+  "brset_predictions_eyepacs_efficientnet_b3_binary_v2.csv": "1ae3bbe5823cf8e4a10c9301602229588e737a7eb28106935bdc67a84390428a",
+  "brset_predictions_eyepacs_efficientnet_b3_binary_seed1_v2.csv": "278626a8b58cae9e135757d8f74586147b25506d8f0708e3d1bae883fb3d8b52",
+  "brset_predictions_eyepacs_efficientnet_b3_binary_seed2_v2.csv": "313ed21c5554fde1cfd197f4e9eea5d9af7c396dba3ba1c41fa0ee8da353796e",
+  "brset_predictions_eyepacs_efficientnet_b3_5class_v2.csv": "5d6ba82995efa7d13166d4b5d7484a6adb1b714ef7f1e8be0b48e15ffa68e7e2",
+  "brset_predictions_eyepacs_efficientnet_b3_5class_seed1_v2.csv": "f32879349bdda9549447637fdf9b7d52c546dc700096f0b020fc31add9a202a9",
+  "brset_predictions_eyepacs_efficientnet_b3_5class_seed2_v2.csv": "cd8856f6f5200161be2ee646082f416315de121a6e3a9d53cc074a9bc8b23be9",
+  "brset_predictions_eyepacs_resnet50_binary_v2.csv": "d98088f3e0e2955724117f4d5408534b94b7b29a8e34abd13800fe5557ba406d",
+  "brset_predictions_eyepacs_resnet50_binary_seed1_v2.csv": "de3c6bd842455823f7d1e1a250c1354f5446c65f585d10e88389d03cca919eb8",
+  "brset_predictions_eyepacs_resnet50_binary_seed2_v2.csv": "0332241c083a42768adcf748b411103d179143aa9b75bcc78d2091535709c4a5",
+  "brset_predictions_eyepacs_resnet50_5class_v2.csv": "233474c4e4e287ce77a439cf934dac562629a7581318c74d21602adc9724a087",
+  "brset_predictions_eyepacs_resnet50_5class_seed1_v2.csv": "a5ce2770739cff9d2f29a282a81a2249c73afacfb74b00eda179385ec8b93d9d",
+  "brset_predictions_eyepacs_resnet50_5class_seed2_v2.csv": "8b45c5bfa9d515a613bf2097303a58d6c533f63133193f75e1b00418f51433ce",
+  "brset_predictions_eyepacs_vit_base_binary_v2.csv": "50e4eb11be48d48bf18505a9c3b8da7b3808c01213a3203c4d45ce4e1335dc26",
+  "brset_predictions_eyepacs_vit_base_binary_seed1_v2.csv": "29a8b4aa7ab04f5727399b9592cf317bb76e6b4d10c6488fe12e105909be6d2f",
+  "brset_predictions_eyepacs_vit_base_binary_seed2_v2.csv": "87af606e466c08a86cde91be8e01d607f9eb4accf2099da06bfabddcb935bc3f",
+  "brset_predictions_eyepacs_vit_base_5class_v2.csv": "c93dac2545c3fc5c76b78b578764d467b15d6ae5dae19309dfeb6c4f5ca67c6f",
+  "brset_predictions_eyepacs_vit_base_5class_seed1_v2.csv": "3021840a32b3acc9dda7c962455701213a8c216dcc5879099be9895548d72c5f",
+  "brset_predictions_eyepacs_vit_base_5class_seed2_v2.csv": "8a8b4b43ad82dc3a940d9d206194956f1808475109e3cd67791465ee2c33d33e",
+  "brset_predictions_eyepacs_retfound_binary_v2.csv": "f4ed06834cecc477ec9b5152eed79252812af9b5e5d65f9aa4deb8d8e9a4774a",
+  "brset_predictions_eyepacs_retfound_binary_seed1_v2.csv": "6e7b2cdcf27cdc88655f789c91689b842928919b786ca7d1367e1d613eba6a53",
+  "brset_predictions_eyepacs_retfound_binary_seed2_v2.csv": "d41e4ce3241d63d4b5bea5457df2c1239d2d741021b725e77b7b31314f6ee373",
+  "brset_predictions_eyepacs_retfound_5class_v2.csv": "676db6d9d41dfd0e33f2791885f6d0f35f99e2fe34bd17dd5dcf82e30a0d396d",
+  "brset_predictions_eyepacs_retfound_5class_seed1_v2.csv": "57bfd51aa014f3df99b54c6749cfa5c671d3beefc7229fa1265ce24a9312507c",
+  "brset_predictions_eyepacs_retfound_5class_seed2_v2.csv": "2f1b1b964b2fb22e15453b21fa41ad46f17dd0ba496578642cd6041745c368ea",
+  "brset_predictions_eyepacs_retfound_adversarial_v2.csv": "6bf0c9f51eb287cc7f69ff55c76888f7a5574fb4d3954a09fb031a6054e92d91",
+  "brset_predictions_eyepacs_retfound_adversarial_seed1_v2.csv": "141413e4bf87bd439c5701fa866b9eb97c05e9a88b07788d3ef92374f97f5288",
+  "brset_predictions_eyepacs_retfound_adversarial_seed2_v2.csv": "9f2de18419c5c48e5e824747ce247974e21216acf9a88b894a3af8aa60f4790a"
+ }
+}

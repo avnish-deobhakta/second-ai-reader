@@ -1,0 +1,1895 @@
+{
+ "status": "secondary, post hoc; not specified in a dated lock; mirrors retina notebooks 18, 18b and 19",
+ "written_utc": "2026-10-30T02:19:47.673863+00:00",
+ "systems": "24 skin systems (2 collections x 6 designs x 2 seeds); 66 variant pairs x 4 seed combinations",
+ "bootstrap": {
+  "resamples": 1000,
+  "seed": 20261029,
+  "unit": "patients",
+  "conditional_on": "full-sample rank transforms"
+ },
+ "harm_model": {
+  "melanoma_deaths_per_miss_average_case": {
+   "low": 0.008333333333333333,
+   "central": 0.011764705882352941,
+   "high": 0.02
+  },
+  "scc_deaths_per_miss": 0.006,
+  "bcc": 0,
+  "worst_case": "each missed melanoma is one death; SCC at its average value",
+  "sources": "Gilmore 2017 PLoS ONE (50 to 120 early invasive melanoma excisions per life saved); Tokez et al. 2022 JAAD (cSCC 5-year disease-specific mortality about 0.6%)"
+ },
+ "pricing": {
+  "K": "benign referrals per melanoma death averted",
+  "grid": [
+   1.0,
+   100000.0,
+   51
+  ],
+  "reference_band": [
+   250,
+   3600
+  ],
+  "band_basis": "number needed to biopsy 5 to 30 (Petty et al. 2020 JAAD; Nelson et al. 2019 JAMA Dermatol) x 50 to 120 melanomas per death averted"
+ },
+ "populations": {
+  "HIBA": {
+   "lesions": 1616,
+   "patients": 623,
+   "f": 0.6088
+  },
+  "PAD": {
+   "lesions": 2283,
+   "patients": 1373,
+   "f": 0.6203
+  }
+ },
+ "A_matched_volume": [
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "missed melanomas (count)",
+   "advantage_per_10k": -6.985073507350732,
+   "ci_lo": -24.423035756798956,
+   "ci_hi": 6.386093221357172
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "missed cancers (count)",
+   "advantage_per_10k": 26.440144014401472,
+   "ci_lo": 2.4788447398040807,
+   "ci_hi": 41.59553776159489
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "average case (central)",
+   "advantage_per_10k": 0.01876566284995592,
+   "ci_lo": -0.20153749186278067,
+   "ci_hi": 0.149844190733531
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "average case (low)",
+   "advantage_per_10k": 0.03530821705819216,
+   "ci_lo": -0.13849841498992585,
+   "ci_hi": 0.1263727296476107
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "average case (high)",
+   "advantage_per_10k": -0.02798717007489594,
+   "ci_lo": -0.3756018166145399,
+   "ci_hi": 0.20056872208048843
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "worst case: every missed melanoma is a death",
+   "advantage_per_10k": -6.86763988796813,
+   "ci_lo": -24.31123998105465,
+   "ci_hi": 6.409916836067049
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "missed melanomas (count)",
+   "advantage_per_10k": 14.532703270327035,
+   "ci_lo": 5.649348426721943,
+   "ci_hi": 31.721017456201267
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "missed cancers (count)",
+   "advantage_per_10k": 73.6714296429643,
+   "ci_lo": 56.4863992883789,
+   "ci_hi": 95.45650943528474
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "average case (central)",
+   "advantage_per_10k": 0.2944540821779081,
+   "ci_lo": 0.16858778222968573,
+   "ci_hi": 0.48081011485197267
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "average case (low)",
+   "advantage_per_10k": 0.24458696608537236,
+   "ci_lo": 0.13950441831262395,
+   "ci_hi": 0.38497047954099173
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "average case (high)",
+   "advantage_per_10k": 0.414135158093067,
+   "ci_lo": 0.21176235906901464,
+   "ci_hi": 0.7344912111245692
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "worst case: every missed melanoma is a death",
+   "advantage_per_10k": 14.65618436951017,
+   "ci_lo": 5.7723600335149685,
+   "ci_hi": 31.80869656555156
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "missed melanomas (count)",
+   "advantage_per_10k": -6.454160527747911,
+   "ci_lo": -17.87497788447215,
+   "ci_hi": -1.8187638536938915
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "missed cancers (count)",
+   "advantage_per_10k": 21.751682395572004,
+   "ci_lo": -7.066657355984865,
+   "ci_hi": 40.160736055797805
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "average case (central)",
+   "advantage_per_10k": -0.039269560293706304,
+   "ci_lo": -0.21176108242059655,
+   "ci_hi": 0.024820268428627168
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "average case (low)",
+   "advantage_per_10k": -0.05774454817278812,
+   "ci_lo": -0.2085393693610634,
+   "ci_hi": 0.0009085026795770802
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "average case (high)",
+   "advantage_per_10k": -0.03935544559346811,
+   "ci_lo": -0.28826902199931886,
+   "ci_hi": 0.03647337110646125
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "worst case: every missed melanoma is a death",
+   "advantage_per_10k": -6.325044132726011,
+   "ci_lo": -17.759799695574536,
+   "ci_hi": -1.7671990777155064
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "missed melanomas (count)",
+   "advantage_per_10k": 5.010685036966251,
+   "ci_lo": -2.121709240280418,
+   "ci_hi": 11.006857908816531
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "missed cancers (count)",
+   "advantage_per_10k": 103.11724339319603,
+   "ci_lo": 83.5375511011053,
+   "ci_hi": 121.74169737438568
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "average case (central)",
+   "advantage_per_10k": 0.08752009684437057,
+   "ci_lo": -0.017785872894970675,
+   "ci_hi": 0.17644671379546042
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "average case (low)",
+   "advantage_per_10k": 0.07032657078155538,
+   "ci_lo": -0.022514984821041997,
+   "ci_hi": 0.1481691950101486
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "average case (high)",
+   "advantage_per_10k": 0.12878455846181422,
+   "ci_lo": -0.02209828379171097,
+   "ci_hi": 0.25870437350548997
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "worst case: every missed melanoma is a death",
+   "advantage_per_10k": 5.0392558969286885,
+   "ci_lo": -2.072391651221023,
+   "ci_hi": 11.059470308444912
+  }
+ ],
+ "B_breakeven_K": [
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "average case (central)",
+   "breakeven_K": "above 100,000",
+   "ci": "35 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.798
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "average case (low)",
+   "breakeven_K": "above 100,000",
+   "ci": "43 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.746
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "average case (high)",
+   "breakeven_K": "above 100,000",
+   "ci": "25 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.858
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "harm": "worst case: every missed melanoma is a death",
+   "breakeven_K": "above 100,000",
+   "ci": "15 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.939
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "average case (central)",
+   "breakeven_K": "8",
+   "ci": "below 1 to 19",
+   "point_value": 8.42445123630059,
+   "share_resamples_never_ahead": 0.001
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "average case (low)",
+   "breakeven_K": "12",
+   "ci": "below 1 to 26",
+   "point_value": 11.630910026306083,
+   "share_resamples_never_ahead": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "average case (high)",
+   "breakeven_K": "5",
+   "ci": "below 1 to 11",
+   "point_value": 5.094593663749731,
+   "share_resamples_never_ahead": 0.002
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "harm": "worst case: every missed melanoma is a death",
+   "breakeven_K": "below 1",
+   "ci": "below 1 to above 100,000",
+   "point_value": -Infinity,
+   "share_resamples_never_ahead": 0.062
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "average case (central)",
+   "breakeven_K": "above 100,000",
+   "ci": "above 100,000 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.998
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "average case (low)",
+   "breakeven_K": "above 100,000",
+   "ci": "above 100,000 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.996
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "average case (high)",
+   "breakeven_K": "above 100,000",
+   "ci": "above 100,000 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 0.999
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "harm": "worst case: every missed melanoma is a death",
+   "breakeven_K": "above 100,000",
+   "ci": "above 100,000 to above 100,000",
+   "point_value": Infinity,
+   "share_resamples_never_ahead": 1.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "average case (central)",
+   "breakeven_K": "below 1",
+   "ci": "below 1 to above 100,000",
+   "point_value": -Infinity,
+   "share_resamples_never_ahead": 0.09
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "average case (low)",
+   "breakeven_K": "below 1",
+   "ci": "below 1 to above 100,000",
+   "point_value": -Infinity,
+   "share_resamples_never_ahead": 0.05
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "average case (high)",
+   "breakeven_K": "below 1",
+   "ci": "below 1 to above 100,000",
+   "point_value": -Infinity,
+   "share_resamples_never_ahead": 0.152
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "harm": "worst case: every missed melanoma is a death",
+   "breakeven_K": "below 1",
+   "ci": "below 1 to above 100,000",
+   "point_value": -Infinity,
+   "share_resamples_never_ahead": 0.33
+  }
+ ],
+ "D_union": [
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "measure": "per extra melanoma",
+   "better_chosen_on": "melanomas",
+   "extra_benign": 701.3435718571857,
+   "extra_benign_lo": 609.7839658454998,
+   "extra_benign_hi": 785.0401892821687,
+   "averted": 103.25251275127508,
+   "averted_lo": 75.13000654055219,
+   "averted_hi": 125.36675661634634,
+   "cost": 6.792508513053352,
+   "cost_lo": 5.173059204832118,
+   "cost_hi": 9.655129792455046,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "measure": "per death averted, average case",
+   "better_chosen_on": "outcome",
+   "extra_benign": 709.8053555355534,
+   "extra_benign_lo": 614.1910285598422,
+   "extra_benign_hi": 790.8895369191397,
+   "averted": 1.6201620162016201,
+   "averted_lo": 1.2520702529775591,
+   "averted_hi": 1.911274216657068,
+   "cost": 438.1076388888888,
+   "cost_lo": 339.28862841940037,
+   "cost_hi": 589.6598273132108,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "measure": "per death averted, worst case",
+   "better_chosen_on": "outcome",
+   "extra_benign": 701.3904515451545,
+   "extra_benign_lo": 610.3776401617366,
+   "extra_benign_hi": 784.9972455069972,
+   "averted": 103.67428930393038,
+   "averted_lo": 75.56029339410622,
+   "averted_hi": 125.85248312871003,
+   "cost": 6.765326835170928,
+   "cost_lo": 5.150615739555452,
+   "cost_hi": 9.627749742271133,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "measure": "per death averted, average case",
+   "better_chosen_on": "melanomas (v3)",
+   "extra_benign": 701.3435718571857,
+   "extra_benign_lo": 609.7839658454998,
+   "extra_benign_hi": 785.0401892821687,
+   "averted": 1.638340304618697,
+   "averted_lo": 1.265893996043333,
+   "averted_hi": 1.9387763078090565,
+   "cost": 428.08174216309385,
+   "cost_lo": 333.09240652267704,
+   "cost_hi": 572.8811842788054,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "better",
+   "measure": "per death averted, worst case",
+   "better_chosen_on": "melanomas (v3)",
+   "extra_benign": 701.3435718571857,
+   "extra_benign_lo": 609.7839658454998,
+   "extra_benign_hi": 785.0401892821687,
+   "averted": 103.67611761176116,
+   "averted_lo": 75.56519231361936,
+   "averted_hi": 125.85394864209184,
+   "cost": 6.764755355553788,
+   "cost_lo": 5.1546379738196135,
+   "cost_hi": 9.610043036300137,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "measure": "per extra melanoma",
+   "better_chosen_on": "not applicable",
+   "extra_benign": 667.9417941794173,
+   "extra_benign_lo": 596.1280164011074,
+   "extra_benign_hi": 749.98094501182,
+   "averted": 125.02812781278132,
+   "averted_lo": 98.20196396380858,
+   "averted_hi": 156.52808832408772,
+   "cost": 5.342332208473934,
+   "cost_lo": 4.047407521142002,
+   "cost_hi": 7.128172229306825,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "measure": "per death averted, average case",
+   "better_chosen_on": "not applicable",
+   "extra_benign": 667.9417941794173,
+   "extra_benign_lo": 596.1280164011074,
+   "extra_benign_hi": 749.98094501182,
+   "averted": 1.9000089347170015,
+   "averted_lo": 1.5468351218281002,
+   "averted_hi": 2.3007094058048088,
+   "cost": 351.546659583948,
+   "cost_lo": 270.2688029581964,
+   "cost_hi": 448.18685188929754,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "HIBA",
+   "comparator": "deployed",
+   "measure": "per death averted, worst case",
+   "better_chosen_on": "not applicable",
+   "extra_benign": 667.9417941794173,
+   "extra_benign_lo": 596.1280164011074,
+   "extra_benign_hi": 749.98094501182,
+   "averted": 125.45721759675965,
+   "averted_lo": 98.665217653314,
+   "averted_hi": 157.06354171383816,
+   "cost": 5.324060320915878,
+   "cost_lo": 4.036030115421437,
+   "cost_hi": 7.106438945502001,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "measure": "per extra melanoma",
+   "better_chosen_on": "melanomas",
+   "extra_benign": 931.7053584464882,
+   "extra_benign_lo": 868.2908597505052,
+   "extra_benign_hi": 1002.4791788108745,
+   "averted": 28.587451386400136,
+   "averted_lo": 16.290539339151803,
+   "averted_hi": 38.149005885525156,
+   "cost": 32.59141033081833,
+   "cost_lo": 24.412730930266793,
+   "cost_hi": 57.208235148593936,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "measure": "per death averted, average case",
+   "better_chosen_on": "outcome",
+   "extra_benign": 1008.3588845086873,
+   "extra_benign_lo": 923.0774776331193,
+   "extra_benign_hi": 1062.6218133871594,
+   "averted": 1.134343356264977,
+   "averted_lo": 0.8909631251519318,
+   "averted_hi": 1.3004043527148312,
+   "cost": 888.9362104864655,
+   "cost_lo": 748.0725597326326,
+   "cost_hi": 1137.0021148778494,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "measure": "per death averted, worst case",
+   "better_chosen_on": "outcome",
+   "extra_benign": 934.4595760495888,
+   "extra_benign_lo": 869.1011515101102,
+   "extra_benign_hi": 1003.7530569270006,
+   "averted": 29.47792643916165,
+   "averted_lo": 17.197417507968144,
+   "averted_hi": 39.07269725902572,
+   "cost": 31.70031575925748,
+   "cost_lo": 23.902367189804448,
+   "cost_hi": 54.40479329116215,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "measure": "per death averted, average case",
+   "better_chosen_on": "melanomas (v3)",
+   "extra_benign": 931.7053584464882,
+   "extra_benign_lo": 868.2908597505052,
+   "extra_benign_hi": 1002.4791788108745,
+   "averted": 1.2299836113316827,
+   "averted_lo": 0.9885512686836285,
+   "averted_hi": 1.4234577193779534,
+   "cost": 757.4941242003594,
+   "cost_lo": 635.5400294353951,
+   "cost_hi": 962.227001156316,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "better",
+   "measure": "per death averted, worst case",
+   "better_chosen_on": "melanomas (v3)",
+   "extra_benign": 931.7053584464882,
+   "extra_benign_lo": 868.2908597505052,
+   "extra_benign_hi": 1002.4791788108745,
+   "averted": 29.481112040244756,
+   "averted_lo": 17.202432741066975,
+   "averted_hi": 39.07903206228219,
+   "cost": 31.603467236059966,
+   "cost_lo": 23.901671039314593,
+   "cost_hi": 54.288381228821535,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "measure": "per extra melanoma",
+   "better_chosen_on": "not applicable",
+   "extra_benign": 960.5250932451983,
+   "extra_benign_lo": 899.8139963191827,
+   "extra_benign_hi": 1022.3613042178021,
+   "averted": 40.052296951114286,
+   "averted_lo": 27.497035389567948,
+   "averted_hi": 55.101475816056364,
+   "cost": 23.981772990886498,
+   "cost_lo": 17.28013718728196,
+   "cost_hi": 35.819495016222966,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "measure": "per death averted, average case",
+   "better_chosen_on": "not applicable",
+   "extra_benign": 960.5250932451983,
+   "extra_benign_lo": 899.8139963191827,
+   "extra_benign_hi": 1022.3613042178021,
+   "averted": 1.2611330121185582,
+   "averted_lo": 1.053363895760828,
+   "averted_hi": 1.497663464403349,
+   "cost": 761.6366267596363,
+   "cost_lo": 629.3351695956611,
+   "cost_hi": 928.0383322608253,
+   "share_infinite": 0.0
+  },
+  {
+   "population": "PAD",
+   "comparator": "deployed",
+   "measure": "per death averted, worst case",
+   "better_chosen_on": "not applicable",
+   "extra_benign": 960.5250932451983,
+   "extra_benign_lo": 899.8139963191827,
+   "extra_benign_hi": 1022.3613042178021,
+   "averted": 40.84222646969031,
+   "averted_lo": 28.24159607474736,
+   "averted_hi": 55.749801040853676,
+   "cost": 23.517941509824883,
+   "cost_lo": 17.04819659684234,
+   "cost_hi": 34.6991126870942,
+   "share_infinite": 0.0
+  }
+ ],
+ "operating_characteristics": [
+  {
+   "population": "HIBA",
+   "reader": "single system (24)",
+   "measure": "sensitivity_any_cancer",
+   "mean": 0.9047936085219707,
+   "min": 0.8748335552596538,
+   "max": 0.933422103861518
+  },
+  {
+   "population": "HIBA",
+   "reader": "single system (24)",
+   "measure": "sensitivity_melanoma",
+   "mean": 0.8554018445322793,
+   "min": 0.7984189723320159,
+   "max": 0.8972332015810277
+  },
+  {
+   "population": "HIBA",
+   "reader": "single system (24)",
+   "measure": "specificity",
+   "mean": 0.6479768786127168,
+   "min": 0.6219653179190752,
+   "max": 0.6728323699421965
+  },
+  {
+   "population": "HIBA",
+   "reader": "single system (24)",
+   "measure": "PPV",
+   "mean": 0.6905487804878048,
+   "min": 0.6676829268292683,
+   "max": 0.7123983739837398
+  },
+  {
+   "population": "HIBA",
+   "reader": "single system (24)",
+   "measure": "NPV",
+   "mean": 0.886867088607595,
+   "min": 0.8512658227848101,
+   "max": 0.9208860759493671
+  },
+  {
+   "population": "HIBA",
+   "reader": "single system (24)",
+   "measure": "referral_rate",
+   "mean": 0.6089108910891089,
+   "min": 0.6089108910891089,
+   "max": 0.6089108910891089
+  },
+  {
+   "population": "HIBA",
+   "reader": "pair (264)",
+   "measure": "sensitivity_any_cancer",
+   "mean": 0.9208227413953112,
+   "min": 0.8908122503328895,
+   "max": 0.9467376830892144
+  },
+  {
+   "population": "HIBA",
+   "reader": "pair (264)",
+   "measure": "sensitivity_melanoma",
+   "mean": 0.8651185770750989,
+   "min": 0.8063241106719368,
+   "max": 0.9169960474308301
+  },
+  {
+   "population": "HIBA",
+   "reader": "pair (264)",
+   "measure": "specificity",
+   "mean": 0.6618935014888773,
+   "min": 0.6358381502890174,
+   "max": 0.684393063583815
+  },
+  {
+   "population": "HIBA",
+   "reader": "pair (264)",
+   "measure": "PPV",
+   "mean": 0.7027823971421533,
+   "min": 0.6798780487804879,
+   "max": 0.7225609756097561
+  },
+  {
+   "population": "HIBA",
+   "reader": "pair (264)",
+   "measure": "NPV",
+   "mean": 0.9059143651706942,
+   "min": 0.870253164556962,
+   "max": 0.9367088607594937
+  },
+  {
+   "population": "HIBA",
+   "reader": "pair (264)",
+   "measure": "referral_rate",
+   "mean": 0.6089108910891088,
+   "min": 0.6089108910891089,
+   "max": 0.6089108910891089
+  },
+  {
+   "population": "PAD",
+   "reader": "single system (24)",
+   "measure": "sensitivity_any_cancer",
+   "mean": 0.7813752698119026,
+   "min": 0.7252543940795559,
+   "max": 0.849213691026827
+  },
+  {
+   "population": "PAD",
+   "reader": "single system (24)",
+   "measure": "sensitivity_melanoma",
+   "mean": 0.4991987179487179,
+   "min": 0.34615384615384615,
+   "max": 0.6153846153846154
+  },
+  {
+   "population": "PAD",
+   "reader": "single system (24)",
+   "measure": "specificity",
+   "mean": 0.5246810870770937,
+   "min": 0.47420965058236275,
+   "max": 0.5856905158069884
+  },
+  {
+   "population": "PAD",
+   "reader": "single system (24)",
+   "measure": "PPV",
+   "mean": 0.5965160075329566,
+   "min": 0.5536723163841808,
+   "max": 0.6483050847457628
+  },
+  {
+   "population": "PAD",
+   "reader": "single system (24)",
+   "measure": "NPV",
+   "mean": 0.7274125336409073,
+   "min": 0.657439446366782,
+   "max": 0.81199538638985
+  },
+  {
+   "population": "PAD",
+   "reader": "single system (24)",
+   "measure": "referral_rate",
+   "mean": 0.6202365308804205,
+   "min": 0.6202365308804205,
+   "max": 0.6202365308804205
+  },
+  {
+   "population": "PAD",
+   "reader": "pair (264)",
+   "measure": "sensitivity_any_cancer",
+   "mean": 0.8031529448041937,
+   "min": 0.7437557816836263,
+   "max": 0.8640148011100832
+  },
+  {
+   "population": "PAD",
+   "reader": "pair (264)",
+   "measure": "sensitivity_melanoma",
+   "mean": 0.5211975524475525,
+   "min": 0.3269230769230769,
+   "max": 0.6923076923076923
+  },
+  {
+   "population": "PAD",
+   "reader": "pair (264)",
+   "measure": "specificity",
+   "mean": 0.5442665002773155,
+   "min": 0.4908485856905158,
+   "max": 0.5990016638935108
+  },
+  {
+   "population": "PAD",
+   "reader": "pair (264)",
+   "measure": "PPV",
+   "mean": 0.6131414783427495,
+   "min": 0.5677966101694916,
+   "max": 0.6596045197740112
+  },
+  {
+   "population": "PAD",
+   "reader": "pair (264)",
+   "measure": "NPV",
+   "mean": 0.7545655517108805,
+   "min": 0.6805074971164936,
+   "max": 0.8304498269896193
+  },
+  {
+   "population": "PAD",
+   "reader": "pair (264)",
+   "measure": "referral_rate",
+   "mean": 0.6202365308804207,
+   "min": 0.6202365308804205,
+   "max": 0.6202365308804205
+  }
+ ],
+ "case_influence_HIBA_melanoma": {
+  "deployed": {
+   "all_lesions": 2.4583333333333335,
+   "sum_of_contributions": 2.458333333333333,
+   "curve": [
+    {
+     "removed": 0,
+     "net_melanomas_avoided": 2.4583333333333335
+    },
+    {
+     "removed": 1,
+     "net_melanomas_avoided": 2.253787878787879
+    },
+    {
+     "removed": 2,
+     "net_melanomas_avoided": 2.147727272727273
+    },
+    {
+     "removed": 3,
+     "net_melanomas_avoided": 2.003787878787879
+    },
+    {
+     "removed": 4,
+     "net_melanomas_avoided": 1.8295454545454546
+    },
+    {
+     "removed": 5,
+     "net_melanomas_avoided": 1.7916666666666667
+    },
+    {
+     "removed": 6,
+     "net_melanomas_avoided": 1.5681818181818181
+    },
+    {
+     "removed": 7,
+     "net_melanomas_avoided": 1.5606060606060606
+    },
+    {
+     "removed": 8,
+     "net_melanomas_avoided": 1.4128787878787878
+    },
+    {
+     "removed": 9,
+     "net_melanomas_avoided": 1.2348484848484849
+    },
+    {
+     "removed": 10,
+     "net_melanomas_avoided": 1.2272727272727273
+    },
+    {
+     "removed": 11,
+     "net_melanomas_avoided": 1.106060606060606
+    },
+    {
+     "removed": 12,
+     "net_melanomas_avoided": 1.1098484848484849
+    },
+    {
+     "removed": 13,
+     "net_melanomas_avoided": 1.0265151515151516
+    },
+    {
+     "removed": 14,
+     "net_melanomas_avoided": 0.8068181818181818
+    },
+    {
+     "removed": 15,
+     "net_melanomas_avoided": 0.8484848484848485
+    },
+    {
+     "removed": 16,
+     "net_melanomas_avoided": 0.6666666666666666
+    },
+    {
+     "removed": 17,
+     "net_melanomas_avoided": 0.5416666666666666
+    },
+    {
+     "removed": 18,
+     "net_melanomas_avoided": 0.5757575757575758
+    },
+    {
+     "removed": 19,
+     "net_melanomas_avoided": 0.4583333333333333
+    },
+    {
+     "removed": 20,
+     "net_melanomas_avoided": 0.4053030303030303
+    },
+    {
+     "removed": 21,
+     "net_melanomas_avoided": 0.3522727272727273
+    },
+    {
+     "removed": 22,
+     "net_melanomas_avoided": 0.2765151515151515
+    },
+    {
+     "removed": 23,
+     "net_melanomas_avoided": 0.2196969696969697
+    },
+    {
+     "removed": 24,
+     "net_melanomas_avoided": 0.14015151515151514
+    },
+    {
+     "removed": 25,
+     "net_melanomas_avoided": 0.08333333333333333
+    },
+    {
+     "removed": 26,
+     "net_melanomas_avoided": 0.007575757575757576
+    },
+    {
+     "removed": 27,
+     "net_melanomas_avoided": -0.06818181818181818
+    },
+    {
+     "removed": 28,
+     "net_melanomas_avoided": -0.015151515151515152
+    },
+    {
+     "removed": 29,
+     "net_melanomas_avoided": -0.09848484848484848
+    },
+    {
+     "removed": 30,
+     "net_melanomas_avoided": -0.2727272727272727
+    }
+   ],
+   "influential_to_reach_zero": 27,
+   "random_removal": {
+    "5": [
+     2.598863636363636,
+     2.428030303030303,
+     2.772727272727273
+    ],
+    "10": [
+     2.536363636363636,
+     2.0833333333333335,
+     2.9242424242424243
+    ],
+    "20": [
+     2.568560606060606,
+     2.0606060606060606,
+     3.007575757575758
+    ]
+   },
+   "melanomas": 253
+  },
+  "better": {
+   "all_lesions": -1.0606060606060606,
+   "sum_of_contributions": -1.0606060606060608,
+   "curve": [
+    {
+     "removed": 0,
+     "net_melanomas_avoided": -1.0606060606060606
+    },
+    {
+     "removed": 1,
+     "net_melanomas_avoided": -1.2803030303030303
+    },
+    {
+     "removed": 2,
+     "net_melanomas_avoided": -1.446969696969697
+    },
+    {
+     "removed": 3,
+     "net_melanomas_avoided": -1.628787878787879
+    },
+    {
+     "removed": 4,
+     "net_melanomas_avoided": -1.731060606060606
+    },
+    {
+     "removed": 5,
+     "net_melanomas_avoided": -1.8181818181818181
+    },
+    {
+     "removed": 6,
+     "net_melanomas_avoided": -1.9393939393939394
+    },
+    {
+     "removed": 7,
+     "net_melanomas_avoided": -2.106060606060606
+    },
+    {
+     "removed": 8,
+     "net_melanomas_avoided": -2.253787878787879
+    },
+    {
+     "removed": 9,
+     "net_melanomas_avoided": -2.4015151515151514
+    },
+    {
+     "removed": 10,
+     "net_melanomas_avoided": -2.5113636363636362
+    },
+    {
+     "removed": 11,
+     "net_melanomas_avoided": -2.6704545454545454
+    },
+    {
+     "removed": 12,
+     "net_melanomas_avoided": -2.6704545454545454
+    },
+    {
+     "removed": 13,
+     "net_melanomas_avoided": -2.7765151515151514
+    },
+    {
+     "removed": 14,
+     "net_melanomas_avoided": -2.867424242424242
+    },
+    {
+     "removed": 15,
+     "net_melanomas_avoided": -2.9053030303030303
+    },
+    {
+     "removed": 16,
+     "net_melanomas_avoided": -3.037878787878788
+    },
+    {
+     "removed": 17,
+     "net_melanomas_avoided": -3.140151515151515
+    },
+    {
+     "removed": 18,
+     "net_melanomas_avoided": -3.128787878787879
+    },
+    {
+     "removed": 19,
+     "net_melanomas_avoided": -3.196969696969697
+    },
+    {
+     "removed": 20,
+     "net_melanomas_avoided": -3.2765151515151514
+    },
+    {
+     "removed": 21,
+     "net_melanomas_avoided": -3.3446969696969697
+    },
+    {
+     "removed": 22,
+     "net_melanomas_avoided": -3.4242424242424243
+    },
+    {
+     "removed": 23,
+     "net_melanomas_avoided": -3.367424242424242
+    },
+    {
+     "removed": 24,
+     "net_melanomas_avoided": -3.4356060606060606
+    },
+    {
+     "removed": 25,
+     "net_melanomas_avoided": -3.4431818181818183
+    },
+    {
+     "removed": 26,
+     "net_melanomas_avoided": -3.5303030303030303
+    },
+    {
+     "removed": 27,
+     "net_melanomas_avoided": -3.590909090909091
+    },
+    {
+     "removed": 28,
+     "net_melanomas_avoided": -3.5984848484848486
+    },
+    {
+     "removed": 29,
+     "net_melanomas_avoided": -3.678030303030303
+    },
+    {
+     "removed": 30,
+     "net_melanomas_avoided": -3.696969696969697
+    }
+   ],
+   "influential_to_reach_zero": 1,
+   "random_removal": {
+    "5": [
+     -0.8464015151515151,
+     -1.018939393939394,
+     -0.5833333333333334
+    ],
+    "10": [
+     -0.8395833333333332,
+     -1.2121212121212122,
+     -0.3939393939393939
+    ],
+    "20": [
+     -0.7837121212121212,
+     -1.4053030303030303,
+     -0.3409090909090909
+    ]
+   },
+   "melanomas": 253
+  }
+ },
+ "cnn_vs_transformer": [
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 112,
+   "estimate": -7.956151008605957,
+   "ci_lo": -28.300386428833008,
+   "ci_hi": 3.2301089763641357
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 112,
+   "estimate": 3.129163980484009,
+   "ci_lo": 2.6187143325805664,
+   "ci_hi": 3.6977379322052
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 96,
+   "estimate": -8.31528377532959,
+   "ci_lo": -29.21810531616211,
+   "ci_hi": 2.9357798099517822
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 96,
+   "estimate": 3.1289918422698975,
+   "ci_lo": 2.613754987716675,
+   "ci_hi": 3.7003283500671387
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": -5.511294364929199,
+   "ci_lo": -24.826641082763672,
+   "ci_hi": 3.2174620628356934
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 3.1953775882720947,
+   "ci_lo": 2.723384141921997,
+   "ci_hi": 3.745971918106079
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": -5.511294364929199,
+   "ci_lo": -24.826641082763672,
+   "ci_hi": 3.2174620628356934
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 3.1953775882720947,
+   "ci_lo": 2.723384141921997,
+   "ci_hi": 3.745971918106079
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": -4.447710990905762,
+   "ci_lo": -27.153240203857422,
+   "ci_hi": 8.013351440429688
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 2.9281954765319824,
+   "ci_lo": 2.4196033477783203,
+   "ci_hi": 3.5193517208099365
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": -3.964266061782837,
+   "ci_lo": -25.13541030883789,
+   "ci_hi": 5.142873287200928
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 3.0062215328216553,
+   "ci_lo": 2.5156476497650146,
+   "ci_hi": 3.59411883354187
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 24,
+   "estimate": -5.6724419593811035,
+   "ci_lo": -36.69010543823242,
+   "ci_hi": 11.117947578430176
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 24,
+   "estimate": 3.373094320297241,
+   "ci_lo": 2.765225410461426,
+   "ci_hi": 4.0751166343688965
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 16,
+   "estimate": -11.602723121643066,
+   "ci_lo": -46.129295349121094,
+   "ci_hi": 8.50976848602295
+  },
+  {
+   "population": "HIBA",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 16,
+   "estimate": 3.2579452991485596,
+   "ci_lo": 2.6053085327148438,
+   "ci_hi": 4.0018815994262695
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 112,
+   "estimate": 39.283512115478516,
+   "ci_lo": 8.17172908782959,
+   "ci_hi": 57.8660888671875
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 112,
+   "estimate": 3.352271795272827,
+   "ci_lo": 2.9829890727996826,
+   "ci_hi": 3.781409740447998
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 96,
+   "estimate": 37.06425094604492,
+   "ci_lo": 6.833752632141113,
+   "ci_hi": 55.1893424987793
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 96,
+   "estimate": 3.3815624713897705,
+   "ci_lo": 3.013124942779541,
+   "ci_hi": 3.8201329708099365
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": 18.03256607055664,
+   "ci_lo": -13.215890884399414,
+   "ci_hi": 39.364078521728516
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 3.787806510925293,
+   "ci_lo": 3.376908302307129,
+   "ci_hi": 4.290410041809082
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": 18.03256607055664,
+   "ci_lo": -13.215890884399414,
+   "ci_hi": 39.364078521728516
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 3.787806510925293,
+   "ci_lo": 3.376908302307129,
+   "ci_hi": 4.290410041809082
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": 57.72355651855469,
+   "ci_lo": 19.309663772583008,
+   "ci_hi": 81.21511840820312
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 2.958441972732544,
+   "ci_lo": 2.5405023097991943,
+   "ci_hi": 3.409998655319214
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": 24.46240997314453,
+   "ci_lo": -10.295069694519043,
+   "ci_hi": 49.31373596191406
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 3.394343376159668,
+   "ci_lo": 2.930609703063965,
+   "ci_hi": 3.9381089210510254
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 24,
+   "estimate": 13.923267364501953,
+   "ci_lo": -28.052963256835938,
+   "ci_hi": 38.69675827026367
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 24,
+   "estimate": 4.475799083709717,
+   "ci_lo": 3.794559955596924,
+   "ci_hi": 5.369864463806152
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 16,
+   "estimate": 20.111385345458984,
+   "ci_lo": -25.650075912475586,
+   "ci_hi": 49.114925384521484
+  },
+  {
+   "population": "HIBA",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 16,
+   "estimate": 4.11179256439209,
+   "ci_lo": 3.381467342376709,
+   "ci_hi": 5.067562103271484
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 112,
+   "estimate": -7.6262431144714355,
+   "ci_lo": -18.800302505493164,
+   "ci_hi": -1.8310091495513916
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 112,
+   "estimate": 1.299856424331665,
+   "ci_lo": 1.148442029953003,
+   "ci_hi": 1.548028826713562
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 96,
+   "estimate": -6.980945110321045,
+   "ci_lo": -18.07890510559082,
+   "ci_hi": -1.3858516216278076
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 96,
+   "estimate": 1.308831810951233,
+   "ci_lo": 1.157409429550171,
+   "ci_hi": 1.5550984144210815
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": -5.543694496154785,
+   "ci_lo": -17.068700790405273,
+   "ci_hi": 0.5108647346496582
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 1.299946665763855,
+   "ci_lo": 1.145660161972046,
+   "ci_hi": 1.5170924663543701
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": -5.543694496154785,
+   "ci_lo": -17.068700790405273,
+   "ci_hi": 0.5108647346496582
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 1.299946665763855,
+   "ci_lo": 1.145660161972046,
+   "ci_hi": 1.5170924663543701
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": -10.813621520996094,
+   "ci_lo": -23.685279846191406,
+   "ci_hi": -1.8839566707611084
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 1.237576961517334,
+   "ci_lo": 1.0876977443695068,
+   "ci_hi": 1.4544103145599365
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": -8.691962242126465,
+   "ci_lo": -21.462305068969727,
+   "ci_hi": 0.21301843225955963
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 1.2192893028259277,
+   "ci_lo": 1.061048984527588,
+   "ci_hi": 1.4343211650848389
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 24,
+   "estimate": -5.840267658233643,
+   "ci_lo": -18.094552993774414,
+   "ci_hi": 2.1663777828216553
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 24,
+   "estimate": 1.3927468061447144,
+   "ci_lo": 1.1950170993804932,
+   "ci_hi": 1.6999210119247437
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 16,
+   "estimate": -7.939114570617676,
+   "ci_lo": -21.60919952392578,
+   "ci_hi": 2.510435104370117
+  },
+  {
+   "population": "PAD",
+   "outcome": "melanoma",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 16,
+   "estimate": 1.351888656616211,
+   "ci_lo": 1.1485732793807983,
+   "ci_hi": 1.6622052192687988
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 112,
+   "estimate": 45.8356819152832,
+   "ci_lo": 5.803977012634277,
+   "ci_hi": 74.04973602294922
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 112,
+   "estimate": 1.7838882207870483,
+   "ci_lo": 1.6966429948806763,
+   "ci_hi": 1.877351999282837
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 96,
+   "estimate": 42.52445983886719,
+   "ci_lo": 3.498288631439209,
+   "ci_hi": 71.26531219482422
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 96,
+   "estimate": 1.816080927848816,
+   "ci_lo": 1.7314252853393555,
+   "ci_hi": 1.9099113941192627
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": 12.935282707214355,
+   "ci_lo": -24.07242774963379,
+   "ci_hi": 39.12656784057617
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 1.7077395915985107,
+   "ci_lo": 1.6211172342300415,
+   "ci_hi": 1.798639178276062
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 128,
+   "estimate": 12.935282707214355,
+   "ci_lo": -24.07242774963379,
+   "ci_hi": 39.12656784057617
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "excluding same family",
+   "measure": "shared-miss ratio",
+   "combinations": 128,
+   "estimate": 1.7077395915985107,
+   "ci_lo": 1.6211172342300415,
+   "ci_hi": 1.798639178276062
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": 56.942626953125,
+   "ci_lo": 4.032136917114258,
+   "ci_hi": 94.10091400146484
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with CNN",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 1.5492825508117676,
+   "ci_lo": 1.447698950767517,
+   "ci_hi": 1.657862901687622
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 64,
+   "estimate": 7.117827415466309,
+   "ci_lo": -40.77375030517578,
+   "ci_hi": 46.04085159301758
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "CNN with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 64,
+   "estimate": 1.5218324661254883,
+   "ci_lo": 1.425475001335144,
+   "ci_hi": 1.6165015697479248
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 24,
+   "estimate": -43.6195068359375,
+   "ci_lo": -101.4654541015625,
+   "ci_hi": 5.2796525955200195
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "all pairs",
+   "measure": "shared-miss ratio",
+   "combinations": 24,
+   "estimate": 1.712253451347351,
+   "ci_lo": 1.6011556386947632,
+   "ci_hi": 1.8309063911437988
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "net misses avoided per 10,000 vs better member",
+   "combinations": 16,
+   "estimate": -49.824790954589844,
+   "ci_lo": -119.85221099853516,
+   "ci_hi": 7.291902542114258
+  },
+  {
+   "population": "PAD",
+   "outcome": "any cancer",
+   "group": "transformer with transformer",
+   "subset": "different collections only",
+   "measure": "shared-miss ratio",
+   "combinations": 16,
+   "estimate": 1.5446288585662842,
+   "ci_lo": 1.4163492918014526,
+   "ci_hi": 1.6791162490844727
+  }
+ ],
+ "input_sha256": {
+  "HIBA__HAM10000_resnet50_seed0.csv": "d699b5e64e6769968393f8bfb4c5ddbac91f156f1312a048716a2ff1bf30cf5b",
+  "HIBA__HAM10000_resnet50_seed1.csv": "31653bf449471649284e404a9cc27358738a9be3cb1f4fbfd6ffa63d40135867",
+  "HIBA__HAM10000_densenet121_seed0.csv": "29cb03a52f253d4f4b208d08b88972e50bc546f2ea23846286578c24cd378369",
+  "HIBA__HAM10000_densenet121_seed1.csv": "028f8476105a1515ab5fa32486fc35b3560b6dd0804a38599f0d378e739c3c24",
+  "HIBA__HAM10000_efficientnet_b3_seed0.csv": "fa5abec8cbcd59a7d148b08b5dee6daf0c3ff4012c97f21ec374510be4aa56d1",
+  "HIBA__HAM10000_efficientnet_b3_seed1.csv": "fa2410a7fca409922b31754f30afcde1c2c6afd35a81b598ae16927d9a1f5870",
+  "HIBA__HAM10000_convnext_t_seed0.csv": "afc4a07979364176ab7c82fc7103ce0185d7ac2e7ff64be28b2f6e026bba0f1d",
+  "HIBA__HAM10000_convnext_t_seed1.csv": "c584303e8466139c28340a036e45c0b2d2bafc013baa3263ef325b8fdf0a3719",
+  "HIBA__HAM10000_vit_b_seed0.csv": "0fae58da5cce2a35ed1fa7aea2d873d1df31d0917af7b563b94c15500b814cd6",
+  "HIBA__HAM10000_vit_b_seed1.csv": "0e146694192511e93f6da327d650ffbd2be3d1cf422c8e4fe93620f08fdfc9c8",
+  "HIBA__HAM10000_vit_b_dinov2_seed0.csv": "475b587d8cf258fcbb41d31803412137b79ebc1ee42f5b4fd05c4c9a828f1c7e",
+  "HIBA__HAM10000_vit_b_dinov2_seed1.csv": "e9dad6602de97e65d75cc4526828827178461d74abbec9a1fbfa25d96ad124ce",
+  "HIBA__BCN20000_resnet50_seed0.csv": "48041369222709d4d099d9596cd56bbe8a4d115623dbd15f4610420181462b51",
+  "HIBA__BCN20000_resnet50_seed1.csv": "cc4473dd34347942a18a82baa3426f674393ef0bc61d1620775ca6b24e935e38",
+  "HIBA__BCN20000_densenet121_seed0.csv": "09c91161905dbaccae7fd3c321b039c714657de78714959c8d651245ff9c149d",
+  "HIBA__BCN20000_densenet121_seed1.csv": "422118d462767aa956126494557cf4572d343c143874ca404d6d63fc1b59bbb3",
+  "HIBA__BCN20000_efficientnet_b3_seed0.csv": "9ba710d82f1788c4194bc896aa9ed12ba58b5c7ced8f9053926f282b377f2d9a",
+  "HIBA__BCN20000_efficientnet_b3_seed1.csv": "64611fdd19c514f9cc87c4bcacfe29332c33bf0857efd92926393757ea01ae0c",
+  "HIBA__BCN20000_convnext_t_seed0.csv": "01e0bb51055c4deef10fe240d7d43d89cdf41065e524be3fa70c52bffb4e7019",
+  "HIBA__BCN20000_convnext_t_seed1.csv": "27011148db33385e827172628a90c0c644c3f5b27a18b2c106d5ac39b47f74ba",
+  "HIBA__BCN20000_vit_b_seed0.csv": "21d812eb6bf21bd2fe2bb36cfe0f85063e4b61f1bf6168846255b937b41ab3ec",
+  "HIBA__BCN20000_vit_b_seed1.csv": "01d836bccc6d104b9421ba55c9711a5aaf5c164866931a8b7443f388cdc9484d",
+  "HIBA__BCN20000_vit_b_dinov2_seed0.csv": "98861ef168bc077950558a3a5095b4d9a1ccd21e8284dd99f36cf88443a03b85",
+  "HIBA__BCN20000_vit_b_dinov2_seed1.csv": "9e77b672f274219159e36cd22b1a8a3098f906bec3c4c2d3c8aef5a2c64d4aaf",
+  "PAD__HAM10000_resnet50_seed0.csv": "ac25277dce41d5b2ca30d2e433e5d80fa52ff2eea3dc9dd3e16b94ec200f6060",
+  "PAD__HAM10000_resnet50_seed1.csv": "90d663c6fe2fb23029d4d2ff823e32e039f708b07e855b732824d8bf5b435c44",
+  "PAD__HAM10000_densenet121_seed0.csv": "4e80d56ffdaea90aec27516de33c8e8e468f50fb6a27bf19e2f7a990a256c061",
+  "PAD__HAM10000_densenet121_seed1.csv": "7fd2bc8463eef892b1b63d32f52ed3c5d40c4869b7c93e00eeabaf9c3b5c0905",
+  "PAD__HAM10000_efficientnet_b3_seed0.csv": "f12eeb1099bcd434ad0e3b90ef8c96d6752d3b06244e0c024d7d313dc9bdcd85",
+  "PAD__HAM10000_efficientnet_b3_seed1.csv": "841e608e7c3f33febaf95a2ef429fa738fd3ed10db00bf8186515d54334f8a52",
+  "PAD__HAM10000_convnext_t_seed0.csv": "bc97d4cb073ef4ee6d2ee75b63ad288675c5ceeebf4680a714d88ba096b19408",
+  "PAD__HAM10000_convnext_t_seed1.csv": "ab451e1de0ddfb66014d53a39e49c24e85a40406b6550af26a8db5471ace076d",
+  "PAD__HAM10000_vit_b_seed0.csv": "83393c4c7380f53cbaa1ccc89bc8c4c6f131d23c269cc11eaea9261b75947fb1",
+  "PAD__HAM10000_vit_b_seed1.csv": "835e8db7816e0973418e1cfdb2272c75cfeed3569710b8d2c8e38a4c0d4cfdec",
+  "PAD__HAM10000_vit_b_dinov2_seed0.csv": "0613b8ec30e02785060abafa2195c63faa08c603001a23c4bb458cde707edbb6",
+  "PAD__HAM10000_vit_b_dinov2_seed1.csv": "59957a8e207932ca76e7adaf7a7a4faa1eaed0ae09a59faa035290be61d43cb7",
+  "PAD__BCN20000_resnet50_seed0.csv": "e3f7544e47dc20ed24c6fe412f841f3fd5c957ed79320c1bb3d81f809ce08f80",
+  "PAD__BCN20000_resnet50_seed1.csv": "a2d6ed6ee8ebdec80ca5e458bb83752b5b1fbc724bafa12008888393dcdebd53",
+  "PAD__BCN20000_densenet121_seed0.csv": "e7e59da6bb383e236c4e7d64cf933a542522f33cc719abc2f5069a3837e852e8",
+  "PAD__BCN20000_densenet121_seed1.csv": "c10d67f70761793f1018bac49f3b016606e703f2771d342afe6ab161b11864f8",
+  "PAD__BCN20000_efficientnet_b3_seed0.csv": "e25d1fd12473dd96ab451690a1670b5cfbc79e376d43271142fee6bb9d284fb4",
+  "PAD__BCN20000_efficientnet_b3_seed1.csv": "4599bd6469f3fd5fcfd83f6a9b64fef0435d8bb6dc20b1b2afb17d71bebaf293",
+  "PAD__BCN20000_convnext_t_seed0.csv": "63f3d4b8b96899e7a141e9670d8c4c7874cf7e4dcbf9c11179f67fabfd2dc056",
+  "PAD__BCN20000_convnext_t_seed1.csv": "83e5f5ac85599017552b04ba2aa5797909b2086fed3305d971ac14e6d1728646",
+  "PAD__BCN20000_vit_b_seed0.csv": "c8c2b538f4aa38d3de3c3207e0a5053d7cd7640c7e95c1dbd69eadf5f7562792",
+  "PAD__BCN20000_vit_b_seed1.csv": "0acdd03ba28b7cb3ba172c4a7b5bffee6dfa661073d1b95648ddab100b2cec62",
+  "PAD__BCN20000_vit_b_dinov2_seed0.csv": "13ec759c7ee8e353419cf924b14cc7d70b3ba3a3d3c5783cd7ee21d33c7f94f0",
+  "PAD__BCN20000_vit_b_dinov2_seed1.csv": "3c1ac555880f6474111b41ba679b6a3251bf9daa1dacd2c7a3c55abc71733e9c"
+ }
+}

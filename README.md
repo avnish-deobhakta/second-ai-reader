@@ -76,7 +76,7 @@ flowchart LR
 | [`notebooks/01_eyepacs/`](notebooks/01_eyepacs) | Splits, training of the 33 EyePACS models, the held-back test set, the **primary analysis**, partner choice, exploratory and harm-weighted analyses |
 | [`notebooks/02_ddr/`](notebooks/02_ddr) | DDR intake, inference, the confirmatory DDR analysis, training of the 12 DDR models |
 | [`notebooks/03_brset/`](notebooks/03_brset) | BRSET download, inference, the confirmatory analysis and follow-ups |
-| [`notebooks/04_skin/`](notebooks/04_skin) | Skin intake, training of the 24 skin models, the confirmatory analysis and follow-ups |
+| [`notebooks/04_skin/`](notebooks/04_skin) | Skin intake, training of the 24 skin models, the confirmatory analysis, follow-ups and the harm-weighted secondary analysis |
 | [`notebooks/05_similarity/`](notebooks/05_similarity) | Degradation fingerprints, and predicting shared misses from the models |
 | [`notebooks/06_figures/`](notebooks/06_figures) | Figure notebooks |
 | [`plans_and_results/`](plans_and_results) | Dated plans, locks with their hashes, aggregate results |
@@ -95,12 +95,15 @@ flowchart LR
 | Degradation fingerprints (22-model zoo) | [`BALLISTICS_fullrecipe`](notebooks/05_similarity/BALLISTICS_fullrecipe.ipynb) and its pilots |
 | Floor of shared misses among EyePACS models | [`PREDICT_from_models_v2`](notebooks/05_similarity/PREDICT_from_models_v2.ipynb) |
 | Harm-weighted analysis and the two bounds | [`18_literature_weighted_secondary_v2`](notebooks/01_eyepacs/18_literature_weighted_secondary_v2.ipynb), [`18b_two_bounds_v2`](notebooks/01_eyepacs/18b_two_bounds_v2.ipynb) |
+| Retina: operating characteristics, case influence, CNN against transformer | [`19_reviewer_checks_v2`](notebooks/01_eyepacs/19_reviewer_checks_v2.ipynb) |
+| Skin: priced false referrals and the two bounds, referring any case either system flags, operating characteristics, case influence, CNN against transformer | [`20_derm_secondary_v4`](notebooks/04_skin/20_derm_secondary_v4.ipynb) |
 
 ## Notes
 
 - `TRAIN_ddr_v2_pilot` is the full training run of the 12 DDR-trained models; the name is kept as run.
 - `03b_aptos_inference_allseeds_v2` made predictions on APTOS 2019. APTOS was not analysed because it releases no patient identifiers, so patient-level analysis is impossible.
-- Figures 1, 2, 3 and 7 were drawn outside the notebooks from the results files in `plans_and_results/`. Figures 4 to 6 and Supplementary Figure 8 come from `06_figures/FIGURES_final`, and the BRSET panels from `03_brset/FIGURES_brset`.
+- Figures 1, 2 and 7 were drawn outside the notebooks from the results files in `plans_and_results/`. Figures 3 to 6 and Supplementary Figure 9 come from `06_figures/FIGURES_final_v4`, Supplementary Figure 8 from `06_figures/FIGURES_final`, and the BRSET panels from `03_brset/FIGURES_brset`.
+- `20_derm_secondary` was run as versions 2 to 4 with the same code and seed. Version 4 is published because it reproduces every number of the earlier versions and adds intervals for the union costs; it also chooses the better member on the outcome each row reports, and prints the earlier definition alongside.
 - Notebook 18's introduction was edited after the run to remove a reference to an unrelated study's notebook; no code, outputs or results were changed.
 
 > [!IMPORTANT]

@@ -1,0 +1,212 @@
+{
+ "written_utc": "2026-10-31T03:06:39.190542+00:00",
+ "note": "aggregate counts only; cells under 10 merged",
+ "files": [
+  {
+   "file": "manifest_BCN20000.csv",
+   "columns": [
+    "image_id",
+    "source",
+    "modality",
+    "dx_text",
+    "dx",
+    "lesion_id",
+    "patient_id",
+    "benign_malignant",
+    "license",
+    "malignant",
+    "melanoma",
+    "raw_sha256",
+    "path_512"
+   ],
+   "rows": 18946,
+   "file_modified_utc": "2026-09-26T20:15",
+   "lesions": 5440,
+   "patients": 0,
+   "after_exclusions": {
+    "images": 17476,
+    "lesions": 4981,
+    "patients": 0,
+    "dx": {
+     "NV": 5647,
+     "MEL": 4636,
+     "BCC": 3676,
+     "BKL": 1551,
+     "AK": 1088,
+     "SCC": 559,
+     "DF": 168,
+     "VASC": 151
+    }
+   },
+   "excluded": {
+    "not_in_eight_classes": 1470,
+    "byte_duplicates": 0
+   },
+   "fields": {
+    "source": {
+     "BCN20000": 17476
+    },
+    "modality": {
+     "dermoscopy": 17476
+    },
+    "license": {
+     "CC-BY-NC": 17476
+    }
+   }
+  },
+  {
+   "file": "manifest_HAM10000.csv",
+   "columns": [
+    "image_id",
+    "source",
+    "modality",
+    "dx_text",
+    "dx",
+    "lesion_id",
+    "patient_id",
+    "benign_malignant",
+    "license",
+    "malignant",
+    "melanoma",
+    "raw_sha256",
+    "path_512"
+   ],
+   "rows": 11720,
+   "file_modified_utc": "2026-09-26T20:15",
+   "lesions": 8838,
+   "patients": 0,
+   "after_exclusions": {
+    "images": 11720,
+    "lesions": 8838,
+    "patients": 0,
+    "dx": {
+     "NV": 7737,
+     "BKL": 1338,
+     "MEL": 1305,
+     "BCC": 622,
+     "SCC": 229,
+     "VASC": 180,
+     "DF": 160,
+     "AK": 149
+    }
+   },
+   "excluded": {
+    "not_in_eight_classes": 0,
+    "byte_duplicates": 0
+   },
+   "fields": {
+    "source": {
+     "HAM10000": 11720
+    },
+    "modality": {
+     "dermoscopy": 11720
+    },
+    "license": {
+     "CC-BY-NC": 11720
+    }
+   }
+  },
+  {
+   "file": "manifest_HIBA.csv",
+   "columns": [
+    "image_id",
+    "source",
+    "modality",
+    "dx_text",
+    "dx",
+    "lesion_id",
+    "patient_id",
+    "benign_malignant",
+    "license",
+    "malignant",
+    "melanoma",
+    "raw_sha256",
+    "path_512"
+   ],
+   "rows": 1616,
+   "file_modified_utc": "2026-09-26T20:15",
+   "lesions": 1246,
+   "patients": 623,
+   "after_exclusions": {
+    "images": 1616,
+    "lesions": 1246,
+    "patients": 623,
+    "dx": {
+     "NV": 602,
+     "BCC": 340,
+     "MEL": 253,
+     "SCC": 158,
+     "BKL": 88,
+     "AK": 63,
+     "DF": 61,
+     "VASC": 51
+    }
+   },
+   "excluded": {
+    "not_in_eight_classes": 0,
+    "byte_duplicates": 0
+   },
+   "fields": {
+    "source": {
+     "HIBA": 1616
+    },
+    "modality": {
+     "dermoscopy": 1616
+    },
+    "license": {
+     "CC-BY": 1616
+    }
+   }
+  },
+  {
+   "file": "manifest_PAD.csv",
+   "columns": [
+    "image_id",
+    "source",
+    "modality",
+    "dx_text",
+    "dx",
+    "lesion_id",
+    "patient_id",
+    "benign_malignant",
+    "license",
+    "malignant",
+    "melanoma",
+    "raw_sha256",
+    "path_512"
+   ],
+   "rows": 2298,
+   "file_modified_utc": "2026-09-26T20:15",
+   "lesions": 1641,
+   "patients": 1373,
+   "after_exclusions": {
+    "images": 2283,
+    "lesions": 1637,
+    "patients": 1373,
+    "dx": {
+     "BCC": 839,
+     "AK": 727,
+     "NV": 243,
+     "BKL": 234,
+     "SCC": 188,
+     "MEL": 52
+    }
+   },
+   "excluded": {
+    "not_in_eight_classes": 0,
+    "byte_duplicates": 15
+   },
+   "fields": {
+    "source": {
+     "PAD": 2283
+    },
+    "modality": {
+     "smartphone": 2283
+    },
+    "license": {
+     "CC BY 4.0 (Mendeley)": 2283
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+  "plan_sha256": "a4d0a3178cbc933e8acecb0d27daf18988bd8f0d1e121779e67b58914d8f3d1e",
+  "models": {
+    "densenet121_5class": {
+      "seed": 20261101,
+      "best_val_auc": 0.953,
+      "best_epoch": 7,
+      "minutes": 78.2,
+      "checkpoint_sha256": "48229f05662d04a0d09e91fcd1fdc356819f13a79356fef453e94c90f629b630",
+      "fresh_prediction_sha256": "9c1346d19db9f4ed6a47988e4f1b77e2f3013caaf8ffa1af4801777d6d331c71",
+      "ddrtest_prediction_sha256": "4838311fa3cd63755f3a786fdec19cb731435f5a41d9dd4b1acdae6dedb4897d",
+      "brset_prediction_sha256": "7daf58e4a2c181cee1c31c4a2095e9d7effc36722f237017729fc3320edeffd0"
+    },
+    "densenet121_5class_seed1": {
+      "seed": 20261102,
+      "best_val_auc": 0.9538,
+      "best_epoch": 11,
+      "minutes": 79.8,
+      "checkpoint_sha256": "f6fd3fa2972b90b1aef19540673519246113b9d2b49e377ee0cc70e0d5047d7f",
+      "fresh_prediction_sha256": "e74ca1250ea5379c86b290da0b3111d840f3039408455eb2d24085a8c2f69529",
+      "ddrtest_prediction_sha256": "6514b38253b3a8ff59c203abe721b50265628daff39f8978ea7458b7c4dc143b",
+      "brset_prediction_sha256": "2f4246296e70fff10d687ed866d4b8b79fba5c96e807f95c96f82683070efbe6"
+    },
+    "densenet121_5class_seed2": {
+      "seed": 20261103,
+      "best_val_auc": 0.9527,
+      "best_epoch": 10,
+      "minutes": 80.6,
+      "checkpoint_sha256": "0e44b43203003d59f0701018ff6ae323f4eb28878813a6f4d947cdd6b2f902d0",
+      "fresh_prediction_sha256": "99947c163396769b6aedc3cded2cfac9d2782de048b53821668070b6de6198ff",
+      "ddrtest_prediction_sha256": "09b63d58b7420291e174c04ce07230b89ebc1129e1d5f9e7da80a7b9c4f7e63b",
+      "brset_prediction_sha256": "ea01f7c2157dc8deaf25839ab66b9cc058202e4f8bce7891749e50d36d181ba8"
+    },
+    "efficientnet_b3_5class": {
+      "seed": 20261111,
+      "best_val_auc": 0.9333,
+      "best_epoch": 4,
+      "minutes": 78.1,
+      "checkpoint_sha256": "9f52aa29bd17a4b3d8db0a16b3ef9ebeaaeb6723442d8b22f184f816e7a93ac7",
+      "fresh_prediction_sha256": "eb03997fd777590d5504c3f17c2452291707e7662a4ddc96e68150d7e9fff063",
+      "ddrtest_prediction_sha256": "377954be812e6b4c746b97271be1628b93d0af97fb87d53cf2e92ec91edb0288",
+      "brset_prediction_sha256": "8044368806fb309fd5e01f06f7c397429f2bc5056bb1184ce49e9512c1f5ea97"
+    },
+    "efficientnet_b3_5class_seed1": {
+      "seed": 20261112,
+      "best_val_auc": 0.9386,
+      "best_epoch": 6,
+      "minutes": 77.4,
+      "checkpoint_sha256": "db89db2a7e81773741b555f40857d38d3ffd545f634ae79fb4cdee7e2da49279",
+      "fresh_prediction_sha256": "20cb5f9c8a90353a98c097f5b55e0848778004e2f9955ef6655a56c1326a48bb",
+      "ddrtest_prediction_sha256": "471d082b33ef7dbf91385d03ff8bd069b6152e2736ba979b6092d8d28590d433",
+      "brset_prediction_sha256": "0a94f720cd27ad26f4cbba911a2251bea4c137834a0e8fc4d53a049c78dbed83"
+    },
+    "efficientnet_b3_5class_seed2": {
+      "seed": 20261113,
+      "best_val_auc": 0.9393,
+      "best_epoch": 6,
+      "minutes": 5.9,
+      "checkpoint_sha256": "fecdb532fc7a67c246223bb7b7293f46bacde5106836ade82a486c3b86d1c07c",
+      "fresh_prediction_sha256": "992fe87f8c866e48fb6d4f5602bc48e0f6084e87399b5fb764dc47359c28e28e",
+      "ddrtest_prediction_sha256": "b65c5092aa6c123d4c00765506b50c8fe470161be7c868545e30c9f2944897e1",
+      "brset_prediction_sha256": "995d0af37172e4612404963b0418e09e17a0697a93a28676a3cfbcf10b5a1b0e"
+    },
+    "resnet50_5class": {
+      "seed": 20261121,
+      "best_val_auc": 0.9389,
+      "best_epoch": 15,
+      "minutes": 5.4,
+      "checkpoint_sha256": "95181543457b191e49fabee8b78b886f4805af5106829860d9ccb8cebdd28f07",
+      "fresh_prediction_sha256": "4377120d1b050323c45f4b8131cd677feec49c4f64d4055ac8a9ac6537a8e484",
+      "ddrtest_prediction_sha256": "9f992b3bc2f544d96362535ce5146263e5580ee721ca93dafd55cf0496ab3117",
+      "brset_prediction_sha256": "94d0288f5ecb47c3e75b3bf1eed62fd6a12f2f6f81fae1590eb5bfe082128b46"
+    },
+    "resnet50_5class_seed1": {
+      "seed": 20261122,
+      "best_val_auc": 0.9381,
+      "best_epoch": 11,
+      "minutes": 5.4,
+      "checkpoint_sha256": "6e3d85bf89d3c98d8fcdc9abb74dfeb4f2551dc22a51f63c9604f96094a197b9",
+      "fresh_prediction_sha256": "5d3400e245aefc8294e7f22e23b0bc9c356b7e95e5d4e041419c1d09098ade04",
+      "ddrtest_prediction_sha256": "582d65bf22f6514135fc52808b4a8d23f2bcef803376fc50deede3c29c3cfcc5",
+      "brset_prediction_sha256": "f4f5ed69b0ce915071da1c18a0b7449d88036c40f4af477b73c1f0aeb2c88c0a"
+    },
+    "resnet50_5class_seed2": {
+      "seed": 20261123,
+      "best_val_auc": 0.9386,
+      "best_epoch": 9,
+      "minutes": 5.4,
+      "checkpoint_sha256": "8a40bcd26a36c46e33c74b71103be8fc14e055aa9e39c6f817dedcc497aecaff",
+      "fresh_prediction_sha256": "f7d0fc369932380ae348b6dc1f928ce574731a986ca285805bf6712d5ba1251a",
+      "ddrtest_prediction_sha256": "3fc273c522d59363a7415a136c585a4e5e897cc5ba938671768bebd38ac5adac",
+      "brset_prediction_sha256": "9a5911ac014e888e0156ce5d7c441c6c7f0e5da87f9e33489f0b2034a04df6b7"
+    },
+    "retfound_5class": {
+      "seed": 20261131,
+      "best_val_auc": 0.9477,
+      "best_epoch": 12,
+      "minutes": 26.5,
+      "checkpoint_sha256": "16c76ba0e9deb53d8011a8e5ead190d3a35c5ac2ca44aefc9f83db4b17868081",
+      "fresh_prediction_sha256": "3d13a8dbc7ea052400981ed7dc42166aacb35e8f12fe9a60c52351d099bef8ab",
+      "ddrtest_prediction_sha256": "390fcf75bfbff51ac6700df1325712b33c28c5c913fd2a034bfc144fc6901011",
+      "brset_prediction_sha256": "f65ef3ca6acb23bfd87b89a5b2c622e89c699c984b5df7524599a586bd12b140"
+    },
+    "retfound_5class_seed1": {
+      "seed": 20261132,
+      "best_val_auc": 0.9475,
+      "best_epoch": 11,
+      "minutes": 26.4,
+      "checkpoint_sha256": "a35e6f6f1aa98ddbbba10952ccea636137ebcfb4d30cd4f4518e6994f1cba5a2",
+      "fresh_prediction_sha256": "a84c52b8b125988eb4c08fe225e92ce55047234bc65520d37bef35185f465032",
+      "ddrtest_prediction_sha256": "4c7a4999d94ee3a464e406f18744114ac5daa4ba9dbee46cff587aa38520e069",
+      "brset_prediction_sha256": "515ea5fe97c000b0f92b8f3a3e2219dd1fddfe5fade8926f58efeb4d7a6fe156"
+    },
+    "retfound_5class_seed2": {
+      "seed": 20261133,
+      "best_val_auc": 0.949,
+      "best_epoch": 6,
+      "minutes": 26.3,
+      "checkpoint_sha256": "a66dbc51f046138dbc77cad80961bf9cce1d0f8fd716329944af541f8c59c24d",
+      "fresh_prediction_sha256": "9c4d4a2e851cd9381c1ce6eb06c069c053219bf978f96fd64c3795c94f83f678",
+      "ddrtest_prediction_sha256": "fc8cec460dc05f3b5bfb3b0b3593161e3a76a995fcd6350cafedfa051c672c63",
+      "brset_prediction_sha256": "1bba4d965a7e3377f424c3d369f78f6d1ab689446e25da78e4faf06e57303a7c"
+    }
+  }
+}

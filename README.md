@@ -126,3 +126,22 @@ Per-image predictions for the openly available test sets, the split files and th
 *Citation to be added on publication.*
 
 Built and run on Google Colab. Every notebook is shown exactly as it was run.
+
+## Review revisions (October 2026)
+
+Analyses added in response to four rounds of pre-submission review. All are post hoc and exploratory unless the manuscript says otherwise; the pooled-training comparison (26) had its plan and predictions dated before training. Every notebook is published as it was run.
+
+| Notebook | What it does |
+|---|---|
+| [`21a`](notebooks/07_review_revisions/21a_retina_revisions_c1.ipynb), [`21b`](notebooks/07_review_revisions/21b_retina_revisions_c1.ipynb) | Retina: patient-level summaries, full-procedure and corrected model bootstraps, fixed-anchor source comparison, out-of-sample harm tuning, partner choice with patients kept apart |
+| [`22`](notebooks/07_review_revisions/22_skin_revisions_c1.ipynb) | Skin: the same checks, lesion-level summaries |
+| [`23`](notebooks/07_review_revisions/23_regret_c1.ipynb) | Regret of picking one system versus pairing |
+| [`24`](notebooks/07_review_revisions/24_adaptive_rule_c1.ipynb) | Local pilot, then pick or pair (original DeLong version) |
+| [`25`](notebooks/07_review_revisions/25_deployment_c1.ipynb) | Categorical outputs, a fixed background partner, more than two systems |
+| [`26`](notebooks/07_review_revisions/26_pooled_training_c1.ipynb) | Pooled training versus pairing (plan dated before training) |
+| [`27`](notebooks/07_review_revisions/27_figures_c1.ipynb), [`28`](notebooks/07_review_revisions/28_supp_figures_c1.ipynb) | Main and supplementary figures for review cycle 1 |
+| [`29`](notebooks/07_review_revisions/29_round2_c2.ipynb) | Pilot rule with patient-clustered inference and matched baselines; maximum versus mean rank |
+| [`29b`](notebooks/07_review_revisions/29b_figures_from_saved_c4.ipynb) | Figures 2 and 7 and Supplementary Figure 11 redrawn from the saved notebook 29 results (DDR pilots excluded; same rosters at every pilot size) |
+| [`30`](notebooks/07_review_revisions/30_skin_data_description_c3.ipynb) | Skin data description for the Methods (aggregate counts only) |
+
+Saved results are in `plans_and_results/review_revisions/`. The version of this repository used for the npj Digital Medicine submission is the tag `npj-submission-1`.

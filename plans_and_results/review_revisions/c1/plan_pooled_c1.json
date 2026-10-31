@@ -1,0 +1,22 @@
+{
+ "title": "Pooled training versus pairing",
+ "written": "2026-10-30",
+ "models": "DenseNet121, EfficientNet-B3, ResNet50, RETFound (5-class), 3 runs each, trained on EyePACS v2 train + DDR official train (concatenated, no reweighting); best epoch on EyePACS v2 val + DDR official valid (AUC, referable); canonical recipe; seeds 20261101 + 10 x design index + run",
+ "test_sets": {
+  "primary": "BRSET, f = 1.31 x referable prevalence, patient bootstrap",
+  "secondary": [
+   "EyePACS fresh, f = 0.25, patients",
+   "DDR official test, f = 1.31 x referable prevalence in that file, filename groups"
+  ]
+ },
+ "outcome": "missed severe DR (grade 3 or 4) per 10,000 at the same referral share; referable and PDR secondary; ties at the margin broken at random (expected value)",
+ "comparisons_brset_severe": {
+  "C1": "pooled single vs EyePACS-only single, matched design and run; prediction: pooled misses fewer",
+  "C2": "pooled single (average of 12) vs mixed-source pair (EyePACS design a + DDR design b, a != b, 9 run combinations); prediction: pooled misses fewer",
+  "C3": "pair of pooled models (different designs, 9 run combinations) vs pooled average member; prediction: pair misses fewer; vs better member reported without prediction",
+  "C4": "pair of pooled models vs EyePACS-only pair (different designs); prediction: pair of pooled misses fewer"
+ },
+ "decision": "supported if the 95% patient-bootstrap interval (1,000 resamples) of the difference excludes zero in the predicted direction; contradicted if it excludes zero the other way; otherwise inconclusive",
+ "brset_role": "test only; never used for training or model selection",
+ "written_utc": "2026-10-30T07:31:08.518962+00:00"
+}
